@@ -1,28 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Outfit:wght@400;700&display=swap");
 
-* {
-  box-sizing: border-box;
+
+
+/* Footer should always stick to the bottom */
+.footer {
+  margin-top: auto; /* Push footer to the bottom */
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat' !important;
-}
 
-
-
-body {
-  /* font-family: "Quicksand", sans-serif; */
-  font-family: 'Outfit' !important; 
-  line-height: 1.5;
-  overflow-x: hidden;
-  color: #ebe7ef;
-  /* background: radial-gradient(#280a48, #20043d); */
-  /* font-synthesis: none; */
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  min-height: 80rem;
-}
 
 header {
   text-align: center;
@@ -194,6 +178,7 @@ main h2 {
   height: 100%;
 }
 /* ABOUT  */
+
 .about{
   background-color: #D4302B;
   /* background-image: url('./assets/heading bg.png');
@@ -431,6 +416,33 @@ main h2 {
   position: absolute;
   left: 35%;
   z-index: 1;
+  width: 26%;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .about-bg-img {
+    height: 50%;
+    width: 60%; /* Adjust width to 50% on tablets or smaller screens */
+    left: 20%; /* Adjust left position accordingly */
+  }
+}
+
+@media (max-width:1189px) {
+  .about-bg-img {
+    height: 40%;
+    width: 50%; /* Adjust width to 50% on tablets or smaller screens */
+    left: 20%; /* Adjust left position accordingly */
+  }
+}
+
+/* For screens smaller than 576px (mobile devices) */
+@media (max-width: 576px) {
+  .about-bg-img {
+    width: 80%; /* Adjust width to 80% on mobile screens */
+    height: 80%;
+    left: 10%; /* Adjust left position to center image */
+  }
 }
 
 .about-content{
@@ -460,7 +472,7 @@ main h2 {
   background-image: url('assets/heading bg.png');
   background-size: cover;
   background-position: center;
-  height: 100px;
+  height: 80px;
 }
 
 .contact-person-style{
@@ -468,6 +480,7 @@ main h2 {
 }
 
 .header-title{
+  color: white;
   font-weight: bold;
 }
 

@@ -1,14 +1,14 @@
 import HomeFirstImg from "./assets/homeFirstImg.jpg";
-// import HomeHeader from './HomeHeader.jsx';
+import HomeHeader from "./HomeHeader.jsx";
 import { numWithText } from './imagesDetails.js';
 import EventPage from './assets/Events Section.png';
 import achiveMentImage from './assets/Achievements Column.png';
 import aboutUsBG from './assets/about us bg.png';
-
+import { FooterSection } from "./App";
 function SecondHome() {
     return (
         <div id="home">
-            {/* <HomeHeader /> */}
+        
             <div className="container-fluid text-dark position-relative p-0">
                 <img
                     src={HomeFirstImg}
@@ -55,7 +55,7 @@ function SecondHome() {
                 <h5>கற்க கசடறக் கற்பவை கற்றபின்<br />
                     நிற்க அதற்குத் தக. </h5>
             </div>
-            <img src={aboutUsBG} alt="" width={'26%'} className="about-bg-img" />
+            <img src={aboutUsBG} alt="" className="about-bg-img" />
             <div className="container d-flex flex-column align-items-center justify-content-center text-dark">
                 <div className="about-content m-5 d-flex flex-column align-items-center justify-content-center text-dark">
                     <h3 style={{ fontWeight: 'bold' }}>About Us</h3>
@@ -82,6 +82,8 @@ function SecondHome() {
                     </div>
                 </div>
             </div>
+
+            <FooterSection />
         </div>
     )
 }
@@ -90,7 +92,7 @@ function CardWithContentDetails({ link, spanVal, heading, checkTrue }) {
     return (
         <>
             <a href="" className="text-danger">{link}</a>
-            <h1><b><span className="text-danger">{spanVal}</span>{heading} </b></h1>
+            <h1><b><span className="text-danger m-3">{spanVal}</span>{heading} </b></h1>
             <div className="row">
                 {numWithText.map((item, index) => (
                     <CreatenumberWithTexts key={index} date={item.dateValue}

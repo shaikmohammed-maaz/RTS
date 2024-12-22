@@ -6,10 +6,13 @@ import { imageCardValues } from "./cardDetails.js";
 import { admissionImagesWithDetails } from "./cardDetails.js";
 import { photoGallary } from "./cardDetails.js";
 import {Header} from './HomeHeader.jsx';
+import HomeHeader from './HomeHeader';
+import { FooterSection } from "./App.jsx";
 
 function AboutUs() {
     return (
         <div id="about-us">
+            
             <Header headVal={'About Us'}/>
             {/* <header className="about p-3 mb-3">
                 <h2>About Us</h2>
@@ -30,7 +33,7 @@ function AboutUs() {
             </div>
 
             <div className="container-fluid mt-3 text-dark fluid-section">
-                <h2 className="text-center"><b>Accreditation and <span className="text-danger">Affiliation</span></b></h2>
+                <h2 className="text-center"><b>Accreditation and <span className="text-danger m-3">Affiliation</span></b></h2>
                 <div className="container">
                     <div className="row">
                         {imageCardValues.map((item, index) => (
@@ -42,7 +45,7 @@ function AboutUs() {
 
             <div className="container text-dark">
                 <h2 className="text-center">
-                    <b><span className="text-danger">Admission</span> Team</b>
+                    <b><span className="text-danger m-3">Admission</span> Team</b>
                 </h2>
                 <div className="row">
                     {admissionImagesWithDetails.map((item, index) => (
@@ -51,13 +54,14 @@ function AboutUs() {
                 </div>
 
                 <h2 className="text-center mt-3">
-                    <b><span className="text-danger">Photo</span> Gallary</b>
+                    <b><span className="text-danger m-3">Photo</span> Gallary</b>
                 </h2>
                 <div className="row">
                     <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel"}/>
                 </div>
 
             </div>
+            <FooterSection/>
         </div>
     );
 };
@@ -99,7 +103,7 @@ function RowColCard() {
     return (
         <div className="text-dark container">
             <h1 className="text-center mt-5 mb-3">
-                <b>Our <span className="text-danger">Mission, Vision, and Values</span></b>
+                <b>Our <span className="text-danger m-3">Mission, Vision, and Values</span></b>
             </h1>
             <div className="row">
                 {imageWithContent.map((item, index) => (

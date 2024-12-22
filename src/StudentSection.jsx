@@ -2,16 +2,13 @@ import { studentImageAndContent } from "./cardDetails";
 import { PhotoGallaryFun } from "./AboutUs.jsx";
 import { photoGallary } from "./cardDetails.js";
 import {Header} from './HomeHeader.jsx';
-
+import HomeHeader from "./HomeHeader.jsx";
+import { FooterSection } from "./App";
 function StudentSection() {
     return (
         <div id="student-section">
+
             <Header headVal={'Student Section'}/>
-            {/* <div className="container-fluid student-section">
-                <header className="p-3">
-                    <h2 className="text-center"><b>Students Section</b></h2>
-                </header>
-            </div> */}
             <h4 className="text-dark text-center mt-3">Student achievements</h4>
             <div className="container">
                 <div className="row text-dark">
@@ -27,11 +24,13 @@ function StudentSection() {
                 } btnName={"Login"} />
             </div>
             <h2 className="text-center mt-3 text-dark">
-                <b><span className="text-danger">Photo</span> Gallary</b>
+                <b><span className="text-danger m-3">Photo</span> Gallary</b>
             </h2>
             <div className="row">
                     <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel2"} />
             </div>
+
+            <FooterSection />
 
         </div>
     )
@@ -50,8 +49,8 @@ function StudentAchivement({ imageVal, head, textContent }) {
 export function PortalSection({ heading, content, btnName }) {
     return (
         <>
-            <h3><b>{heading}</b></h3>
-            <div className="container">
+            <h3 className="text-white"><b>{heading}</b></h3>
+            <div className="container text-white">
                 <p className="text-center fs-6">{content}</p>
                 <div className="text-center">
                     <button className="login-style fs-6 pt-2 pb-2"><a href="https://www.catamilacademy.org/cta/login.aspx?ReturnUrl=%2fcta" className="link-sty" target="blank"><b>{btnName}</b></a></button>

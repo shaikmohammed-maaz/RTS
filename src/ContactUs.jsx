@@ -5,6 +5,8 @@ import atLogo from "./assets/at-logo.png";
 import location from "./assets/location-logo.png";
 import phone from "./assets/phone-logo.png";
 import { Header } from "./HomeHeader";
+import { FooterSection } from "./App";
+import HomeHeader from "./HomeHeader";
 
 export default function ContactUs() {
     return (
@@ -15,6 +17,7 @@ export default function ContactUs() {
             <img src={bg} alt="contact-bg" />
         </div>
     </div> */}
+    
             <Header headVal={'Contact Us'} />
             <div className="container my-5 text-dark">
                 <div className="row">
@@ -75,6 +78,7 @@ export default function ContactUs() {
                 </div>
             </div>
 
+            <FooterSection />
         </>
     )
 }

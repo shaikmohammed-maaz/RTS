@@ -3,6 +3,8 @@
 import gradimg from "./assets/homeImgfour.jpg";
 import React, { useState } from 'react';
 import { Header } from "./HomeHeader";
+import { FooterSection } from "./App";
+import HomeHeader from "./HomeHeader";
 
 export default function Blog() {
 
@@ -32,7 +34,7 @@ export default function Blog() {
             </div> */}
 
             <div className="container-fluid mt-4 text-dark">
-                <h2 className='text-center'>School <span className='text-danger'>news</span></h2>
+                <h2 className='text-center'>School <span className='text-danger m-3'>news</span></h2>
                 <div className="row ">
                     <div className="col-md-4 col-sm-4 col-12">
                         <div class="blog-card1">
@@ -88,7 +90,7 @@ export default function Blog() {
                             <h1>Event <span id="news-span">updates</span></h1>
                         </div>
                     </div> */}
-                <h2 className='text-center'>Event <span className='text-danger'>updates</span></h2>
+                <h2 className='text-center'>Event <span className='text-danger m-3'>updates</span></h2>
 
                     <div className="row ">
                         <div className="col-md-4">
@@ -126,8 +128,10 @@ export default function Blog() {
                     </div>
                 </div>
 
-            )}
+                
 
+            )}
+    <FooterSection />
 
         </>
     )

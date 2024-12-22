@@ -15,8 +15,7 @@ import ContactUs from "./ContactUs.jsx";
 function App() {
   return (
     <Router>
-      <HomeHeader /> {/* Add the HomeHeader component with navigation */}
-
+      <HomeHeader />
       <Routes>
         <Route path="/" element={<SecondHome />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -27,14 +26,12 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contactUs" element={<ContactUs />} />
       </Routes>
-
-      <FooterSection /> {/* Render FooterSection component */}
     </Router>
   );
 }
 
 
-function FooterSection() {
+export function FooterSection() {
   return (
     <footer className="container-fluid footer-style py-4">
       {/* Icons Row */}
