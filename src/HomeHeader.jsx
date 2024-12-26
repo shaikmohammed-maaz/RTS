@@ -21,8 +21,8 @@ export default function HomeHeader() {
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
                             <Link
-                                className={`nav-link fs-5 text-dark ${location.pathname === '/' ? 'active' : ''}`}
-                                to="/"
+                                className={`nav-link fs-5 text-dark ${location.pathname === '/RTS' ? 'active' : ''}`}
+                                to="/RTS"
                                 id="home"
                             >
                                 Home
