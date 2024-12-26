@@ -8,10 +8,10 @@ import HomeHeader from './HomeHeader.jsx';
 function Volunteer() {
     return (
         <>
-
+        <HomeHeader/>
             <Header headVal={'Volunteer'} />
             <div className="container text-dark">
-                <h2 className='text-center'>Volunteering <span className='text-danger m-3'>opportunities</span></h2>
+                <h2 className='text-center'>Volunteering <span className='web-color'> opportunities</span></h2>
                 <p className='text-center'>vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam. Pharetra laoreet lobortis ut vivamus placerat vitae non feugiat. Pharetra mauris in quam non vitae. Amet habitant pretium nascetur nunc pretium. Tincidunt et nec quis amet et id volutpat. Sed vestibulum non risus nulla.
                     Risus sit senectus a velit. Vestibulum evismod eget vestibulum eget elementum duis nibh odio quisque. Cras faucibus viverra aenean commodo egestas posuere tincidunt tortor. Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis ipsum ipsum condimentum in aliquam commodo molestie.
                     Elementum nullam massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices curabitur felis malesuada ante arcu egestas. Donec.</p>
@@ -19,7 +19,7 @@ function Volunteer() {
                     <a href="" className="link-sty"><button className="login-style2 fs-6 pt-2 pb-2"><b>Join Us</b></button></a>
                 </div>
                 <div className="text-center mt-3">
-                    <h2>Volunteer <span className='text-danger m-3'>Teams</span></h2>
+                    <h2>Volunteer <span className='web-color'> Teams</span></h2>
                 </div>
                 <div className="row">
                     {admissionImagesWithDetails.map((item, index) => (
@@ -27,8 +27,8 @@ function Volunteer() {
                     ))}
                 </div>
             </div>
-            <div className="container-fluid contact-person-style mb-2">
-                <h3 className='text-center text-dark mt-3 mb-2'><b>Contact<span className='text-danger m-3'>Person</span></b></h3>
+            <div className="container-fluid">
+                <h3 className='text-center text-dark mt-3 mb-2'><b>Contact<span className='web-color'> Person</span></b></h3>
                 <div className="row">
                     {commuincationProtocalsValues.map((item, index) => (
                         <CommunicationProtocols key={index} emailId={item.emailValue} nameValue={item.nameValue} />

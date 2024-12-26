@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Outfit:wght@400;700&display=swap");
 
-
-
-/* Footer should always stick to the bottom */
-.footer {
-  margin-top: auto; /* Push footer to the bottom */
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat';
 }
 
+p{
+  font-family: 'Outfit';
+}
 
+.web-color{
+  color: #D4302B;
+}
 header {
   text-align: center;
   /* margin: 3rem 0; */
@@ -177,6 +180,10 @@ main h2 {
 .card{
   height: 100%;
 }
+
+.home-bg-img-head{
+  font-weight: bold;
+}
 /* ABOUT  */
 
 .about{
@@ -206,18 +213,6 @@ main h2 {
   border-style: solid;
   border-color: #D4302B transparent transparent #D4302B; /* Arrowhead color */
   transform: rotate(120deg); /* Rotates the arrowhead to point correctly */
-}
-
-@media (max-width:575px) {
-  .dashed-arrow {
-    display: none;
-  }
-  .left-arrow{
-    display: none;
-  }
-  .left-dashed-arrow{
-    display: none;
-  }
 }
 
 .card-styles{
@@ -267,8 +262,10 @@ main h2 {
 
 @media (max-width:991px) {
   .card-styles {
-    width: 140%;
-    margin: 0 auto;
+    width: 140% !important;
+  }
+  .card-container{
+    max-width: 890px;
   }
   .left-dashed-arrow{
     display: none;
@@ -281,12 +278,6 @@ main h2 {
   }
 }
 
-@media (max-width:575px) {
-  .card-styles{
-    margin: auto !important;
-    width: 70% !important;
-  }
-}
 
 @media (max-width:964px) {
   .iframe-style{
@@ -340,48 +331,14 @@ main h2 {
   padding-right: 4%;
 }
 
+.regis-btn:hover{
+  background-color: #D4302B;
+}
+
 .tamil-content{
-  background-color: pink;
+  background-color: #FDF4F4;
 }
 
-/* Footer Style  */
-.footer-style{
-  background-color: pink !important;
-}
-
-
-/* Footer Styles */
-.footer-style {
-  background-color: #f8f9fa; /* Light background color for contrast */
-  color: #343a40; /* Dark text for readability */
-  text-align: center;
-}
-
-/* Input and Button */
-.form-control {
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-}
-
-.regis-btn {
-  padding: 0.5rem 1rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .footer-style {
-      padding: 1.5rem;
-  }
-
-  .form-control {
-      width: 100%;
-  }
-
-  .regis-btn {
-      margin-top: 1rem;
-  }
-}
 
 @media (max-width:730px) {
   .image-inside-content{
@@ -391,7 +348,6 @@ main h2 {
 
 @media (max-width:748px) {
   .navbar-expand-sm .navbar-nav .nav-link {
-    font-family: 'Montserrat';
     font-size: 80% !important;
   }
 }
@@ -401,14 +357,25 @@ main h2 {
   color: #D4302B;
 }
 
+.navbar-expand-sm .navbar-nav .nav-link {
+  font-family: 'Montserrat';
+}
 @media (max-width:575px) {
   .num-circle{
+    margin: auto !important;
+  }
+  .card-styles{
+    width: 80% !important;
     margin: auto !important;
   }
 }
 @media (max-width:767px) {
   .card-styles{
-    width: 200%;
+    width: 200% ;
+    margin-left: 30%;
+  }
+  .image-with-text-container{
+    max-width: 990px;
   }
 }
 
@@ -422,7 +389,7 @@ main h2 {
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
   .about-bg-img {
-    height: 50%;
+    height: 60% !important;
     width: 60%; /* Adjust width to 50% on tablets or smaller screens */
     left: 20%; /* Adjust left position accordingly */
   }
@@ -527,14 +494,37 @@ main h2 {
   font-size: 14px;
 }
 
+.table-responsive {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+}
+
 @media (max-width: 768px) {
-  .schedule-table {
+  .schedule-table th, .schedule-table td {
+    padding: 8px;
     font-size: 12px;
   }
 
-  .schedule-table th,
-  .schedule-table td {
-    padding: 8px;
+  .schedule-container h1 {
+    font-size: 20px;
+  }
+
+  .schedule-table tbody td p {
+    margin: 2px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .schedule-table th, .schedule-table td {
+    font-size: 10px;
+  }
+
+  .schedule-container h1 {
+    font-size: 18px;
+  }
+
+  .schedule-table tbody td p {
+    font-size: 10px;
   }
 }
 
@@ -570,15 +560,15 @@ main h2 {
 
 }
 
-#grad-img1 {
+/* #grad-img1 {
   width: 100%;
   max-width: 350px;
   height: auto;
   margin: 0 auto;
   display: block;
-}
+} */
 
-.blog-card1 {
+/* .blog-card1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -587,7 +577,29 @@ main h2 {
   text-align: center;
   margin-left: 13%;
 
+} */
+
+.blog-card1 {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the image doesn't overflow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Ensures the card height adjusts to its content */
 }
+
+.blog-card1 img {
+  width: 100%; /* Ensures the image spans the card width */
+  height: 200px; /* Adjust this value to fit your card design */
+  object-fit: cover; /* Makes sure the image covers the area without distortion */
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 .grad1-cont1 {
   font-size: 1.2rem;
@@ -595,12 +607,12 @@ main h2 {
   margin: 10px 0;
 }
 
-#graddate1 {
+/* #graddate1 {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 10px;
   text-align: center;
-}
+} */
 
 #main-cont-id {
   font-size: 1rem;
@@ -636,16 +648,16 @@ font-size: 1.3rem;
 }
 
 @media (max-width: 1024px) {
-  #grad1-cont1 {
+  /* #grad1-cont1 {
       font-size: 15px;
       padding: 14px;
       text-align: justify;
-  }
+  } */
 
-  .blog-card1 {
+  /* .blog-card1 {
       width: 100%;
       margin-left: 0;
-  }
+  } */
 
   
 
@@ -762,3 +774,108 @@ font-size: 1.3rem;
       font-size: 120%;
   }
 }
+
+.regis-btn{
+  background-color: #D4302B;
+}
+
+@media (max-width:1199px) {
+  /* .footer-input-sty{
+    width: 100%;
+  } */
+  .home-colum-image{
+    display: block !important;
+    width: 50% !important;
+    margin-left: 20%;
+  }
+  .card-styles{
+    margin-right: 100%;
+    width: 130%;
+    height: 90%;
+  }
+  .dashed-arrow {
+    display: none;
+  }
+  .left-arrow{
+    display: none;
+  }
+  .left-dashed-arrow{
+    display: none;
+  }
+}
+
+.home-colum-image{
+  /* margin-left: 15%; */
+  width: 90%;
+}
+
+
+
+.table-head-style{
+  font-size: 20px;
+}
+
+/* @media (max-width:767px) {
+ .footer-contain{
+  margin-right: 50%;
+ }
+ .footer-input-sty{
+  width: 400% !important;
+ }
+ .regis-btn{
+  width: 400% !important;
+ }
+ .bootom-footer{
+  margin-left: 90% !important;
+ }
+}
+
+@media (max-width:593px) {
+  .footer-contain{
+    margin-right: 75%;
+   }
+   .footer-input-sty{
+    width: 4000% !important;
+   }
+   .regis-btn{
+    width: 4000% !important;
+   }
+   .bootom-footer{
+    margin-left: 230% !important;
+   }
+}
+
+@media (max-width:556px) {
+  .footer-input-sty{
+    width: 6000% !important;
+  }
+  .regis-btn{
+    width: 6000% !important;
+  }
+}
+
+@media (max-width:536px) {
+  .footer-input-sty{
+    width: 10030% !important;
+  }
+  .regis-btn{
+    width: 10030% !important;
+  }
+}
+
+@media (max-width:526px) {
+  .footer-input-sty{
+    width: 20030% !important;
+  }
+  .regis-btn{
+    width: 20030% !important;
+  }
+} */
+
+.form-section{
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+}
+
+
+

@@ -7,21 +7,21 @@ import { FooterSection } from "./App.jsx";
 function Acedemics() {
   return (
     <>
-    
+    <HomeHeader/>
       <Header headVal={'Academics'} />
       <div className="container text-dark">
-        <h2 className='text-center'>Curriculum <span className='text-danger m-3'>overview</span></h2>
+        <h2 className='text-center'><b>Curriculum<span className='web-color'> overview</span></b></h2>
         <p className='text-center'>vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam. Pharetra laoreet lobortis ut vivamus placerat vitae non feugiat. Pharetra mauris in quam non vitae. Amet habitant pretium nascetur nunc pretium. Tincidunt et nec quis amet et id volutpat. Sed vestibulum non risus nulla.
           Risus sit senectus a velit. Vestibulum evismod eget vestibulum eget elementum duis nibh odio quisque. Cras faucibus viverra aenean commodo egestas posuere tincidunt tortor. Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis ipsum ipsum condimentum in aliquam commodo molestie.
           Elementum nullam massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices curabitur felis malesuada ante arcu egestas. Donec.</p>
       </div>
       <ScheduleTable />
       <div className="container text-dark">
-        <h2 className='text-center'>Library <span className='text-danger m-3'>information</span></h2>
+        <h2 className='text-center'><b>Library<span className='web-color'> information</span></b></h2>
         <p className='text-center'>vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam. Pharetra laoreet lobortis ut vivamus placerat vitae non feugiat. Pharetra mauris in quam non vitae. Amet habitant pretium nascetur nunc pretium. Tincidunt et nec quis amet et id volutpat. Sed vestibulum non risus nulla.
           Risus sit senectus a velit. Vestibulum evismod eget vestibulum eget elementum duis nibh odio quisque. Cras faucibus viverra aenean commodo egestas posuere tincidunt tortor. Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis ipsum ipsum condimentum in aliquam commodo molestie.
           Elementum nullam massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices curabitur felis malesuada ante arcu egestas. Donec.</p>
-        <h2 className='text-center'>Communication <span className='text-danger m-3'>protocols</span></h2>
+        <h2 className='text-center'><b>Communication<span className='web-color'> protocols</span></b></h2>
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12 mb-4">
             <p className="text-center text-md-start">
@@ -50,7 +50,7 @@ function Acedemics() {
         </div>
 
         <div className="text-center mt-2">
-          <h2>Academic <span className='text-danger m-3'>calendar</span></h2>
+          <h2><b>Academic<span className='web-color'> calendar</span></b></h2>
         </div>
         <div className="row">
           {admissionImagesWithDetails.map((item, index) => (
@@ -58,7 +58,7 @@ function Acedemics() {
           ))}
         </div>
         <div className="text-center mt-2">
-          <h2>Administration <span className='text-danger m-3'>team</span></h2>
+          <h2><b>Administration<span className='web-color'> team</span></b></h2>
         </div>
         <div className="d-flex flex-column align-items-center mb-3">
           <iframe src="https://www.catamilacademy.org/RedmondTamilSchoolSchedule.html" className='iframe-style' height="400" width="900" title="Iframe Example" style={{ backgroundColor: 'gray', borderRadius: '10px' }}></iframe>
@@ -71,6 +71,44 @@ function Acedemics() {
 }
 
 
+// const ScheduleTable = () => {
+//   const periods = ["Period 1", "Period 2", "Period 3", "Period 4"];
+//   const days = ["Monday", "Monday", "Monday", "Monday", "Monday", "Monday", "Monday"];
+
+//   return (
+//     <div className="schedule-container text-dark">
+//       <h1>
+//         Class <span className="highlight">schedules</span>
+//       </h1>
+//       <table className="schedule-table">
+//         <thead>
+//           <tr>
+//             <th></th>
+//             {periods.map((period, index) => (
+//               <th key={index} className="table-head-style">
+//                 {period.split(' ')[0]} <span className="web-color">{period.split(' ')[1]}</span> {/* Split and wrap the number in a span */}
+//               </th>
+//             ))}
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {days.map((day, rowIndex) => (
+//             <tr key={rowIndex}>
+//               <td>{day}</td>
+//               {periods.map((_, colIndex) => (
+//                 <td key={colIndex}>
+//                   <p>8:00-9:00</p>
+//                   <p>Tamil Basic</p>
+//                 </td>
+//               ))}
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// };
+
 const ScheduleTable = () => {
   const periods = ["Period 1", "Period 2", "Period 3", "Period 4"];
   const days = ["Monday", "Monday", "Monday", "Monday", "Monday", "Monday", "Monday"];
@@ -78,33 +116,39 @@ const ScheduleTable = () => {
   return (
     <div className="schedule-container text-dark">
       <h1>
-        Class <span className="highlight">schedules</span>
+        <b>
+        Class <span className="highlight">Schedules</span></b>
       </h1>
-      <table className="schedule-table">
-        <thead>
-          <tr>
-            <th></th>
-            {periods.map((period, index) => (
-              <th key={index}>{period}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {days.map((day, rowIndex) => (
-            <tr key={rowIndex}>
-              <td>{day}</td>
-              {periods.map((_, colIndex) => (
-                <td key={colIndex}>
-                  <p>8:00-9:00</p>
-                  <p>Tamil Basic</p>
-                </td>
+      <div className="table-responsive">
+        <table className="schedule-table">
+          <thead>
+            <tr>
+              <th></th>
+              {periods.map((period, index) => (
+                <th key={index} className="table-head-style">
+                  {period.split(' ')[0]} <span className="web-color">{period.split(' ')[1]}</span>
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {days.map((day, rowIndex) => (
+              <tr key={rowIndex}>
+                <td>{day}</td>
+                {periods.map((_, colIndex) => (
+                  <td key={colIndex}>
+                    <p>8:00-9:00</p>
+                    <p>Tamil Basic</p>
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
+
 
 export default Acedemics;

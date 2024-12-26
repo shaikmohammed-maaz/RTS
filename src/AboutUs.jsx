@@ -12,12 +12,12 @@ import { FooterSection } from "./App.jsx";
 function AboutUs() {
     return (
         <div id="about-us">
-            
+            <HomeHeader/>
             <Header headVal={'About Us'}/>
             {/* <header className="about p-3 mb-3">
                 <h2>About Us</h2>
             </header> */}
-            <div className="container mt-3">
+            <div className="container mt-3 card-container">
                 <div className="row g-3">
                     {cardDetails.map((item, index) => (
                         <Card
@@ -33,7 +33,7 @@ function AboutUs() {
             </div>
 
             <div className="container-fluid mt-3 text-dark fluid-section">
-                <h2 className="text-center"><b>Accreditation and <span className="text-danger m-3">Affiliation</span></b></h2>
+                <h2 className="text-center"><b>Accreditation and <span className="web-color"> Affiliation</span></b></h2>
                 <div className="container">
                     <div className="row">
                         {imageCardValues.map((item, index) => (
@@ -44,8 +44,8 @@ function AboutUs() {
             </div>
 
             <div className="container text-dark">
-                <h2 className="text-center">
-                    <b><span className="text-danger m-3">Admission</span> Team</b>
+                <h2 className="text-center mt-2">
+                    <b><span className="web-color">Administration</span> Team</b>
                 </h2>
                 <div className="row">
                     {admissionImagesWithDetails.map((item, index) => (
@@ -54,7 +54,7 @@ function AboutUs() {
                 </div>
 
                 <h2 className="text-center mt-3">
-                    <b><span className="text-danger m-3">Photo</span> Gallary</b>
+                    <b><span className="web-color">Photo</span> Gallary</b>
                 </h2>
                 <div className="row">
                     <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel"}/>
@@ -101,9 +101,9 @@ function Card({ heading, subHeading, content, index, styleContent }) {
 
 function RowColCard() {
     return (
-        <div className="text-dark container">
+        <div className="text-dark container image-with-text-container">
             <h1 className="text-center mt-5 mb-3">
-                <b>Our <span className="text-danger m-3">Mission, Vision, and Values</span></b>
+                <b>Our <span className="web-color"> Mission, Vision, and Values</span></b>
             </h1>
             <div className="row">
                 {imageWithContent.map((item, index) => (
@@ -120,18 +120,18 @@ function CardCol({ imgVal, cardHead, cardText, isVal }) {
     return (
         <>
             {isVal ? (
-                <div className="row d-flex flex-row align-items-center">
-                    <div className="col-sm-6 d-flex flex-column">
+                <div className="row image-with-text-container g-3 d-flex flex-row align-items-center">
+                    <div className="col-sm-6 col-md-4 d-flex flex-column">
                         <img
                             src={imgVal}
                             alt="Illustration"
                             className="img-fluid rounded "
-                            style={{ maxWidth:'80%',maxHeight: '200px', objectFit: 'cover' }}
+                            style={{ maxWidth:'100%',maxHeight: '200px', objectFit: 'cover' }}
                         />
                     </div>
 
-                    <div className="col-sm-6 align-items-center">
-                        <h5 className="text-danger text-center"><b>{cardHead}</b></h5>
+                    <div className="col-sm-6 col-md-8 align-items-center">
+                        <h5 className="web-color text-center"><b>{cardHead}</b></h5>
                         <p>
                             {cardText}
                         </p>
@@ -139,19 +139,19 @@ function CardCol({ imgVal, cardHead, cardText, isVal }) {
                 </div>
             ) : (
                 <div className="row d-flex flex-row align-items-center">
-                    <div className="col-sm-6">
-                        <h5 className="text-danger text-center"><b>{cardHead}</b></h5>
+                    <div className="col-sm-6 col-md-8">
+                        <h5 className="web-color text-center"><b>{cardHead}</b></h5>
                         <p>
                             {cardText}
                         </p>
                     </div>
 
-                    <div className="col-sm-6 d-flex flex-column">
+                    <div className="col-sm-6 col-md-4 d-flex flex-column">
                         <img
                             src={imgVal}
                             alt="Illustration"
                             className="img-fluid rounded"
-                            style={{ maxWidth:'80%',maxHeight: '200px', objectFit: 'cover' }}
+                            style={{ maxWidth:'100%',maxHeight: '200px', objectFit: 'cover' }}
                         />
                     </div>
                 </div>
@@ -184,7 +184,7 @@ export function AdmissionColImages({ personImage, personName, personDetails }) {
                     style={{ width: '200px', height: '200px', objectFit: 'cover' }}
                 />
 
-                <h3 className="text-center text-danger">{personName}</h3>
+                <h3 className="text-center web-color mt-3"><b>{personName}</b></h3>
                 <p className="text-center">{personDetails}</p>
             </div>
         </>
@@ -216,7 +216,8 @@ export function PhotoGallaryFun({ pictures = [] ,idVal}) {
                                     <img
                                         src={picture}
                                         alt={`Slide ${index + 1} - Image ${picIndex + 1}`}
-                                        style={{ width: '100%', height: 'auto' }}
+                                        className="photo-gallary-image"
+                                        style={{ width: '110%', height: 'auto'}}
                                     />
                                 </div>
                             ))}

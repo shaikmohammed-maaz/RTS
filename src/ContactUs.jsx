@@ -17,12 +17,12 @@ export default function ContactUs() {
             <img src={bg} alt="contact-bg" />
         </div>
     </div> */}
-    
+    <HomeHeader/>
             <Header headVal={'Contact Us'} />
             <div className="container my-5 text-dark">
-                <div className="row">
+                <div className="row g-3">
                     {/* Left Section: Contact Details */}
-                    <div className="col-md-6">
+                    <div className="col-xl-6 col-sm-12 col-md-6">
                         <p>
                             degree or diploma from a school, college, or university. This includes
                             earning the required number of credits, taking all necessary courses,
@@ -49,8 +49,8 @@ export default function ContactUs() {
                     </div>
 
                     {/* Right Section: Contact Form */}
-                    <div className="col-md-6">
-                        <div className="p-4">
+                    <div className=" col-xl-6 col-sm-12 col-md-6">
+                        <div className="form-section p-4">
                             <h2 className="text-danger">Contact Form</h2>
                             <h5 className="mb-4">How can we help?</h5>
                             <p className="mb-4">
