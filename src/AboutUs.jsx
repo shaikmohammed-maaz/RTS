@@ -12,7 +12,7 @@ import { FooterSection } from "./App.jsx";
 function AboutUs() {
     return (
         <div id="about-us">
-            <HomeHeader/>
+            <HomeHeader></HomeHeader>
             <Header headVal={'About Us'}/>
             {/* <header className="about p-3 mb-3">
                 <h2>About Us</h2>

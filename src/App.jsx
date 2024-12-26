@@ -1,24 +1,22 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js"; // This includes Popper.js
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"; // Import Link for navigation
-import HomeHeader from "./HomeHeader"; // Import the HomeHeader component
-import SecondHome from "./SecondHome.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // This includes Popper.js
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Import Link for navigation 
+import HomeHeader from './HomeHeader';  // Import the HomeHeader component
+import SecondHome from './SecondHome.jsx';
 import AboutUs from "./AboutUs.jsx";
 import StudentSection from "./StudentSection.jsx";
 import ParentsSection from "./ParentsSection.jsx";
-import Volunteer from "./Volunteer.jsx";
+import Volunteer from './Volunteer.jsx';
 import Acedemics from "./Acedemics.jsx";
 import Blog from "./Blog.jsx";
 import ContactUs from "./ContactUs.jsx";
 
 function App() {
   return (
-    <>
     <Router>
-      
       <Routes>
-        <Route path="/RTS" element={<SecondHome />} />
+        <Route path="/" element={<SecondHome />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/student-section" element={<StudentSection />} />
         <Route path="/parent-section" element={<ParentsSection />} />
@@ -27,11 +25,10 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contactUs" element={<ContactUs />} />
       </Routes>
-      
     </Router>
-    </>
   );
 }
+
 
 export function FooterSection() {
   return (
@@ -68,10 +65,7 @@ export function FooterSection() {
         {/* Contact Information */}
         <h5 className="bootom-footer text-center mt-3">
           123 Greenfield Ave, Springfield, IL <br />
-          <a
-            href="mailto:info@RedmondTamilSchool.edu"
-            className="footer-link-color text-decoration-none"
-          >
+          <a href="mailto:info@RedmondTamilSchool.edu" className="footer-link-color text-decoration-none">
             info@RedmondTamilSchool.edu
           </a>
         </h5>

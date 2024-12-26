@@ -7,7 +7,7 @@ import { FooterSection } from "./App.jsx";
 function Acedemics() {
   return (
     <>
-    <HomeHeader/>
+    <HomeHeader></HomeHeader>
       <Header headVal={'Academics'} />
       <div className="container text-dark">
         <h2 className='text-center'><b>Curriculum<span className='web-color'> overview</span></b></h2>
