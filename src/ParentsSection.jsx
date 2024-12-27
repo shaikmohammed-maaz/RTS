@@ -16,7 +16,7 @@ function ParentsSection() {
                 {/* <iframe src="https://www.catamilacademy.org/RedmondTamilSchoolSchedule.html" className='iframe-style' height="400" width="900" title="Iframe Example" style={{ backgroundColor: 'gray', borderRadius: '10px' }}></iframe> */}
                 <img src={bigImage} alt="" style={{maxWidth:'100%',maxHeight:'100%'}}/>
             </div>
-            <div className="container-fluid student-section d-flex flex-column align-items-center p-3">
+            <div className="container-fluid portal-section d-flex flex-column align-items-center p-3">
                 <PortalSection heading={"Parent portal"} content={"Lorem ipsum dolor sit amet consectetur. Nunc sit rhoncus purus et. Ornare leo vivamus id tempus scelerisque consectetur mauris iaculis quam.Tristique vitae ipsum cras vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam."}
                     btnName={"Login"} />
             </div>

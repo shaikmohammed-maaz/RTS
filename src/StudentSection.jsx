@@ -18,7 +18,7 @@ function StudentSection() {
                 </div>
             </div>
 
-            <div className="container-fluid student-section d-flex flex-column align-items-center p-3">
+            <div className="container-fluid portal-section d-flex flex-column align-items-center p-3">
                 <PortalSection heading={"Students Portal"} content={
                     "Lorem ipsum dolor sit amet consectetur. Nunc sit rhoncus purus et. Ornare leo vivamus id tempus scelerisque consectetur mauris iaculis quam.Tristique vitae ipsum cras vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam."
                 } btnName={"Login"} />

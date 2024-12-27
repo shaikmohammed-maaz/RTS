@@ -50,8 +50,8 @@ function SecondHome() {
             </div>
 
             <div className="container-fluid tamil-content p-3 text-center text-dark mb-3">
-                <h5>கற்க கசடறக் கற்பவை கற்றபின்<br />
-                    நிற்க அதற்குத் தக. </h5>
+                <p>கற்க கசடறக் கற்பவை கற்றபின்<br />
+                    நிற்க அதற்குத் தக. </p>
             </div>
             <img src={aboutUsBG} alt="" className="about-bg-img" />
             <div className="container d-flex flex-column align-items-center justify-content-center text-dark mb-2">
@@ -76,7 +76,7 @@ function SecondHome() {
                         <ShowImages imagePathLink={achiveMentImage} />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={true} />
+                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true} />
                     </div>
                 </div>
             </div>
@@ -89,7 +89,10 @@ function SecondHome() {
 function CardWithContentDetails({ link, spanVal, heading, checkTrue }) {
     return (
         <>
-            <a href="" className="web-color">{link}</a>
+        <div className={`${checkTrue ? 'left-align' : 'right-alignment'}`}>
+            <a href="" className="web-color"  style={{marginRight:'20%'}}
+            >{link}</a>
+            </div>
             <h2><b><span className="web-color">{spanVal}</span> {heading} </b></h2>
             <div className="row">
                 {numWithText.map((item, index) => (

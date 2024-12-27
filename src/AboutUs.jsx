@@ -5,15 +5,16 @@ import { imageWithContent } from './cardDetails.js';
 import { imageCardValues } from "./cardDetails.js";
 import { admissionImagesWithDetails } from "./cardDetails.js";
 import { photoGallary } from "./cardDetails.js";
-import {Header} from './HomeHeader.jsx';
+import { Header } from './HomeHeader.jsx';
 import HomeHeader from './HomeHeader';
 import { FooterSection } from "./App.jsx";
+import imag1 from './assets/classroom.jpg';
 
 function AboutUs() {
     return (
         <div id="about-us">
             <HomeHeader></HomeHeader>
-            <Header headVal={'About Us'}/>
+            <Header headVal={'About Us'} />
             {/* <header className="about p-3 mb-3">
                 <h2>About Us</h2>
             </header> */}
@@ -57,23 +58,45 @@ function AboutUs() {
                     <b><span className="web-color">Photo</span> Gallary</b>
                 </h2>
                 <div className="row mb-5">
-                    <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel"}/>
+                    <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel"} />
                 </div>
 
             </div>
-            <FooterSection/>
+            <FooterSection />
         </div>
     );
 };
 
 function Card({ heading, subHeading, content, index, styleContent }) {
+    const [hovered, setHovered] = useState(false);
     return (
         <>
             <div className="col-xl-3 col-md-3 col-sm-6">
-                <div className="card card-styles p-3" style={styleContent ? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}>
-                    <h2 style={styleContent ? { color: "#D4302B" } : { color: "white" }}><b>{heading}</b></h2>
-                    <h5 style={styleContent ? { color: "black" } : { color: "white" }}><b>{subHeading}</b></h5>
-                    <p style={styleContent ? { color: "black" } : { color: "white" }}>{content}</p>
+                <div className="card card-styles p-3" style={styleContent ? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}>
+                    {
+                        hovered ? (
+                            <img
+                            src={imag1}
+                            alt=""
+                            style={{
+                              width: "100%",  
+                              height: "100%", 
+                              objectFit: "cover", 
+                              position: "absolute",
+                              top: 0,
+                              left: 0,
+                            }}
+                          />
+                        ) :
+                            (
+                                <><h2 style={styleContent ? { color: "#D4302B" } : { color: "white" }}><b>{heading}</b></h2>
+                                    <h5 style={styleContent ? { color: "black" } : { color: "white" }}><b>{subHeading}</b></h5>
+                                    <p style={styleContent ? { color: "black" } : { color: "white" }}>{content}</p>
+                                </>)
+                    }
+
                 </div>
             </div>
 
@@ -126,7 +149,7 @@ function CardCol({ imgVal, cardHead, cardText, isVal }) {
                             src={imgVal}
                             alt="Illustration"
                             className="img-fluid rounded "
-                            style={{ maxWidth:'100%',maxHeight: '200px', objectFit: 'cover' }}
+                            style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'cover' }}
                         />
                     </div>
 
@@ -151,7 +174,7 @@ function CardCol({ imgVal, cardHead, cardText, isVal }) {
                             src={imgVal}
                             alt="Illustration"
                             className="img-fluid rounded"
-                            style={{ maxWidth:'100%',maxHeight: '200px', objectFit: 'cover' }}
+                            style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'cover' }}
                         />
                     </div>
                 </div>
@@ -192,7 +215,7 @@ export function AdmissionColImages({ personImage, personName, personDetails }) {
 }
 
 
-export function PhotoGallaryFun({ pictures = [] ,idVal}) {
+export function PhotoGallaryFun({ pictures = [], idVal }) {
     // Split the pictures into groups of 6 for each carousel slide
     const chunkedPictures = [];
     for (let i = 0; i < pictures.length; i += 6) {
@@ -217,7 +240,7 @@ export function PhotoGallaryFun({ pictures = [] ,idVal}) {
                                         src={picture}
                                         alt={`Slide ${index + 1} - Image ${picIndex + 1}`}
                                         className="photo-gallary-image"
-                                        style={{ width: '110%', height: 'auto'}}
+                                        style={{ width: '110%', height: 'auto' }}
                                     />
                                 </div>
                             ))}

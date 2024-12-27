@@ -32,7 +32,8 @@ function App() {
 
 export function FooterSection() {
   return (
-    <footer className="container-fluid footer-style py-4">
+    <div className="footer-container-style py-3">
+    <footer className="container-fluid">
       {/* Icons Row */}
       <div className="row text-center mb-3">
         <CreateIcon />
@@ -45,7 +46,7 @@ export function FooterSection() {
 
       {/* Subscription Form */}
       <div className="footer-contain text-dark d-flex flex-column align-items-center justify-content-center">
-        <div className="row w-50 px-3 mb-2">
+        <div className="row w-50 px-3 mb-2 footer-row">
           {/* Email Input */}
           <div className="col-xl-6 col-sm-12 col-md-8 mb-3 mb-md-0">
             <input
@@ -63,14 +64,15 @@ export function FooterSection() {
         </div>
 
         {/* Contact Information */}
-        <h5 className="bootom-footer text-center mt-3">
+        <p className="bootom-footer text-center mt-3">
           123 Greenfield Ave, Springfield, IL <br />
           <a href="mailto:info@RedmondTamilSchool.edu" className="footer-link-color text-decoration-none">
             info@RedmondTamilSchool.edu
           </a>
-        </h5>
+        </p>
       </div>
     </footer>
+    </div>
   );
 }
 
