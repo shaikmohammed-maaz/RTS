@@ -80,14 +80,7 @@ function Card({ heading, subHeading, content, index, styleContent }) {
                             <img
                             src={imag1}
                             alt=""
-                            style={{
-                              width: "100%",  
-                              height: "100%", 
-                              objectFit: "cover", 
-                              position: "absolute",
-                              top: 0,
-                              left: 0,
-                            }}
+                            className="cards-images"
                           />
                         ) :
                             (
@@ -216,10 +209,11 @@ export function AdmissionColImages({ personImage, personName, personDetails }) {
 
 
 export function PhotoGallaryFun({ pictures = [], idVal }) {
-    // Split the pictures into groups of 6 for each carousel slide
+    // Split the pictures into groups of 3 for tablet/mobile and 6 for larger screens
     const chunkedPictures = [];
-    for (let i = 0; i < pictures.length; i += 6) {
-        chunkedPictures.push(pictures.slice(i, i + 6));
+    const chunkSize = window.innerWidth < 768 ? 3 : 6; // Dynamically decide chunk size based on screen width
+    for (let i = 0; i < pictures.length; i += chunkSize) {
+        chunkedPictures.push(pictures.slice(i, i + chunkSize));
     }
 
     return (
@@ -230,17 +224,16 @@ export function PhotoGallaryFun({ pictures = [], idVal }) {
                         key={index}
                         className={`carousel-item ${index === 0 ? "active" : ""}`}
                     >
-                        <div className="row">
+                        <div className="row g-5">
                             {chunk.map((picture, picIndex) => (
                                 <div
                                     key={picIndex}
-                                    className="col-2 d-flex justify-content-center"
+                                    className="col-lg-2 col-md-4 col-sm-4 col-4 d-flex justify-content-center"
                                 >
                                     <img
                                         src={picture}
                                         alt={`Slide ${index + 1} - Image ${picIndex + 1}`}
                                         className="photo-gallary-image"
-                                        style={{ width: '110%', height: 'auto' }}
                                     />
                                 </div>
                             ))}
@@ -270,6 +263,7 @@ export function PhotoGallaryFun({ pictures = [], idVal }) {
         </div>
     );
 }
+
 
 
 export default AboutUs;

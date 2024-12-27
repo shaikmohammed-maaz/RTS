@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Outfit:wght@400;700&display=swap");
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Montserrat';
 }
 
-p{
+p {
   font-family: 'Outfit';
 }
 
-.web-color{
+.web-color {
   color: #D4302B;
 }
 
@@ -163,13 +168,13 @@ header img {
   overflow: hidden;
 } */
 
-.card{
+.card {
   height: 100%;
 }
 
 /* Home  */
 /* home page bg-image inside heading  */
-.home-bg-img-head{
+.home-bg-img-head {
   font-weight: bold;
 }
 
@@ -183,7 +188,7 @@ header img {
   font-weight: bold;
 } */
 /* Card style  */
-.card-styles{
+.card-styles {
   border: 3px solid #D4302B;
   align-items: center;
 }
@@ -191,62 +196,84 @@ header img {
 /* Go to left side arrow  */
 .dashed-arrow {
   position: relative;
-  border-top: 2px dashed #D4302B; /* Dashed line */
-  margin-top: 80%; /* Length of the line */
+  border-top: 2px dashed #D4302B;
+  /* Dashed line */
+  margin-top: 80%;
+  /* Length of the line */
 }
 
 .dashed-arrow::after {
   content: '';
   position: absolute;
-  top: -5px; /* Adjusts the position of the arrowhead */
-  right: 0; /* Places the arrowhead at the end of the line */
-  border-width: 5px; /* Size of the arrowhead */
+  top: -5px;
+  /* Adjusts the position of the arrowhead */
+  right: 0;
+  /* Places the arrowhead at the end of the line */
+  border-width: 5px;
+  /* Size of the arrowhead */
   border-style: solid;
-  border-color: #D4302B transparent transparent #D4302B; /* Arrowhead color */
-  transform: rotate(120deg); /* Rotates the arrowhead to point correctly */
+  border-color: #D4302B transparent transparent #D4302B;
+  /* Arrowhead color */
+  transform: rotate(120deg);
+  /* Rotates the arrowhead to point correctly */
 }
 
 /* Down arrow style  */
 .left-arrow {
   position: relative;
-  border-left: 2px dashed #D4302B; /* Dashed vertical line */
-  height: 100px; /* Length of the dashed line */
-  width: 0; /* Keep width 0 for a vertical line */
-  margin-left: 60%; /* Center the arrow horizontally */
+  border-left: 2px dashed #D4302B;
+  /* Dashed vertical line */
+  height: 100px;
+  /* Length of the dashed line */
+  width: 0;
+  /* Keep width 0 for a vertical line */
+  margin-left: 60%;
+  /* Center the arrow horizontally */
 }
 
 .left-arrow::after {
   content: '';
   position: absolute;
-  bottom: 0; /* Position the arrowhead at the bottom of the line */
+  bottom: 0;
+  /* Position the arrowhead at the bottom of the line */
   top: 100px;
-  left: -9px; /* Center the arrowhead horizontally */
-  border-width: 10px; /* Size of the arrowhead */
+  left: -9px;
+  /* Center the arrowhead horizontally */
+  border-width: 10px;
+  /* Size of the arrowhead */
   border-style: solid;
-  border-color: #D4302B transparent transparent transparent; /* Arrowhead colors */
+  border-color: #D4302B transparent transparent transparent;
+  /* Arrowhead colors */
 }
 
 /* Go to right side arrow  */
 .left-dashed-arrow {
   position: relative;
-  border-top: 2px dashed #D4302B; /* Dashed horizontal line */
-  width: 100px; /* Length of the dashed line */
+  border-top: 2px dashed #D4302B;
+  /* Dashed horizontal line */
+  width: 100px;
+  /* Length of the dashed line */
   margin-top: 80%;
 }
 
 .left-dashed-arrow::after {
   content: '';
   position: absolute;
-  top: -5px; /* Adjust position of the arrowhead */
-  left: 0; /* Places the arrowhead at the start of the line */
-  border-width: 5px; /* Size of the arrowhead */
+  top: -5px;
+  /* Adjust position of the arrowhead */
+  left: 0;
+  /* Places the arrowhead at the start of the line */
+  border-width: 5px;
+  /* Size of the arrowhead */
   border-style: solid;
-  border-color: transparent #D4302B #D4302B transparent; /* Arrowhead color */
-  transform: rotate(-200deg); /* Rotates the arrowhead to point left */
+  border-color: transparent #D4302B #D4302B transparent;
+  /* Arrowhead color */
+  transform: rotate(-200deg);
+  /* Rotates the arrowhead to point left */
 }
 
 /* Affiliation section  */
-.fluid-section{
+.fluid-section {
   background-color: rgb(249, 220, 225);
 }
 
@@ -256,17 +283,27 @@ header img {
   .card-styles {
     width: 140% !important;
   }
-  .card-container{
+
+  .card-container {
     max-width: 890px;
   }
-  .left-dashed-arrow{
+
+  .left-dashed-arrow {
     display: none;
   }
-  .left-arrow{
+
+  .left-arrow {
     display: none;
   }
-  .dashed-arrow{
+
+  .dashed-arrow {
     display: none;
+  }
+  .student-achivement-head{
+    font-size: 0.9rem;
+  }
+  .about-bg-img{
+    height: 40% !important;
   }
 }
 
@@ -274,7 +311,7 @@ header img {
 
 /* Acedemic Iframe style  */
 @media (max-width:964px) {
-  .iframe-style{
+  .iframe-style {
     width: 100%;
   }
 }
@@ -283,12 +320,12 @@ header img {
 /* Student Sectionn  */
 
 /* Portal login section  */
-.portal-section{
+.portal-section {
   background-color: #D4302B;
 }
 
 /* portal section login button  */
-.login-style{
+.login-style {
   color: #D4302B;
   padding-left: 5%;
   padding-right: 5%;
@@ -297,7 +334,7 @@ header img {
 }
 
 /* Join us and show more show less button  */
-.login-style2{
+.login-style2 {
   color: white;
   background-color: #D4302B;
   padding-left: 5%;
@@ -313,30 +350,30 @@ header img {
 
 /* Parents page */
 /* School timigs  */
-.school-timing{
+.school-timing {
   padding-right: 20px;
-  border-right:1px solid gray ;
+  border-right: 1px solid gray;
 }
 
 /* Home style  */
 
-.regis-btn{
+.regis-btn {
   font-weight: bold;
   padding-left: 4%;
   padding-right: 4%;
 }
 
-.regis-btn:hover{
+.regis-btn:hover {
   background-color: #D4302B;
 }
 
-.tamil-content{
+.tamil-content {
   background-color: #FDF4F4;
 }
 
 
 @media (max-width:730px) {
-  .image-inside-content{
+  .image-inside-content {
     font-size: 4px !important;
   }
 }
@@ -347,35 +384,65 @@ header img {
   }
 }
 
-.link-sty{
+.link-sty {
   text-decoration: none;
   color: #D4302B;
+}
+
+.cards-images {
+  width: 100% !important;   /* Ensures image takes full width of the container */
+  height: 100% !important;  /* Ensures image height matches the container */
+  object-fit: cover !important; /* Ensures image covers the container without distortion */
+  position: absolute !important; /* Absolute position for image to fit properly inside card */
+  top: 0;
+  left: 0;
 }
 
 .navbar-expand-sm .navbar-nav .nav-link {
   font-family: 'Montserrat';
 }
+
 @media (max-width:575px) {
-  .num-circle{
+  .num-circle {
     margin: auto !important;
   }
-  .card-styles{
-    width: 80% !important;
-    margin: auto !important;
+  .home-bg-img-text{
+   font-size: 0.9rem !important;
   }
+
+  .cards-images {
+    width: 100% !important;    /* Ensures full width for mobile */
+    height: 100% !important;   /* Adjusts height based on aspect ratio */
+    object-fit: cover !important; /* Ensures the image still covers the area */
+    position: relative !important; /* Switch to relative positioning for better mobile layout */
 }
+
+.card-styles {
+    position: relative;  /* Ensures that the card’s content stack correctly */
+    overflow: hidden;    /* Ensures no content goes outside the bounds of the card */
+}
+
+}
+
 @media (max-width:767px) {
-  .card-styles{
-    width: 200% ;
-    margin-left: 30%;
+  .card-styles {
+    width: 76% !important;
+    margin-left: 13%;
   }
-  .image-with-text-container{
+
+  .image-with-text-container {
     max-width: 990px;
   }
+  .about-bg-img{
+    margin-top: 20% !important;
+    left: 17% !important;
+    width: 50% !important;
+    height: 80% !important;
+  }
 }
 
 
-.about-bg-img{
+.about-bg-img {
   position: absolute;
   left: 35%;
   z-index: 1;
@@ -386,48 +453,54 @@ header img {
 @media (max-width: 768px) {
   .about-bg-img {
     height: 23% !important;
-    width: 60%; /* Adjust width to 50% on tablets or smaller screens */
-    left: 20%; /* Adjust left position accordingly */
+    width: 60%;
+    /* Adjust width to 50% on tablets or smaller screens */
+    left: 20%;
+    /* Adjust left position accordingly */
   }
 }
 
 @media (max-width:1189px) {
   .about-bg-img {
-    height: 16%;
-    width: 60%; /* Adjust width to 50% on tablets or smaller screens */
-    left: 20%; /* Adjust left position accordingly */
+    height: 30%;
+    width: 60%;
+    /* Adjust width to 50% on tablets or smaller screens */
+    left: 20%;
+    /* Adjust left position accordingly */
   }
 }
 
 /* For screens smaller than 576px (mobile devices) */
 @media (max-width: 576px) {
   .about-bg-img {
-    width: 80%; /* Adjust width to 80% on mobile screens */
-    height: 80%;
-    left: 10%; /* Adjust left position to center image */
+    width: 80%;
+    /* Adjust width to 80% on mobile screens */
+    height: 40% !important;
+    left: 10%;
+    /* Adjust left position to center image */
   }
 }
 
-.about-content{
+.about-content {
   position: relative;
   z-index: 4;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   background-color: #D4302B;
 }
 
-.num-circle{
+.num-circle {
   background-color: #D4302B;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #D4302B !important;
 }
 
 .nav-link.active {
   font-weight: bold;
-  color:#D4302B !important;
+  color: #D4302B !important;
 }
 
 .bg-img-header {
@@ -438,11 +511,11 @@ header img {
   height: 80px;
 }
 
-.contact-person-style{
+.contact-person-style {
   background-color: rgb(224, 219, 219);
 }
 
-.header-title{
+.header-title {
   color: white;
   font-weight: bold;
 }
@@ -462,7 +535,8 @@ header img {
 }
 
 .schedule-container .highlight {
-  color: #e63946; /* Red for "schedules" */
+  color: #e63946;
+  /* Red for "schedules" */
 }
 
 .schedule-table {
@@ -491,12 +565,16 @@ header img {
 }
 
 .table-responsive {
-  overflow-x: auto; /* Enable horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on touch devices */
 }
 
 @media (max-width: 768px) {
-  .schedule-table th, .schedule-table td {
+
+  .schedule-table th,
+  .schedule-table td {
     padding: 8px;
     font-size: 12px;
   }
@@ -511,7 +589,9 @@ header img {
 }
 
 @media (max-width: 576px) {
-  .schedule-table th, .schedule-table td {
+
+  .schedule-table th,
+  .schedule-table td {
     font-size: 10px;
   }
 
@@ -538,7 +618,7 @@ header img {
   background-attachment: fixed;
 }
 
-.footer-container-style{
+.footer-container-style {
   background-color: #FDF4F4;
   background-image: url('assets/heading bg.png');
   background-size: cover;
@@ -586,15 +666,20 @@ header img {
 .blog-card1 {
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden; /* Ensures the image doesn't overflow */
+  overflow: hidden;
+  /* Ensures the image doesn't overflow */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 100%; /* Ensures the card height adjusts to its content */
+  height: 100%;
+  /* Ensures the card height adjusts to its content */
 }
 
 .blog-card1 img {
-  width: 100%; /* Ensures the image spans the card width */
-  height: 200px; /* Adjust this value to fit your card design */
-  object-fit: cover; /* Makes sure the image covers the area without distortion */
+  width: 100%;
+  /* Ensures the image spans the card width */
+  height: 200px;
+  /* Adjust this value to fit your card design */
+  object-fit: cover;
+  /* Makes sure the image covers the area without distortion */
 }
 
 .card-body {
@@ -639,8 +724,8 @@ header img {
   border: none;
   background: none;
   color: #D4302B;
-font-weight: bold;
-font-size: 1.3rem;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 #viewmore-btn:hover {
@@ -663,16 +748,16 @@ font-size: 1.3rem;
       margin-left: 0;
   } */
 
-  
+
 
   #main-cont-id {
-      font-size: 12px;
-      text-align: justify;
+    font-size: 12px;
+    text-align: justify;
   }
 
   #readmore-grad {
-      font-size: 12px;
-      padding: 4px;
+    font-size: 12px;
+    padding: 4px;
   }
 }
 
@@ -703,6 +788,10 @@ font-size: 1.3rem;
   margin-top: 7%;
 }
 
+#logo{
+  max-width: 60%;
+  max-height: 10% !important;
+}
 #at-logo,
 #location-logo,
 #phone-logo {
@@ -732,7 +821,7 @@ font-size: 1.3rem;
   width: 100%;
 }
 
-#submit-button {
+/* #submit-button {
   background-color: #D4302B;
   color: #fff;
   border: none;
@@ -744,87 +833,101 @@ font-size: 1.3rem;
 }
 
 #submit-button:hover {
-  background-color: #cc0000;
-}
+  background-color: #cc0000 !important;
+} */
 
 @media (max-width: 890px) {
   #text-head {
-      position: absolute;
-      text-align: center;
-      margin-top: 3%;
-      color: aliceblue;
+    position: absolute;
+    text-align: center;
+    margin-top: 3%;
+    color: aliceblue;
 
   }
 }
 
 @media (max-width: 620px) {
   #text-head {
-      position: absolute;
-      text-align: center;
-      margin-top: 2%;
-      color: aliceblue;
+    position: absolute;
+    text-align: center;
+    margin-top: 2%;
+    color: aliceblue;
 
   }
 }
 
 @media (max-width: 464px) {
   #text-head {
-      font-size: 160%;
+    font-size: 160%;
   }
 }
 
 @media (max-width: 360px) {
   #text-head {
-      font-size: 120%;
+    font-size: 120%;
   }
 }
 
-.regis-btn{
+.regis-btn {
   background-color: #D4302B;
 }
-.footer-input-sty{
+
+.footer-input-sty {
   width: 100% !important;
 }
-@media (max-width:600px) {
- .footer-row{
-  margin-right: 40%;
-  width: 70% !important;
- }
+
+@media (max-width:767px) {
+  .footer-row {
+    margin-right: 20%;
+    width: 70% !important;
+  }
+  .home-bg-img-text{
+    font-size: 1.2rem;
+  }
+  .img-fluid{
+    height: 10% !important;
+  }
 }
+
 @media (max-width:1199px) {
+
   /* .footer-input-sty{
     width: 110% !important;
   } */
-  .home-colum-image{
+  .home-colum-image {
     display: inline !important;
     width: 65% !important;
     height: 30% !important;
     margin-left: 20%;
   }
-  .card-styles{
+
+  .card-styles {
     margin-right: 100%;
     width: 130%;
     height: 90%;
   }
+
   .dashed-arrow {
     display: none;
   }
-  .left-arrow{
+
+  .left-arrow {
     display: none;
   }
-  .left-dashed-arrow{
+
+  .left-dashed-arrow {
     display: none;
   }
 }
 
-.home-colum-image{
+.home-colum-image {
   /* margin-left: 15%; */
   width: 90%;
 }
 
 
 
-.table-head-style{
+.table-head-style {
   font-size: 20px;
 }
 
@@ -885,14 +988,14 @@ font-size: 1.3rem;
   }
 } */
 
-.form-section{
+.form-section {
   border: 1px solid #ced4da;
   border-radius: 20px;
 }
 
-@media (max-width:2800px) and (min-width:1850px) {
+@media (max-width:2800px) and (min-width:1800px) {
   .about-bg-img {
-    width: 10% ;
+    width: 10%;
     left: 46%;
     margin-top: 2%;
   }
@@ -900,20 +1003,27 @@ font-size: 1.3rem;
 
 @media (max-width:1850px) {
   .about-bg-img {
-    width: 16% ;
+    width: 16%;
     left: 40%;
     margin-top: 2%;
   }
 }
 
-.right-alignment{
+.right-alignment {
   text-align: right !important;
 }
 
-.apply-gray{
+.apply-gray {
   color: gray;
 }
-.submit-button{
+
+.submit-button {
+  background-color: #D4302B;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.submit-button:hover {
   background-color: #D4302B;
   color: white;
   font-size: 1.5rem;
@@ -921,7 +1031,8 @@ font-size: 1.3rem;
 
 .card-hover-effect {
   position: relative;
-  overflow: hidden; /* Ensures the image doesn't overflow the card */
+  overflow: hidden;
+  /* Ensures the image doesn't overflow the card */
 }
 
 .hover-image {
@@ -931,19 +1042,54 @@ font-size: 1.3rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0; /* Initially hide the image */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition */
-  z-index: -1; /* Ensure the image stays behind the text */
+  opacity: 0;
+  /* Initially hide the image */
+  transition: opacity 0.3s ease-in-out;
+  /* Smooth transition */
+  z-index: -1;
+  /* Ensure the image stays behind the text */
 }
 
 .card-hover-effect:hover .hover-image {
-  opacity: 1; /* Show the image on hover */
+  opacity: 1;
+  /* Show the image on hover */
 }
 
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
   background-image: url('./assets/prev.png');
 }
 
-.carousel-control-next-icon{
+.carousel-control-next-icon {
   background-image: url('./assets/next.png');
+}
+
+.footer-input-sty{
+  background-color: #F9E1E0;
+}
+
+.footer-input-sty::placeholder {
+  color: #D4302B;
+}
+
+
+/* Photo Gallary  */
+
+
+.photo-gallary-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+@media (max-width: 767px) {
+  /* Adjust styles for tablets and smaller screens */
+  .carousel-inner .row {
+      margin: 0; /* Remove any extra margin for better alignment */
+  }
+
+  .photo-gallary-image {
+      width: 100%;
+      height: auto; /* Ensures aspect ratio is maintained */
+  }
 }

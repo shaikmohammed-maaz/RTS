@@ -41,7 +41,7 @@ function StudentAchivement({ imageVal, head, textContent }) {
     return (
         <div className="col-sm-6 col-md-4 col-xl-4 d-flex flex-column align-items-center">
             <img src={imageVal} alt="" style={{ width: '200px', height: 'auto' }} />
-            <h5 className="mt-3"><b>{head}</b></h5>
+            <h5 className="mt-3 student-achivement-head"><b>{head}</b></h5>
             <p>{textContent}</p>
         </div>
     )

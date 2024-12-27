@@ -13,7 +13,7 @@ function SecondHome() {
                 <img
                     src={HomeFirstImg}
                     alt="Home"
-                    className="img-fluid" // Make image responsive with Bootstrap's class
+                    className="img-fluid home-image" // Make image responsive with Bootstrap's class
                     style={{ objectFit: 'cover', width: '100%', height: '70vh' }} // Fullscreen height on all devices
                 />
 
@@ -41,7 +41,7 @@ function SecondHome() {
                         }}
                     >
                         <h1 className=" home-bg-img-head">Welcome to Redmond Tamil School</h1>
-                        <p>
+                        <p className="home-bg-img-text">
                             At Redmond Tamil School, we nurture students with Tamil heritage, fostering cultural pride
                             and empowering them with knowledge for a bright future.
                         </p>
