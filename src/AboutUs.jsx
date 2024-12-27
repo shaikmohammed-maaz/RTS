@@ -32,8 +32,8 @@ function AboutUs() {
                 <RowColCard />
             </div>
 
-            <div className="container-fluid mt-3 text-dark fluid-section">
-                <h2 className="text-center"><b>Accreditation and <span className="web-color"> Affiliation</span></b></h2>
+            <div className="container-fluid mt-3 p-3 text-dark fluid-section">
+                <h2 className="text-center mb-4"><b>Accreditation and <span className="web-color"> Affiliation</span></b></h2>
                 <div className="container">
                     <div className="row">
                         {imageCardValues.map((item, index) => (
@@ -44,7 +44,7 @@ function AboutUs() {
             </div>
 
             <div className="container text-dark">
-                <h2 className="text-center mt-2">
+                <h2 className="text-center m-3">
                     <b><span className="web-color">Administration</span> Team</b>
                 </h2>
                 <div className="row">
@@ -53,10 +53,10 @@ function AboutUs() {
                     ))}
                 </div>
 
-                <h2 className="text-center mt-3">
+                <h2 className="text-center m-3">
                     <b><span className="web-color">Photo</span> Gallary</b>
                 </h2>
-                <div className="row">
+                <div className="row mb-5">
                     <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel"}/>
                 </div>
 
@@ -168,7 +168,7 @@ function ImageCol({ imageLink }) {
                 alt="Accredited"
                 style={{ width: '200px', height: 'auto' }}
             />
-            <h4 className="text-center">Accredited</h4>
+            <h4 className="text-center mt-3">Accredited</h4>
         </div>
     );
 }

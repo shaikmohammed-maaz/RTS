@@ -65,18 +65,18 @@ function SecondHome() {
                 </div>
                 <div className="row">
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false} />
+                        <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false}/>
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12">
                         <ShowImages imagePathLink={EventPage} />
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mb-5">
                     <div className="col-xl-6 col-md-12 col-sm-12">
                         <ShowImages imagePathLink={achiveMentImage} />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={true} />
+                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={true} />
                     </div>
                 </div>
             </div>
@@ -112,8 +112,8 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
                         <p
                             className="num-circle rounded-circle mt-5 text-white d-flex justify-content-center align-items-center"
                             style={{
-                                width: '50px',
-                                height: '50px',
+                                width: '60px',
+                                height: '60px',
                                 margin: '0',
                                 fontSize: '0.7rem'
                             }}
@@ -122,17 +122,17 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
                         </p>
                     </div>
                     <div className="col-sm-10">
-                        <p>{date}</p>
+                        <p className="apply-gray">{date}</p>
                         <h5><b>{head}</b></h5>
-                        <p>{text}</p>
+                        <p className="apply-gray">{text}</p>
                     </div>
                 </>
             ) : (
                 <>
-                    <div className="col-sm-10">
-                        <p>{date}</p>
+                    <div className="col-sm-10 right-alignment">
+                        <p className="apply-gray">{date}</p>
                         <h5><b>{head}</b></h5>
-                        <p>{text}</p>
+                        <p className="apply-gray">{text}</p>
                     </div>
                     <div className="col-sm-2">
                         <p
@@ -155,9 +155,9 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
 
 function ShowImages({ imagePathLink }) {
     return (
-        <>
-            <img src={imagePathLink} alt="" className="home-colum-image" style={{ width: '70%', height: 'auto' }} />
-        </>
+        <div className="image-container">
+            <img src={imagePathLink} alt="" className="home-colum-image" style={{ width: '80%', height: 'auto',marginLeft:'10%' }} />
+        </div>
 
     );
 }

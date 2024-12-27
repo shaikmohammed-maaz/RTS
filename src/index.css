@@ -379,6 +379,7 @@ main h2 {
   }
 }
 
+
 .about-bg-img{
   position: absolute;
   left: 35%;
@@ -389,7 +390,7 @@ main h2 {
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
   .about-bg-img {
-    height: 60% !important;
+    height: 37% !important;
     width: 60%; /* Adjust width to 50% on tablets or smaller screens */
     left: 20%; /* Adjust left position accordingly */
   }
@@ -397,8 +398,8 @@ main h2 {
 
 @media (max-width:1189px) {
   .about-bg-img {
-    height: 40%;
-    width: 50%; /* Adjust width to 50% on tablets or smaller screens */
+    height: 41%;
+    width: 60%; /* Adjust width to 50% on tablets or smaller screens */
     left: 20%; /* Adjust left position accordingly */
   }
 }
@@ -780,12 +781,13 @@ font-size: 1.3rem;
 }
 
 @media (max-width:1199px) {
-  /* .footer-input-sty{
-    width: 100%;
-  } */
+  .footer-input-sty{
+    width: 110% !important;
+  }
   .home-colum-image{
-    display: block !important;
-    width: 50% !important;
+    display: inline !important;
+    width: 65% !important;
+    height: 30% !important;
     margin-left: 20%;
   }
   .card-styles{
@@ -877,5 +879,25 @@ font-size: 1.3rem;
   border-radius: 20px;
 }
 
+@media (max-width:2800px) and (min-width:1800px) {
+  .about-bg-img {
+    width: 10% ;
+    left: 46%;
+    margin-top: 2%;
+  }
+}
 
 
+
+.right-alignment{
+  text-align: right;
+}
+
+.apply-gray{
+  color: gray;
+}
+.submit-button{
+  background-color: #D4302B;
+  color: white;
+  font-size: 1.5rem;
+}

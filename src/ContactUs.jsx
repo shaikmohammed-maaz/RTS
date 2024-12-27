@@ -51,7 +51,7 @@ export default function ContactUs() {
                     {/* Right Section: Contact Form */}
                     <div className=" col-xl-6 col-sm-12 col-md-6">
                         <div className="form-section p-4">
-                            <h2 className="text-danger">Contact Form</h2>
+                            <h2 className="web-color text-center">Contact Form</h2>
                             <h5 className="mb-4">How can we help?</h5>
                             <p className="mb-4">
                                 Have a question or feedback? Fill out the form below, and we will
@@ -71,7 +71,7 @@ export default function ContactUs() {
                                     <label htmlFor="message" className="form-label">Message</label>
                                     <textarea className="form-control" id="message" rows="4" placeholder="Your message" ></textarea>
                                 </div>
-                                <button type="submit" className="btn btn-danger w-100">Submit</button>
+                                <button type="submit" className="btn submit-button w-100">Submit</button>
                             </form>
                         </div>
                     </div>
