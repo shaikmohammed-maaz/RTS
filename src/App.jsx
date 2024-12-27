@@ -89,9 +89,7 @@ function CreateIcon() {
       <a href="#" className="web-color" aria-label="Instagram">
         <i className="fab fa-instagram fa-2x"></i>
       </a>
-      <a href="#" className="web-color" aria-label="LinkedIn">
-        <i className="fab fa-linkedin fa-2x"></i>
-      </a>
+
     </div>
   );
 }
