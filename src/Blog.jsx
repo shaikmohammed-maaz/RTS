@@ -34,7 +34,7 @@ export default function Blog() {
             <HomeHeader />
             <Header headVal={'Blog'} />
 
-            <div className="container-fluid mt-4 text-dark">
+            <div className="container blog-container mt-4 text-dark">
                 <h2 className='text-center m-4'><b>School <span className='web-color'>news</span></b></h2>
                 <div className="row g-3">
                     <div className="col-md-4">
@@ -84,7 +84,7 @@ export default function Blog() {
             </div>
 
             {showContent  && (
-                <div className="container-fluid mt-4 text-dark mb-3">
+                <div className="container blog-container mt-4 text-dark mb-3">
                     {/* <div className="row ">
                         <div className="col-md-12 " id="school-news">
                             <h1>Event <span id="news-span">updates</span></h1>
@@ -138,7 +138,7 @@ export default function Blog() {
                 </div>
             </div>
 
-            <div className="container-fluid mt-4 text-dark mb-3">
+            <div className="container blog-container mt-4 text-dark mb-3">
                 {/* <div className="row ">
                         <div className="col-md-12 " id="school-news">
                             <h1>Event <span id="news-span">updates</span></h1>
@@ -191,7 +191,7 @@ export default function Blog() {
             </div>
 
             {showContent2 && (
-                <div className="container-fluid mt-4 text-dark mb-3" style={showContent3 ? {display:'none'}:{display:'block'}}>
+                <div className="container blog-container mt-4 text-dark mb-3" style={showContent3 ? {display:'none'}:{display:'block'}}>
                     {/* <div className="row ">
                         <div className="col-md-12 " id="school-news">
                             <h1>Event <span id="news-span">updates</span></h1>

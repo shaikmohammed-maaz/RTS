@@ -303,7 +303,7 @@ header img {
     font-size: 0.9rem;
   }
   .about-bg-img{
-    height: 40% !important;
+    height: 20% !important;
   }
 }
 
@@ -409,26 +409,20 @@ header img {
   .home-bg-img-text{
    font-size: 0.9rem !important;
   }
-
-  .cards-images {
-    width: 100% !important;    /* Ensures full width for mobile */
-    height: 100% !important;   /* Adjusts height based on aspect ratio */
-    object-fit: cover !important; /* Ensures the image still covers the area */
-    position: relative !important; /* Switch to relative positioning for better mobile layout */
-}
-
-.card-styles {
-    position: relative;  /* Ensures that the card’s content stack correctly */
-    overflow: hidden;    /* Ensures no content goes outside the bounds of the card */
-}
-
 }
 
 @media (max-width:767px) {
   .card-styles {
     width: 76% !important;
     margin-left: 13%;
+    height: 100% !important;
   }
+  .cards-images{
+    width: 100% !important;    /* Ensures full width for mobile */
+    height: 100% !important;   /* Adjusts height based on aspect ratio */
+    object-fit: cover !important; /* Ensures the image still covers the area */
+    position: relative !important; 
+  } 
 
   .image-with-text-container {
     max-width: 990px;
@@ -462,11 +456,14 @@ header img {
 
 @media (max-width:1189px) {
   .about-bg-img {
-    height: 30%;
+    height: 16%;
     width: 60%;
     /* Adjust width to 50% on tablets or smaller screens */
     left: 20%;
     /* Adjust left position accordingly */
+  }
+  .blog-container{
+    max-width: 100% !important;
   }
 }
 
@@ -475,7 +472,7 @@ header img {
   .about-bg-img {
     width: 80%;
     /* Adjust width to 80% on mobile screens */
-    height: 40% !important;
+    height: 20% !important;
     left: 10%;
     /* Adjust left position to center image */
   }
@@ -790,7 +787,7 @@ header img {
 
 #logo{
   max-width: 60%;
-  max-height: 10% !important;
+  max-height: 13% !important;
 }
 #at-logo,
 #location-logo,
@@ -884,9 +881,12 @@ header img {
   .home-bg-img-text{
     font-size: 1.2rem;
   }
-  .img-fluid{
-    height: 10% !important;
+  .blog-container{
+    max-width: 80% !important;
   }
+  /* .img-fluid{
+    height: 10% !important;
+  } */
 }
 
 @media (max-width:1199px) {

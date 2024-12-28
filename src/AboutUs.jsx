@@ -71,7 +71,7 @@ function Card({ heading, subHeading, content, index, styleContent }) {
     const [hovered, setHovered] = useState(false);
     return (
         <>
-            <div className="col-xl-3 col-md-3 col-sm-6">
+            <div className="col-xl-3 col-md-3">
                 <div className="card card-styles p-3" style={styleContent ? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}>

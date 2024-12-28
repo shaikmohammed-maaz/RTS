@@ -51,8 +51,8 @@ export default function ContactUs() {
                     {/* Right Section: Contact Form */}
                     <div className=" col-xl-6 col-sm-12 col-md-6">
                         <div className="form-section p-4">
-                            <h2 className="web-color text-center">Contact Form</h2>
-                            <h5 className="mb-4">How can we help?</h5>
+                            <h2 className="web-color text-center"><b>Contact Form</b></h2>
+                            <h5 className="mb-4"><b>How can we help?</b></h5>
                             <p className="mb-4">
                                 Have a question or feedback? Fill out the form below, and we will
                                 get back to you.

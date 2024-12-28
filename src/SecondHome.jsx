@@ -61,11 +61,11 @@ function SecondHome() {
                         quam non vitae. Amet habitant pretium nascetur nunc pretium. I incidunt et nec quis amet et id volutpat. sed vestibulum non risus nulla
                         Risus sit senectus a velit. Vestibulum euismod eget vestibulum eget elementum duis nibh odio quisque. Cras taucibus viverra aenean commodo egestas posuere tincidun tortor. Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis ipsum ipsum condimentum in aliquam commodo molestie.
                         Elementum nullam massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices curabitur felis malesuada ante arcu egestas. Donec.</p>
-                        <a href="" className="web-color">Know More</a>
+                    <a href="" className="web-color">Know More</a>
                 </div>
                 <div className="row">
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false}/>
+                        <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false} />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12">
                         <ShowImages imagePathLink={EventPage} />
@@ -89,9 +89,9 @@ function SecondHome() {
 function CardWithContentDetails({ link, spanVal, heading, checkTrue }) {
     return (
         <>
-        <div className={`${checkTrue ? 'left-align' : 'right-alignment'}`}>
-            <a href="" className="web-color"  style={{marginRight:'20%'}}
-            >{link}</a>
+            <div className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3`}>
+                <a href="" className="web-color" style={{ marginRight: '20%' }}
+                ><b>{link}</b></a>
             </div>
             <h2><b><span className="web-color">{spanVal}</span> {heading} </b></h2>
             <div className="row">
@@ -159,7 +159,7 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
 function ShowImages({ imagePathLink }) {
     return (
         <div className="image-container">
-            <img src={imagePathLink} alt="" className="home-colum-image" style={{ width: '80%', height: 'auto',marginLeft:'10%' }} />
+            <img src={imagePathLink} alt="" className="home-colum-image" style={{ width: '80%', height: 'auto', marginLeft: '10%' }} />
         </div>
 
     );
