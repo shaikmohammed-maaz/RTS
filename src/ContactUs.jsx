@@ -1,28 +1,73 @@
-
-// import bg from "./assets/headingbgContactUs.png";
-import map from "./assets/map.png";
-import atLogo from "./assets/at-logo.png";
-import location from "./assets/location-logo.png";
-import phone from "./assets/phone-logo.png";
+import React, { useState } from 'react';
 import { Header } from "./HomeHeader";
 import { FooterSection } from "./App";
 import HomeHeader from "./HomeHeader";
+import atLogo from "./assets/at-logo.png";
+import location from "./assets/location-logo.png";
+import phone from "./assets/phone-logo.png";
+import map from "./assets/map.png";
 
 export default function ContactUs() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [popUpMessage, setPopUpMessage] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!name) {
+            setPopUpMessage("Please enter your name.");
+            return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailPattern.test(email)) {
+            setPopUpMessage("Please enter a valid email.");
+            return;
+        }
+
+        if (!message) {
+            setPopUpMessage("Please enter your message.");
+            return;
+        }
+
+        const data = { name, email, message };
+
+        try {
+            const response = await fetch(
+                'https://script.google.com/macros/s/AKfycbxxNSBlOJGe4YFqRAkxzrvOfNsERMxCHfKKyaFGjZRpCyLSU9_u-PZ_Y06RDXBA7JwH/exec',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(data),
+                }
+            );
+
+            const result = await response.text();
+            console.log(result);
+            if (result.includes("Success")) { // Check if "Success" is part of the response
+                setPopUpMessage("Your message has been sent successfully!");
+                setName('');
+                setEmail('');
+                setMessage('');
+            } else {
+                setPopUpMessage("There was an error submitting the form.");
+            }
+        } catch (error) {
+            setPopUpMessage("Network error. Please try again later.");
+        }
+    };
+
     return (
         <>
-            {/* <div className="container-fluid" id="headbg">
-        <div className="row justify-content-center">
-            <h1 id="text-head">Contact Us</h1>
-            <img src={bg} alt="contact-bg" />
-        </div>
-    </div> */}
-    <HomeHeader/>
+            <HomeHeader />
             <Header headVal={'Contact Us'} />
-            <div className="container my-5 text-dark">
+            <div className="container form-container my-5 text-dark">
                 <div className="row g-3">
                     {/* Left Section: Contact Details */}
-                    <div className="col-xl-6 col-sm-12 col-md-6">
+                    <div className="col-xl-6 col-md-6">
                         <p>
                             degree or diploma from a school, college, or university. This includes
                             earning the required number of credits, taking all necessary courses,
@@ -42,43 +87,73 @@ export default function ContactUs() {
                                 <span id="gmail">3677273209</span>
                             </li>
                         </ul>
-                        <img src={map}
-                            alt="Map"
-                            className="map-img"
-                        />
+                        <img src={map} alt="Map" className="map-img" />
                     </div>
 
                     {/* Right Section: Contact Form */}
-                    <div className=" col-xl-6 col-sm-12 col-md-6">
-                        <div className="form-section p-4">
-                            <h2 className="web-color text-center"><b>Contact Form</b></h2>
-                            <h5 className="mb-4"><b>How can we help?</b></h5>
+                    <div className="col-xl-6 col-md-6">
+                        <div className="p-4 right-section">
+                            <h2 className="text-danger contact-form mt-5 contactform-h2 mb-4"><b>Contact Form</b></h2>
+                            <h6 className="mb-4 contactUs-h5"><b>How can we help?</b></h6>
                             <p className="mb-4">
                                 Have a question or feedback? Fill out the form below, and we will
                                 get back to you.
                             </p>
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className="mb-3">
-                                    <label htmlFor="name" className="form-label"> Name</label>
-                                    <input type="text" className="form-control" id="name" placeholder="Your name"
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="name"
+                                        placeholder="Name"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="email" className="form-label">Email</label>
-                                    <input type="email" className="form-control" id="email" placeholder="Your email" />
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        id="email"
+                                        placeholder="Email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="message" className="form-label">Message</label>
-                                    <textarea className="form-control" id="message" rows="4" placeholder="Your message" ></textarea>
+                                    <textarea
+                                        className="form-control"
+                                        id="message"
+                                        rows="4"
+                                        placeholder="Message"
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
+                                    ></textarea>
                                 </div>
-                                <button type="submit" className="btn submit-button w-100">Submit</button>
+                                <button type="submit" className="btn btn-danger w-100 fs-5">Submit</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
 
+            {/* Pop-up Message */}
+            {popUpMessage && (
+    <div className="dialog-overlay">
+        <div className="dialog-box">
+            <div className="dialog-header">
+                <h4>Message</h4>
+            </div>
+            <div className="dialog-body">
+                <p>{popUpMessage}</p>
+            </div>
+            <div className="dialog-footer">
+                <button onClick={() => setPopUpMessage('')} className="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+)}
             <FooterSection />
         </>
-    )
+    );
 }

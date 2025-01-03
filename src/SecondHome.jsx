@@ -14,7 +14,7 @@ function SecondHome() {
                     src={HomeFirstImg}
                     alt="Home"
                     className="img-fluid home-image" // Make image responsive with Bootstrap's class
-                    style={{ objectFit: 'cover', width: '100%', height: '70vh' }} // Fullscreen height on all devices
+                    style={{ objectFit: 'cover', width: '100%', height: '70vh'}} // Fullscreen height on all devices
                 />
 
                 <div
@@ -49,34 +49,51 @@ function SecondHome() {
                 </div>
             </div>
 
-            <div className="container-fluid tamil-content p-3 text-center text-dark mb-3">
-                <p>கற்க கசடறக் கற்பவை கற்றபின்<br />
+            <div className="container-fluid tamil-content p-3 text-center text-dark mb-3 fs-4">
+                <p>கற்க   கசடறக்   கற்பவை கற்றபின்<br />
                     நிற்க அதற்குத் தக. </p>
             </div>
             <img src={aboutUsBG} alt="" className="about-bg-img" />
             <div className="container d-flex flex-column align-items-center justify-content-center text-dark mb-2">
                 <div className="about-content m-5 d-flex flex-column align-items-center justify-content-center text-dark">
-                    <h3 style={{ fontWeight: 'bold' }}>About Us</h3>
+                    <h3 style={{ fontWeight: 'bold', marginBottom: '3%' ,marginTop: '-4%'}}>About Us</h3>
                     <p>vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam. Pharetra laoreet lobortis ut vivamus placerat vitae non feugiat. Pharetra mauris in
                         quam non vitae. Amet habitant pretium nascetur nunc pretium. I incidunt et nec quis amet et id volutpat. sed vestibulum non risus nulla
                         Risus sit senectus a velit. Vestibulum euismod eget vestibulum eget elementum duis nibh odio quisque. Cras taucibus viverra aenean commodo egestas posuere tincidun tortor. Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis ipsum ipsum condimentum in aliquam commodo molestie.
                         Elementum nullam massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices curabitur felis malesuada ante arcu egestas. Donec.</p>
-                    <a href="" className="web-color">Know More</a>
+                    <a href="" className="web-color mt-4"  >Know More</a>
                 </div>
                 <div className="row">
                     <div className="col-xl-6 col-md-12 col-sm-12">
                         <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false} />
                     </div>
-                    <div className="col-xl-6 col-md-12 col-sm-12">
-                        <ShowImages imagePathLink={EventPage} />
+                    <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none">
+                        <ShowImages imagePathLink={EventPage} isTabView={false} />
                     </div>
                 </div>
-                <div className="row mb-5">
-                    <div className="col-xl-6 col-md-12 col-sm-12">
+                <div className="row tabView-column-show">
+                    <div className="col-md-6 tabView-colum1">
+                        <ShowImages imagePathLink={EventPage} />
+                    </div>
+                    <div className="col-md-6 tabView-colum2">
                         <ShowImages imagePathLink={achiveMentImage} />
                     </div>
+                </div>
+
+                <div className="row mb-5 not-show-column-mobile">
+                    <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none">
+                        <ShowImages imagePathLink={achiveMentImage} isTabView={true} />
+                    </div>
+                    <div className="col-xl-6 col-md-12 col-sm-12 mt-3">
+                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true} />
+                    </div>
+                </div>
+                <div className="row mb-5 show-change-column-mobile">
                     <div className="col-xl-6 col-md-12 col-sm-12">
                         <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true} />
+                    </div>
+                    <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none">
+                        <ShowImages imagePathLink={achiveMentImage} />
                     </div>
                 </div>
             </div>
@@ -90,10 +107,14 @@ function CardWithContentDetails({ link, spanVal, heading, checkTrue }) {
     return (
         <>
             <div className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3`}>
-                <a href="" className="web-color" style={{ marginRight: '20%' }}
+                <a href="" className="web-color " style={{ marginRight: '20%' }}
                 ><b>{link}</b></a>
             </div>
-            <h2><b><span className="web-color">{spanVal}</span> {heading} </b></h2>
+            <h2 className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3 span-val`}>
+            <b>
+                <span className="web-color">{spanVal}</span> {heading}
+            </b>
+            </h2>
             <div className="row">
                 {numWithText.map((item, index) => (
                     <CreatenumberWithTexts key={index} date={item.dateValue}
@@ -156,10 +177,11 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
     )
 }
 
-function ShowImages({ imagePathLink }) {
+function ShowImages({ imagePathLink,isTabView }) {
     return (
         <div className="image-container">
-            <img src={imagePathLink} alt="" className="home-colum-image" style={{ width: '80%', height: 'auto', marginLeft: '10%' }} />
+            <img src={imagePathLink} alt="" className="home-colum-image" style={isTabView ? { width: '69%', height: 'auto'} : { width: '69%', height: 'auto',marginLeft:'19%'}}
+ />
         </div>
 
     );

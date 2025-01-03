@@ -18,7 +18,7 @@ function AboutUs() {
             {/* <header className="about p-3 mb-3">
                 <h2>About Us</h2>
             </header> */}
-            <div className="container mt-3 card-container">
+            <div className="container mt-3 card-container mt-5 mb-5">
                 <div className="row g-3">
                     {cardDetails.map((item, index) => (
                         <Card
@@ -33,8 +33,8 @@ function AboutUs() {
                 <RowColCard />
             </div>
 
-            <div className="container-fluid mt-3 p-3 text-dark fluid-section">
-                <h2 className="text-center mb-4"><b>Accreditation and <span className="web-color"> Affiliation</span></b></h2>
+            <div className="container-fluid mt-5 p-3 text-dark fluid-section ">
+                <h2 className="text-center mb-5 mt-4"><b>Accreditation and <span className="web-color"> Affiliation</span></b></h2>
                 <div className="container">
                     <div className="row">
                         {imageCardValues.map((item, index) => (
@@ -44,7 +44,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="container text-dark">
+            <div className="container text-dark mt-5">
                 <h2 className="text-center m-3">
                     <b><span className="web-color">Administration</span> Team</b>
                 </h2>
@@ -54,7 +54,7 @@ function AboutUs() {
                     ))}
                 </div>
 
-                <h2 className="text-center m-3">
+                <h2 className="text-center m-3 mt-5 mb-5">
                     <b><span className="web-color">Photo</span> Gallary</b>
                 </h2>
                 <div className="row mb-5">
@@ -78,10 +78,10 @@ function Card({ heading, subHeading, content, index, styleContent }) {
                     {
                         hovered ? (
                             <img
-                            src={imag1}
-                            alt=""
-                            className="cards-images"
-                          />
+                                src={imag1}
+                                alt=""
+                                className="cards-images"
+                            />
                         ) :
                             (
                                 <><h2 style={styleContent ? { color: "#D4302B" } : { color: "white" }}><b>{heading}</b></h2>
@@ -123,7 +123,7 @@ function RowColCard() {
             </h1>
             <div className="row">
                 {imageWithContent.map((item, index) => (
-                    <CardCol imgVal={item.imageValue} cardHead={item.headValue}
+                    <CardCol imgVal={item.imageValue} cardHead={item.headValue} subHead={item.subHead}
                         cardText={item.contentValue} isVal={index % 2 === 0 ? true : false} />
                 ))}
             </div>
@@ -132,7 +132,7 @@ function RowColCard() {
 }
 
 
-function CardCol({ imgVal, cardHead, cardText, isVal }) {
+function CardCol({ imgVal, cardHead, subHead, cardText, isVal }) {
     return (
         <>
             {isVal ? (
@@ -141,25 +141,29 @@ function CardCol({ imgVal, cardHead, cardText, isVal }) {
                         <img
                             src={imgVal}
                             alt="Illustration"
-                            className="img-fluid rounded "
+                            className="img-fluid rounded"
                             style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'cover' }}
                         />
                     </div>
 
-                    <div className="col-sm-6 col-md-8 align-items-center">
+                    <div className="col-sm-6 col-md-8 align-items-center ">
                         <h5 className="web-color text-center"><b>{cardHead}</b></h5>
-                        <p>
-                            {cardText}
-                        </p>
+                        <div>
+                        {subHead && <h6><b>{subHead}</b></h6>} {/* Use subHead instead of item.subHead */}
+                        {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
+                            <p key={idx} className="m-auto">* {content}</p>
+                        ))}
+                        </div>
                     </div>
                 </div>
             ) : (
                 <div className="row d-flex flex-row align-items-center">
                     <div className="col-sm-6 col-md-8">
                         <h5 className="web-color text-center"><b>{cardHead}</b></h5>
-                        <p>
-                            {cardText}
-                        </p>
+                            {subHead && <h3>{subHead}</h3>} {/* Use subHead instead of item.subHead */}
+                            {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
+                                <p key={idx} className="m-auto">* {content}</p>
+                            ))}
                     </div>
 
                     <div className="col-sm-6 col-md-4 d-flex flex-column">
@@ -173,8 +177,9 @@ function CardCol({ imgVal, cardHead, cardText, isVal }) {
                 </div>
             )}
         </>
-    )
+    );
 }
+
 
 function ImageCol({ imageLink }) {
     return (
@@ -192,7 +197,7 @@ function ImageCol({ imageLink }) {
 export function AdmissionColImages({ personImage, personName, personDetails }) {
     return (
         <>
-            <div className="col-xl-4 col-sm-6 d-flex flex-column align-items-center">
+            <div className="col-xl-4 col-sm-6 d-flex flex-column align-items-center mt-5">
                 <img
                     src={personImage}
                     alt="Accredited"
@@ -208,10 +213,33 @@ export function AdmissionColImages({ personImage, personName, personDetails }) {
 }
 
 
+// import React, { useState, useEffect } from "react";
+
 export function PhotoGallaryFun({ pictures = [], idVal }) {
-    // Split the pictures into groups of 3 for tablet/mobile and 6 for larger screens
+    const [chunkSize, setChunkSize] = useState(4); // Default to laptop view chunk size
+
+    // Dynamically update chunk size based on screen width
+    useEffect(() => {
+        const updateChunkSize = () => {
+            if (window.innerWidth < 768) {
+                setChunkSize(1); // Mobile view: 1 card per row
+            } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+                setChunkSize(3); // Tablet view: 3 cards per row
+            } else {
+                setChunkSize(4); // Laptop/Desktop view: 4 cards per row
+            }
+        };
+
+        updateChunkSize(); // Set chunk size initially
+        window.addEventListener("resize", updateChunkSize); // Update on window resize
+
+        return () => {
+            window.removeEventListener("resize", updateChunkSize); // Cleanup listener
+        };
+    }, []);
+
+    // Split pictures into chunks
     const chunkedPictures = [];
-    const chunkSize = window.innerWidth < 768 ? 3 : 6; // Dynamically decide chunk size based on screen width
     for (let i = 0; i < pictures.length; i += chunkSize) {
         chunkedPictures.push(pictures.slice(i, i + chunkSize));
     }
@@ -224,16 +252,22 @@ export function PhotoGallaryFun({ pictures = [], idVal }) {
                         key={index}
                         className={`carousel-item ${index === 0 ? "active" : ""}`}
                     >
-                        <div className="row g-5">
+                        <div className="row justify-content-center">
                             {chunk.map((picture, picIndex) => (
                                 <div
                                     key={picIndex}
-                                    className="col-lg-2 col-md-4 col-sm-4 col-4 d-flex justify-content-center"
+                                    className={`col-lg-${12 / chunkSize} col-md-${12 / chunkSize} col-sm-12 d-flex justify-content-center`}
                                 >
                                     <img
                                         src={picture}
                                         alt={`Slide ${index + 1} - Image ${picIndex + 1}`}
-                                        className="photo-gallary-image"
+                                        className="photo-gallary-image w-100"
+                                        style={{
+                                            maxWidth: "90%",
+                                            height: "auto",
+                                            objectFit: "cover",
+                                            borderRadius: "8px",
+                                        }}
                                     />
                                 </div>
                             ))}
@@ -261,8 +295,10 @@ export function PhotoGallaryFun({ pictures = [], idVal }) {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
+
     );
 }
+
 
 
 

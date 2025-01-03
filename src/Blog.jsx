@@ -1,10 +1,13 @@
 // import bg2 from "./assets/heading bg.png";
 // import BlogCard from "./BlogCard";
-import gradimg from "./assets/homeImgfour.jpg";
+
 import React, { useState } from 'react';
 import { Header } from "./HomeHeader";
 import { FooterSection } from "./App";
 import HomeHeader from "./HomeHeader";
+import BlogContents from './blogContents.js'
+import gradimg from "./assets/homeImgfour.jpg"; 
+// import ReadMorePage from './ReadMorePage.jsx';
 
 export default function Blog() {
 
@@ -12,6 +15,7 @@ export default function Blog() {
     const [showContent2, setShowContent2] = useState(false);
     const [showContent3, setShowContent3] = useState(false);
     const [showContent4, setShowContent4] = useState(false);
+
 
     const handleClick = () => {
         setShowContent(true);
@@ -39,34 +43,52 @@ export default function Blog() {
                 <div className="row g-3">
                     <div className="col-md-4">
                         <div class="blog-card1">
-                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                graddate={"26th December 2024"} dateid={"graddate1"}
-                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits "}
+                        <BlogCard
+                                gradimg={gradimg}
+                                blogimgid={"x"}
+                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"}
+                                h1id={"grad1-cont1"}
+                                graddate={"26th December 2024"}
+                                dateid={"graddate1"}
+                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
                                 excescont={"This includes earning the required number of credits."}
-                                maincontid={"main-cont-id"} btnid={"readmore-grad"} />
+                                maincontid={"main-cont-id"}
+                                btnid={"readmore-grad"}
+                            />
                         </div>
                     </div>
 
                     <div className="col-md-4">
                         <div class="blog-card1">
-                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                graddate={"26th December 2024"} dateid={"graddate1"}
+                        <BlogCard
+                                gradimg={gradimg}
+                                blogimgid={"grad-img2"}
+                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"}
+                                h1id={"grad2-cont2"}
+                                graddate={"26th December 2024"}
+                                dateid={"graddate2"}
                                 maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
-                                maincontid={"main-cont-id"} btnid={"readmore-grad"}
-                                excescont={"This includes earning the required number of credits."} />
+                                excescont={"This includes earning the required number of credits."}
+                                maincontid={"main-cont-id"}
+                                btnid={"readmore-grad"}
+                            />
                         </div>
                     </div>
 
                     <div className="col-md-4">
                         <div class="blog-card1">
-                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                graddate={"26th December 2024"} dateid={"graddate1"}
+                        <BlogCard
+                                gradimg={gradimg}
+                                blogimgid={"grad-img3"}
+                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"}
+                                h1id={"grad3-cont3"}
+                                graddate={"26th December 2024"}
+                                dateid={"graddate3"}
                                 maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
-                                maincontid={"main-cont-id"} btnid={"readmore-grad"}
-                                excescont={"This includes earning the required number of credits."} />
+                                excescont={"This includes earning the required number of credits."}
+                                maincontid={"main-cont-id"}
+                                btnid={"readmore-grad"}
+                            />
                         </div>
                     </div>
                 </div>
@@ -75,7 +97,7 @@ export default function Blog() {
 
             {/* event updates */}
 
-            <div className="container mt-4 mb-4" style={showContent ? {display:'none'}:{display:'block'}}>
+            <div className="container mt-4 mb-4" style={showContent ? { display: 'none' } : { display: 'block' }}>
                 <div className="row viewmore">
                     <div className="col-md-12 " >
                         <button id="viewmore-btn" onClick={handleClick}>View more</button>
@@ -83,46 +105,57 @@ export default function Blog() {
                 </div>
             </div>
 
-            {showContent  && (
+            {showContent && (
                 <div className="container blog-container mt-4 text-dark mb-3">
-                    {/* <div className="row ">
-                        <div className="col-md-12 " id="school-news">
-                            <h1>Event <span id="news-span">updates</span></h1>
-                        </div>
-                    </div> */}
-                    {/* <h2 className='text-center'>Event <span className='web-color'>updates</span></h2> */}
-
                     <div className="row g-3">
                         <div className="col-md-4">
                             <div class="blog-card1">
-                                <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                    graddate={"26th December 2024"} dateid={"graddate1"}
-                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits "}
-                                    excescont={"This includes earning the required number of credits."}
-                                    maincontid={"main-cont-id"} btnid={"readmore-grad"} />
+                            <BlogCard
+                                gradimg={gradimg}
+                                blogimgid={"x"}
+                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"}
+                                h1id={"grad1-cont1"}
+                                graddate={"26th December 2024"}
+                                dateid={"graddate1"}
+                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
+                                excescont={"This includes earning the required number of credits."}
+                                maincontid={"main-cont-id"}
+                                btnid={"readmore-grad"}
+                            />
                             </div>
                         </div>
 
                         <div className="col-md-4">
                             <div class="blog-card1">
-                                <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                    graddate={"26th December 2024"} dateid={"graddate1"}
-                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
-                                    maincontid={"main-cont-id"} btnid={"readmore-grad"}
-                                    excescont={"This includes earning the required number of credits."} />
+                            <BlogCard
+                                gradimg={gradimg}
+                                blogimgid={"x"}
+                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"}
+                                h1id={"grad1-cont1"}
+                                graddate={"26th December 2024"}
+                                dateid={"graddate1"}
+                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
+                                excescont={"This includes earning the required number of credits."}
+                                maincontid={"main-cont-id"}
+                                btnid={"readmore-grad"}
+                            />
                             </div>
                         </div>
 
                         <div className="col-md-4">
                             <div class="blog-card1">
-                                <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                    graddate={"26th December 2024"} dateid={"graddate1"}
-                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
-                                    maincontid={"main-cont-id"} btnid={"readmore-grad"}
-                                    excescont={"This includes earning the required number of credits."} />
+                            <BlogCard
+                                gradimg={gradimg}
+                                blogimgid={"x"}
+                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"}
+                                h1id={"grad1-cont1"}
+                                graddate={"26th December 2024"}
+                                dateid={"graddate1"}
+                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
+                                excescont={"This includes earning the required number of credits."}
+                                maincontid={"main-cont-id"}
+                                btnid={"readmore-grad"}
+                            />
                             </div>
                         </div>
                     </div>
@@ -130,7 +163,7 @@ export default function Blog() {
             )}
 
 
-            <div className="container mt-4 mb-4" style={showContent ? {display:'block'}: {display:'none'}}>
+            <div className="container mt-4 mb-4" style={showContent ? { display: 'block' } : { display: 'none' }}>
                 <div className="row viewmore">
                     <div className="col-md-12 " >
                         <button id="viewmore-btn" onClick={handleClick4}>View less</button>
@@ -138,51 +171,47 @@ export default function Blog() {
                 </div>
             </div>
 
+{/* EVENT  */}
             <div className="container blog-container mt-4 text-dark mb-3">
-                {/* <div className="row ">
-                        <div className="col-md-12 " id="school-news">
-                            <h1>Event <span id="news-span">updates</span></h1>
-                        </div>
-                    </div> */}
                 <h2 className='text-center'>Event <span className='web-color'>updates</span></h2>
 
                 <div className="row g-3">
                     <div className="col-md-4">
                         <div class="blog-card1">
-                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                graddate={"26th December 2024"} dateid={"graddate1"}
-                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits "}
-                                excescont={"This includes earning the required number of credits."}
-                                maincontid={"main-cont-id"} btnid={"readmore-grad"} />
+                        <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
+                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
+                                    graddate={"26th December 2024"} dateid={"graddate1"}
+                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits "}
+                                    excescont={"This includes earning the required number of credits."}
+                                    maincontid={"main-cont-id"} btnid={"readmore-grad"} />
                         </div>
                     </div>
 
                     <div className="col-md-4">
                         <div class="blog-card1">
-                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                graddate={"26th December 2024"} dateid={"graddate1"}
-                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
-                                maincontid={"main-cont-id"} btnid={"readmore-grad"}
-                                excescont={"This includes earning the required number of credits."} />
+                        <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
+                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
+                                    graddate={"26th December 2024"} dateid={"graddate1"}
+                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
+                                    maincontid={"main-cont-id"} btnid={"readmore-grad"}
+                                    excescont={"This includes earning the required number of credits."} />
                         </div>
                     </div>
 
                     <div className="col-md-4">
                         <div class="blog-card1">
-                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                graddate={"26th December 2024"} dateid={"graddate1"}
-                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
-                                maincontid={"main-cont-id"} btnid={"readmore-grad"}
-                                excescont={"This includes earning the required number of credits."} />
+                        <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
+                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
+                                    graddate={"26th December 2024"} dateid={"graddate1"}
+                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
+                                    maincontid={"main-cont-id"} btnid={"readmore-grad"}
+                                    excescont={"This includes earning the required number of credits."} />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container mt-4 mb-4" style={showContent2 ? {display:'none'}: {display:'block'}}>
+            <div className="container mt-4 mb-4" style={showContent2 ? { display: 'none' } : { display: 'block' }}>
                 <div className="row viewmore">
                     <div className="col-md-12 " >
                         <button id="viewmore-btn" onClick={handleClick2}>View more</button>
@@ -191,7 +220,7 @@ export default function Blog() {
             </div>
 
             {showContent2 && (
-                <div className="container blog-container mt-4 text-dark mb-3" style={showContent3 ? {display:'none'}:{display:'block'}}>
+                <div className="container blog-container mt-4 text-dark mb-3" style={showContent3 ? { display: 'none' } : { display: 'block' }}>
                     {/* <div className="row ">
                         <div className="col-md-12 " id="school-news">
                             <h1>Event <span id="news-span">updates</span></h1>
@@ -202,18 +231,7 @@ export default function Blog() {
                     <div className="row ">
                         <div className="col-md-4">
                             <div class="blog-card1">
-                                <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
-                                    graddate={"26th December 2024"} dateid={"graddate1"}
-                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits "}
-                                    excescont={"This includes earning the required number of credits."}
-                                    maincontid={"main-cont-id"} btnid={"readmore-grad"} />
-                            </div>
-                        </div>
-
-                        <div className="col-md-4">
-                            <div class="blog-card1">
-                                <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
+                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
                                     h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
                                     graddate={"26th December 2024"} dateid={"graddate1"}
                                     maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
@@ -224,7 +242,18 @@ export default function Blog() {
 
                         <div className="col-md-4">
                             <div class="blog-card1">
-                                <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
+                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
+                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
+                                    graddate={"26th December 2024"} dateid={"graddate1"}
+                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
+                                    maincontid={"main-cont-id"} btnid={"readmore-grad"}
+                                    excescont={"This includes earning the required number of credits."} />
+                            </div>
+                        </div>
+
+                        <div className="col-md-4">
+                            <div class="blog-card1">
+                            <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
                                     h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
                                     graddate={"26th December 2024"} dateid={"graddate1"}
                                     maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
@@ -236,7 +265,7 @@ export default function Blog() {
                 </div>
             )}
 
-            <div className="container mt-4 mb-4"  style={showContent2 ?  {display:'block'}:{display:'none'}}>
+            <div className="container mt-4 mb-4" style={showContent2 ? { display: 'block' } : { display: 'none' }}>
                 <div className="row viewmore">
                     <div className="col-md-12 " >
                         <button id="viewmore-btn" onClick={handleClick3}>View less</button>
@@ -250,25 +279,26 @@ export default function Blog() {
 }
 
 
-function BlogCard({ gradimg, blogimgid, h1cont, h1id, graddate, maincont, dateid, maincontid, btnid, excescont }) {
+export function BlogCard({ gradimg, blogimgid, h1cont, h1id, graddate, maincont, dateid, maincontid, btnid, excescont }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleContent = () => {
-        setIsExpanded(!isExpanded);
+        // setIsExpanded(!isExpanded);
+        window.location.href = "/read-more";
     };
 
     return (
         <div className="card h-100">
             <img src={gradimg} alt="grad-img" id={blogimgid} className="card-img-top img-fluid" />
             <div className="card-body">
-                <h4 id={h1id} className="blog-card-header text-center"><b>{h1cont}</b></h4>
-                <p id={dateid} className="text-muted text-center">{graddate}</p>
-                <p id={maincontid}>
+                <h4 id="grad1-cont1" className="blog-card-header text-center"><b>{h1cont}</b></h4>
+                <p className="text-muted text-center">{graddate}</p>
+                <p id="main-cont-id">
                     {isExpanded ? `${maincont} ${excescont}` : maincont}
                 </p>
                 <div className="text-center m-3">
                     <button className="login-style2 fs-6 pt-2 pb-2" onClick={toggleContent}>
-                        <b>{isExpanded ? "Show Less" : "Read More"}</b>
+                        <b>Read More</b>
                     </button>
                 </div>
             </div>

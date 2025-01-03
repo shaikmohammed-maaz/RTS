@@ -11,11 +11,14 @@ import Volunteer from './Volunteer.jsx';
 import Acedemics from "./Acedemics.jsx";
 import Blog from "./Blog.jsx";
 import ContactUs from "./ContactUs.jsx";
+import ReadMorePage from './ReadMorePage.jsx';
+
 
 function App() {
   return (
     <Router>
       <Routes>
+      <Route path="/read-more" element={<ReadMorePage />} /> 
         <Route path="/RTS" element={<SecondHome />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/student-section" element={<StudentSection />} />
@@ -28,7 +31,6 @@ function App() {
     </Router>
   );
 }
-
 
 export function FooterSection() {
   return (

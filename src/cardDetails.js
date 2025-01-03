@@ -42,18 +42,28 @@ let cardsInfo = [
 export let imageWithContent = [
     {
         imageValue:  mission,
-        headValue: "Our Commitment",
-        contentValue: "DummyCorp is a leading provider of innovative solutions that streamlineyour workflow and enhance productivity. Established in 2024, we specializein creating unique experiences for our global clients."
+        headValue: "Our Mission",
+        contentValue: ["As a non-profit organization, we aim to make Tamil education accessible to all, instilling a lifelong connection to the Tamil language and culture in our students."]
     },
     {
         imageValue:  vision ,
-        headValue: "Our Commitment",
-        contentValue: "DummyCorp is a leading provider of innovative solutions that streamlineyour workflow and enhance productivity. Established in 2024, we specializein creating unique experiences for our global clients."
+        headValue: "CORE AREA OF FOCUS",
+        contentValue: ["Building foundational and advanced proficiency in Tamil through interactive and structured lessons",
+            "Integrating lessons on Tamil heritage, literature, and traditions to create a holistic learning experience.",
+            "Encouraging students to excel in academics through periodic evaluations and continuous feedback."
+        ]
     },
     {
         imageValue:  values ,
-        headValue: "Our Commitment",
-        contentValue: "DummyCorp is a leading provider of innovative solutions that streamlineyour workflow and enhance productivity. Established in 2024, we specializein creating unique experiences for our global clients."
+        headValue: "OUR OBJECTIVES",
+        subHead : "Students who successfully complete the final year will:",
+        contentValue: ["Converse with each other in Tamil and exchange ideas without hesitation.",
+            "Read, understand and write flawlessly Tamil.",
+            "Interpret from English to Tamil and from Tamil to English smoothly.",
+            "Knows the pride of Tamil language and Tamil language education",
+            "Know the history of Tamil language and Tamil culture.",
+            "Passionate about teaching Tamil to others."
+        ]
     }
 ];
 
@@ -186,4 +196,21 @@ export let commuincationProtocalsValues = [
     }
 ];
 
+export let libraryInformation = [
+    {
+        heading : "Welcome to our vibrant and comprehensive library, a cherished resource for our community! Managed and maintained by our dedicated RTS volunteers, our library boasts an extensive collection of over 1,000 titles, serving more than 450 students and their families.",
+        subHeading : "Our library caters to a wide range of readers, ensuring there's something for everyone:",
+        points : [
+            "Younger Kids: Picture books, early readers, and engaging tales to spark the joy of reading.",
+            "Older Kids: Chapter books, educational resources, and adventure stories to inspire and educate.",
+            "Adults: A curated selection of novels, comedies, educational material, and stories for leisure or learning.",
+            "We proudly offer books across diverse categories, including:",
+            "Comedy: Lighthearted reads to brighten your day.",
+            "Education: Informative resources to support academic growth and lifelong learning.",
+            "Stories: Captivating narratives for readers of all ages.",
+            "Our library is conveniently accessible every Sunday from 10:30 AM to 11:50 AM at the Bellevue College R Building lobby. During this time, our friendly library team will be available to assist you in exploring our collection, borrowing books, and answering any questions.",
+            "Come visit us to discover a world of knowledge, laughter, and inspiration!"
+        ]
+    }
+]
 export default cardsInfo;
