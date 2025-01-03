@@ -3,7 +3,7 @@ import { BlogCard } from './Blog';
 import gradimg from "./assets/homeImgfour.jpg";
 
 
-function ReadMorePage({ }) {
+function ReadMorePage() {
     return (
         <>
             <Header headVal={'Blog'} />
