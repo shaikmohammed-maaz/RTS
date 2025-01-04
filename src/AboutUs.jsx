@@ -19,16 +19,18 @@ function AboutUs() {
                 <h2>About Us</h2>
             </header> */}
             <div className="container mt-3 card-container mt-5 mb-5">
-                <div className="row g-3">
-                    {cardDetails.map((item, index) => (
-                        <Card
-                            heading={item.heading}
-                            subHeading={item.subHead}
-                            content={item.content}
-                            index={index}
-                            styleContent={index % 2 === 0 ? true : false}
-                        />
-                    ))}
+                <div className="align-items-center">
+                    <div className="row g-3 card-row">
+                        {cardDetails.map((item, index) => (
+                            <Card
+                                heading={item.heading}
+                                subHeading={item.subHead}
+                                content={item.content}
+                                index={index}
+                                styleContent={index % 2 === 0 ? true : false}
+                            />
+                        ))}
+                    </div>
                 </div>
                 <RowColCard />
             </div>
@@ -72,7 +74,7 @@ function Card({ heading, subHeading, content, index, styleContent }) {
     return (
         <>
             <div className="col-xl-3 col-md-3">
-                <div className="card card-styles p-3" style={styleContent ? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}
+                <div className="card card-styles p-2" style={styleContent ? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}>
                     {
@@ -84,10 +86,11 @@ function Card({ heading, subHeading, content, index, styleContent }) {
                             />
                         ) :
                             (
-                                <><h2 style={styleContent ? { color: "#D4302B" } : { color: "white" }}><b>{heading}</b></h2>
+                                <div className={index == 0 ? 'm-auto' : ''}>
+                                    <h2 style={styleContent ? { color: "#D4302B" } : { color: "white" }} className="text-center"><b>{heading}</b></h2>
                                     <h5 style={styleContent ? { color: "black" } : { color: "white" }}><b>{subHeading}</b></h5>
                                     <p style={styleContent ? { color: "black" } : { color: "white" }}>{content}</p>
-                                </>)
+                                </div>)
                     }
 
                 </div>
@@ -119,7 +122,7 @@ function RowColCard() {
     return (
         <div className="text-dark container image-with-text-container">
             <h1 className="text-center mt-5 mb-3">
-                <b>Our <span className="web-color"> Mission, Vision, and Values</span></b>
+                <b>Our <span className="web-color"> Core Area Of Focus, Our objectives</span></b>
             </h1>
             <div className="row">
                 {imageWithContent.map((item, index) => (
@@ -149,10 +152,10 @@ function CardCol({ imgVal, cardHead, subHead, cardText, isVal }) {
                     <div className="col-sm-6 col-md-8 align-items-center ">
                         <h5 className="web-color text-center"><b>{cardHead}</b></h5>
                         <div>
-                        {subHead && <h6><b>{subHead}</b></h6>} {/* Use subHead instead of item.subHead */}
-                        {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
-                            <p key={idx} className="m-auto">* {content}</p>
-                        ))}
+                            {subHead && <h6><b>{subHead}</b></h6>} {/* Use subHead instead of item.subHead */}
+                            {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
+                                <p key={idx} className="m-auto">* {content}</p>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -160,10 +163,10 @@ function CardCol({ imgVal, cardHead, subHead, cardText, isVal }) {
                 <div className="row d-flex flex-row align-items-center">
                     <div className="col-sm-6 col-md-8">
                         <h5 className="web-color text-center"><b>{cardHead}</b></h5>
-                            {subHead && <h3>{subHead}</h3>} {/* Use subHead instead of item.subHead */}
-                            {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
-                                <p key={idx} className="m-auto">* {content}</p>
-                            ))}
+                        {subHead && <h3>{subHead}</h3>} {/* Use subHead instead of item.subHead */}
+                        {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
+                            <p key={idx} className="m-auto">* {content}</p>
+                        ))}
                     </div>
 
                     <div className="col-sm-6 col-md-4 d-flex flex-column">

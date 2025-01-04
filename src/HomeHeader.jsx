@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from './assets/logo.png';
 
 export default function HomeHeader() {
     const location = useLocation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const sidebarRef = useRef(null); // Reference for the sidebar
 
     const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
+        setIsSidebarOpen(!isSidebarOpen); // Toggle sidebar open/close
     };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Close sidebar if clicked outside and it's open
+            if (
+                isSidebarOpen && 
+                sidebarRef.current && 
+                !sidebarRef.current.contains(event.target) && 
+                !event.target.classList.contains('navbar-toggler')
+            ) {
+                setIsSidebarOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isSidebarOpen]);
 
     return (
         <>
@@ -21,15 +42,14 @@ export default function HomeHeader() {
                     <button
                         className="navbar-toggler"
                         type="button"
-                        onClick={toggleSidebar} // Open sidebar on toggle button click
+                        onClick={toggleSidebar} // Toggle sidebar
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
                     <div className="collapse navbar-collapse nav-style" id="collapsibleNavbar">
                         <ul className="navbar-nav ms-auto">
-                            {/* Navbar Links */}
-                            {['/RTS', '/about-us', '/student-section', '/parent-section', '/volunteer', '/acedemics', '/blog', '/contactUs'].map((path, index) => (
+                            {['/Home', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Acedemics', '/Blog', '/ContactUs'].map((path, index) => (
                                 <li className="nav-item" key={index}>
                                     <Link
                                         className={`nav-link fs-5 text-dark ${location.pathname === path ? 'active' : ''}`}
@@ -45,19 +65,21 @@ export default function HomeHeader() {
                                     </Link>
                                 </li>
                             ))}
-
                         </ul>
                     </div>
                 </div>
             </nav>
 
             {/* Sidebar */}
-            <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+            <div
+                ref={sidebarRef} // Assign reference to sidebar
+                className={`sidebar ${isSidebarOpen ? 'open' : ''}`}
+            >
                 <button className="close-btn" onClick={toggleSidebar}>
                     &times;
                 </button>
                 <ul>
-                    {['/RTS', '/about-us', '/student-section', '/parent-section', '/volunteer', '/acedemics', '/blog', '/contactUs'].map((path, index) => (
+                    {['/Home', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Acedemics', '/Blog', '/ContactUs'].map((path, index) => (
                         <li key={index}>
                             <Link
                                 className={`sidebar-link ${location.pathname === path ? 'active' : ''}`}
@@ -73,6 +95,7 @@ export default function HomeHeader() {
         </>
     );
 }
+
 
 
 export function Header({ headVal }) {

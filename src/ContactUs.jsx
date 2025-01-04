@@ -15,21 +15,21 @@ export default function ContactUs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!name) {
-            setPopUpMessage("Please enter your name.");
-            return;
-        }
+        // if (!name) {
+        //     setPopUpMessage("Please enter your name.");
+        //     return;
+        // }
 
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email || !emailPattern.test(email)) {
-            setPopUpMessage("Please enter a valid email.");
-            return;
-        }
+        // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // if (!email || !emailPattern.test(email)) {
+        //     setPopUpMessage("Please enter a valid email.");
+        //     return;
+        // }
 
-        if (!message) {
-            setPopUpMessage("Please enter your message.");
-            return;
-        }
+        // if (!message) {
+        //     setPopUpMessage("Please enter your message.");
+        //     return;
+        // }
 
         const data = { name, email, message };
 
@@ -69,7 +69,7 @@ export default function ContactUs() {
                     {/* Left Section: Contact Details */}
                     <div className="col-xl-6 col-md-6">
                         <p>
-                            degree or diploma from a school, college, or university. This includes
+                            Degree or diploma from a school, college, or university. This includes
                             earning the required number of credits, taking all necessary courses,
                             and completing any other requirements
                         </p>
@@ -82,12 +82,13 @@ export default function ContactUs() {
                                 <img src={location} alt="location-logo" id="location-logo" />
                                 <span id="gmail">ganesh nagar,camproad,600073</span>
                             </li>
-                            <li className="mb-3">
+                            <li className="">
                                 <img src={phone} alt="phone-logo" id="phone-logo" />
                                 <span id="gmail">3677273209</span>
                             </li>
                         </ul>
                         <img src={map} alt="Map" className="map-img" />
+                        {/* <iframe src="https://www.google.com/maps/place/Reception+Desk,+Bellevue,+WA+98005,+USA/@47.5859163,-122.1500019,17z/data=!3m1!4b1!4m6!3m5!1s0x54906c1e512f32d1:0x70526e5f329b6b00!8m2!3d47.5859163!4d-122.1500019!16s%2Fg%2F1pzxg8_qv?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" className="map-img" title="Location"></iframe> */}
                     </div>
 
                     {/* Right Section: Contact Form */}
@@ -108,6 +109,7 @@ export default function ContactUs() {
                                         placeholder="Name"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
+                                        required
                                     />
                                 </div>
                                 <div className="mb-3">
@@ -118,6 +120,7 @@ export default function ContactUs() {
                                         placeholder="Email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
+                                        required
                                     />
                                 </div>
                                 <div className="mb-3">
@@ -128,6 +131,7 @@ export default function ContactUs() {
                                         placeholder="Message"
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}
+                                        required
                                     ></textarea>
                                 </div>
                                 <button type="submit" className="btn btn-danger w-100 fs-5">Submit</button>
@@ -139,20 +143,20 @@ export default function ContactUs() {
 
             {/* Pop-up Message */}
             {popUpMessage && (
-    <div className="dialog-overlay">
-        <div className="dialog-box">
-            <div className="dialog-header">
-                <h4>Message</h4>
-            </div>
-            <div className="dialog-body">
-                <p>{popUpMessage}</p>
-            </div>
-            <div className="dialog-footer">
-                <button onClick={() => setPopUpMessage('')} className="close-btn">Close</button>
-            </div>
-        </div>
-    </div>
-)}
+                <div className="dialog-overlay">
+                    <div className="dialog-box">
+                        <div className="dialog-header">
+                            <h4>Message</h4>
+                        </div>
+                        <div className="dialog-body">
+                            <p>{popUpMessage}</p>
+                        </div>
+                        <div className="dialog-footer">
+                            <button onClick={() => setPopUpMessage('')} className="close-btn">Close</button>
+                        </div>
+                    </div>
+                </div>
+            )}
             <FooterSection />
         </>
     );

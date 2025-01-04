@@ -53,3 +53,17 @@
 .footer {
     margin-top: auto; /* Push footer to the bottom */
   }
+
+  @media (max-width:2611px) and (min-width:1790px) {
+    .footer-input-sty{
+      margin-left: 50%;
+      width: 50% !important;
+    }
+  }
+
+  @media (max-width:1790px) and (min-width:1350px) {
+    .footer-input-sty{
+      margin-left: 30%;
+      width: 70% !important;
+    }
+  }

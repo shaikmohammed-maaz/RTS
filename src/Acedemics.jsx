@@ -6,6 +6,12 @@ import HomeHeader from "./HomeHeader";
 import { FooterSection } from "./App.jsx";
 import { AcedemicCalunder } from './ParentsSection.jsx'
 import { libraryInformation } from './cardDetails.js';
+import CurriculamOverview from './CurriculamOverview.jsx';
+import { ADVANCE_LEVEL } from './cardDetails.js';
+import { INTERMEDIATE_LEVEL } from './cardDetails.js';
+import { BASIC_LEVEL } from './cardDetails.js';
+import { AssestmentSystemPoints } from './cardDetails.js';
+
 function Acedemics() {
   return (
     <>
@@ -13,49 +19,46 @@ function Acedemics() {
       <Header headVal={'Academics'} />
       <div className="container text-dark mt-5">
         <h2 className='text-center mb-3'><b>Curriculum<span className='web-color'> overview</span></b></h2>
-        <p className='text-center'>At Redmond Tamil School, we are dedicated to preserving and promoting Tamil language and culture through comprehensive and engaging academic programs. Our curriculum is designed to nurture proficiency in reading, writing, and speaking Tamil, while also fostering an appreciation for Tamil culture, literature, history, and traditions. </p>
+        {/* <p className='text-center'>At Redmond Tamil School, we are dedicated to preserving and promoting Tamil language and culture through comprehensive and engaging academic programs. Our curriculum is designed to nurture proficiency in reading, writing, and speaking Tamil, while also fostering an appreciation for Tamil culture, literature, history, and traditions. </p>
         <p className='text-center'>we create a dynamic learning environment where students of all ages can connect, grow, and develop a lasting appreciation for Tamil heritage.</p>
-        <p className='text-center mb-5'>As an affiliated institution of the International Tamil Academy (ITA), formerly known as the California Tamil Academy (CTA), RTS provides a curriculum that caters to students from diverse backgrounds in a welcoming and inclusive atmosphere.</p>
+        <p className='text-center mb-5'>As an affiliated institution of the International Tamil Academy (ITA), formerly known as the California Tamil Academy (CTA), RTS provides a curriculum that caters to students from diverse backgrounds in a welcoming and inclusive atmosphere.</p> */}
+        <CurriculamOverview head={'BASIC LEVEL'} curriculamDetail={BASIC_LEVEL} />
+        <CurriculamOverview head={'INTERMEDIATE LEVEL'} curriculamDetail={INTERMEDIATE_LEVEL} />
+        <CurriculamOverview head={'ADVANCE LEVEL'} curriculamDetail={ADVANCE_LEVEL} />
       </div>
       <ScheduleTable />
       <div className="container text-dark">
         <h2 className='text-center mt-5 mb-4'><b>Library<span className='web-color'> information</span></b></h2>
         {libraryInformation.map((item, index) => (
           <LibraryInformationFunction
-          head={item.heading}
-          subHead={item.subHeading}
-          point={item.points}
+            head={item.heading}
+            subHead={item.subHeading}
+            point={item.points}
           />
         ))}
         <h2 className='text-center mt-5 mb-5'><b>Assessment<span className='web-color'> system</span></b></h2>
-        <div className="row align-items-center">
-          <div className="col-lg-6 col-md-12 mb-4">
-            <p className="text-center text-md-start">
-              Vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in
-              pulvinar lectus ut diam. Pharetra laoreet lobortis ut vivamus placerat
-              vitae non feugiat. Pharetra mauris in quam non vitae. Amet habitant
-              pretium nascetur nunc pretium. Tincidunt et nec quis amet et id volutpat.
-              Sed vestibulum non risus nulla. Risus sit senectus a velit. Vestibulum
-              euismod eget vestibulum eget elementum duis nibh odio quisque. Cras
-              faucibus viverra aenean commodo egestas posuere tincidunt tortor.
-              Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis
-              ipsum ipsum condimentum in aliquam commodo molestie. Elementum nullam
-              massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus
-              volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices
-              curabitur felis malesuada ante arcu egestas. Donec.
+        <h5><b>Assessment for RTS is based on ITA guidelines. The ITS guidelines for current ITA students are as follows</b></h5>
+        <div className="row">
+          <div className="col-lg-6 col-md-12">
+            <p className="text-center ">
+              {AssestmentSystemPoints.map((item, index) => (
+                <AssestMentSystemFunction key={index}
+                  point={item}
+                />
+              ))}
             </p>
           </div>
-          <div className="col-lg-6 col-md-12 text-center">
+          <div className="col-lg-6 col-md-12">
             <img
               src={image1}
               alt="Accredited"
               className="img-fluid"
-              style={{ maxWidth: '70%', height: 'auto' }}
+              style={{ maxWidth: '100%', maxHeight: 'auto' }}
             />
           </div>
         </div>
 
-        <div className="text-center mt-5 mb-3">
+        <div className="text-center mt-2 mb-3">
           <h2><b>Faculty<span className='web-color'> profiles</span></b></h2>
         </div>
         <div className="row">
@@ -77,44 +80,13 @@ function Acedemics() {
   )
 }
 
-
-// const ScheduleTable = () => {
-//   const periods = ["Period 1", "Period 2", "Period 3", "Period 4"];
-//   const days = ["Monday", "Monday", "Monday", "Monday", "Monday", "Monday", "Monday"];
-
-//   return (
-//     <div className="schedule-container text-dark">
-//       <h1>
-//         Class <span className="highlight">schedules</span>
-//       </h1>
-//       <table className="schedule-table">
-//         <thead>
-//           <tr>
-//             <th></th>
-//             {periods.map((period, index) => (
-//               <th key={index} className="table-head-style">
-//                 {period.split(' ')[0]} <span className="web-color">{period.split(' ')[1]}</span> {/* Split and wrap the number in a span */}
-//               </th>
-//             ))}
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {days.map((day, rowIndex) => (
-//             <tr key={rowIndex}>
-//               <td>{day}</td>
-//               {periods.map((_, colIndex) => (
-//                 <td key={colIndex}>
-//                   <p>8:00-9:00</p>
-//                   <p>Tamil Basic</p>
-//                 </td>
-//               ))}
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// };
+function AssestMentSystemFunction({ point }) {
+  return (
+    <>
+      <p className="text-justify">*{point}</p>
+    </>
+  )
+}
 
 const ScheduleTable = () => {
   const periods = ["Period 1", "Period 2", "Period 3", "Period 4"];

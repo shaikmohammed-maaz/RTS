@@ -61,11 +61,12 @@ function SecondHome() {
                         quam non vitae. Amet habitant pretium nascetur nunc pretium. I incidunt et nec quis amet et id volutpat. sed vestibulum non risus nulla
                         Risus sit senectus a velit. Vestibulum euismod eget vestibulum eget elementum duis nibh odio quisque. Cras taucibus viverra aenean commodo egestas posuere tincidun tortor. Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis ipsum ipsum condimentum in aliquam commodo molestie.
                         Elementum nullam massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices curabitur felis malesuada ante arcu egestas. Donec.</p>
-                    <a href="" className="web-color mt-4"  >Know More</a>
+                    <a href="/About-us" className="web-color mt-4"  >Know More</a>
                 </div>
                 <div className="row">
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false} />
+                        <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false}
+                         />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none">
                         <ShowImages imagePathLink={EventPage} isTabView={false} />
@@ -85,12 +86,14 @@ function SecondHome() {
                         <ShowImages imagePathLink={achiveMentImage} isTabView={true} />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 mt-3">
-                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true} />
+                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true}
+                         />
                     </div>
                 </div>
                 <div className="row mb-5 show-change-column-mobile">
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true} />
+                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true}
+                         />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none">
                         <ShowImages imagePathLink={achiveMentImage} />
@@ -107,7 +110,7 @@ function CardWithContentDetails({ link, spanVal, heading, checkTrue }) {
     return (
         <>
             <div className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3`}>
-                <a href="" className="web-color " style={{ marginRight: '20%' }}
+                <a href='/Blog' className="web-color " 
                 ><b>{link}</b></a>
             </div>
             <h2 className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3 span-val`}>
@@ -153,14 +156,14 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
                 </>
             ) : (
                 <>
-                    <div className="col-sm-10 right-alignment">
+                    <div className="col-sm-11 right-alignment">
                         <p className="apply-gray">{date}</p>
                         <h5><b>{head}</b></h5>
                         <p className="apply-gray">{text}</p>
                     </div>
-                    <div className="col-sm-2">
+                    <div className="col-sm-1">
                         <p
-                            className="num-circle rounded-circle mt-5 text-white d-flex justify-content-center align-items-center"
+                            className="num-circle  rounded-circle mt-5 text-white d-flex justify-content-center align-items-center"
                             style={{
                                 width: '50px',
                                 height: '50px',

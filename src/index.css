@@ -235,6 +235,9 @@ header img {
     font-size: 400%;
     margin-top: 60%;
   }
+  .student-achive-image{
+    width: 100% !important;
+  }
   .home-bg-img-text{
     font-size: 40% !important;
   }
@@ -261,7 +264,7 @@ header img {
   position: relative;
   border-top: 2px dashed #D4302B;
   /* Dashed line */
-  margin-top: 80%;
+  margin-top: 140%;
   /* Length of the line */
 }
 
@@ -316,7 +319,7 @@ header img {
   /* Dashed horizontal line */
   width: 100px;
   /* Length of the dashed line */
-  margin-top: 80%;
+  margin-top: 140%;
 }
 
 .left-dashed-arrow::after {
@@ -349,6 +352,12 @@ header img {
   .span-val{
     margin-right: 1%;
   }
+  /* .student-achive-image{
+    width: 600px !important;
+  } */
+  .home-colum-image{
+    margin-left: 0% !important;
+  }
 }
 
 
@@ -356,7 +365,12 @@ header img {
 @media (max-width:991px) {
   .card-styles {
     width: 140% !important;
+    /* padding: 10% !; */
   }
+
+  /* .card-row{
+    margin-left: 0% !important;
+  } */
 
   .card-container {
     max-width: 890px;
@@ -392,6 +406,7 @@ header img {
 
 
 /* Student Sectionn  */
+
 
 /* Portal login section  */
 .portal-section {
@@ -500,7 +515,7 @@ header img {
   }
   .cards-images{
     width: 100% !important;    /* Ensures full width for mobile */
-    height: 100% !important;   /* Adjusts height based on aspect ratio */
+    height: 500% !important;   /* Adjusts height based on aspect ratio */
     object-fit: cover !important; /* Ensures the image still covers the area */
     position: relative !important; 
   } 
@@ -908,10 +923,7 @@ header img {
 
 }
 
-.map-img {
-  width: 100%;
-  margin-top: 7%;
-}
+
 
 #logo{
   max-width: 80%;
@@ -931,8 +943,9 @@ header img {
 }
 
 .map-img {
-  width: 100%;
-  margin-top: 11%;
+  width: 97%;
+  /* margin-top: 11%; */
+  border-radius: 10px;
   border: 1px solid #ddd;
 }
 
@@ -1017,11 +1030,25 @@ header img {
   } */
 }
 
+@media (max-width:1325px) {
+  .nav-link{
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width:1099px) and (min-width:575px) {
+  .student-achive-image{
+    width: 200px !important;
+  }
+}
 @media (max-width:1199px) {
 
   /* .footer-input-sty{
     width: 110% !important;
   } */
+  .student-row{
+    max-width: 1600px;
+  }
   .home-colum-image {
     display: inline !important;
     width: 86% !important;
@@ -1197,9 +1224,9 @@ header img {
   background-image: url('./assets/next.png');
 }
 
-.carousel-control-next, .carousel-control-prev {
+/* .carousel-control-next, .carousel-control-prev {
   opacity: 2  ;
-}
+} */
 
 
 .footer-input-sty{
@@ -1306,3 +1333,4 @@ header img {
 .text-justify{
   text-align: justify;
 }
+

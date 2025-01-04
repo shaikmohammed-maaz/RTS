@@ -23,7 +23,7 @@ let cardsInfo = [
         content: "The school expanded its programs to include a variety of extracurricular activities and language learning initiatives to support students’ cultural and linguistic development."
     },
     {
-        heading: "2010",
+        heading: "2020",
         subHead: "New Campus",
         content: "The school moved to a larger campus with improved facilities, providing more space for classrooms, recreational activities, and student projects."
     },
@@ -33,7 +33,7 @@ let cardsInfo = [
         content: "Redmond Tamil School started various community outreach programs to engage with the local area and help Tamil-speaking families and individuals in the region."
     },
     {
-        heading: "2020",
+        heading: "2010",
         subHead: "Technological Integration",
         content: "The school introduced digital learning tools and online platforms to enhance the learning experience for students and ensure continuity during the pandemic."
     }
@@ -213,4 +213,120 @@ export let libraryInformation = [
         ]
     }
 ]
+
+
+// export const curriculamDetails = [
+//     {
+//         heading: "MAZHALAI-1 (PRESCHOOL-1)",
+//         content: "Learn basic Tamil words and sentences with correct pronunciation, focusing on topics like family, colors, and animals. Build a strong foundation through simple vocabulary and meanings.",
+//         year: "3 years",
+//         age: "Age",
+//         yesOrNo: "No",
+//         evalution: "Evaluation",
+//     },
+//     {
+//         heading: "MAZHALAI-2 (PRESCHOOL-2)",
+//         content: "Inspire curiosity by teaching kids basic Tamil words like shapes, animals, and colors. Using actions, pictures, and games to ensure correct pronunciation and understanding.",
+//         year: "4 years",
+//         age: "Age",
+//         yesOrNo: "No",
+//         evalution: "Evaluation",
+//     },
+//     {
+//         heading: "KINDERGARTEN",
+//         content: "Teaching children simple Tamil through stories, games, and interactive tools to help them learn new words, sentences, and grammar. Focusing on writing and reading Tamil vowels, consonants, and combinations, with an emphasis on correct pronunciation, sound distinction, and grammatical rules.",
+//         year: "5 years",
+//         age: "Age",
+//         yesOrNo: "No",
+//         evalution: "Evaluation",
+//     },
+// ];
+
+export const BASIC_LEVEL = [
+    {
+      heading: "MAZHALAI-1 (PRESCHOOL-1)",
+      content: "Learn basic Tamil words and sentences with correct pronunciation, focusing on topics like family, colors, and animals. Build a strong foundation through simple vocabulary and meanings.",
+      ageRequirement: "3 years",
+      evaluationRequired: "No",
+    },
+    {
+      heading: "MAZHALAI-2 (PRESCHOOL-2)",
+      content: "Inspire curiosity by teaching kids basic Tamil words like shapes, animals, and colors. Using actions, pictures, and games to ensure correct pronunciation and understanding.",
+      ageRequirement: "4 years",
+      evaluationRequired: "No",
+    },
+    {
+      heading: "KINDERGARTEN",
+      content: "Teaching children simple Tamil through stories, games, and interactive tools to help them learn new words, sentences, and grammar. Focusing on writing and reading Tamil vowels, consonants, and combinations, with an emphasis on correct pronunciation, sound distinction, and grammatical rules.",
+      ageRequirement: "5 years",
+      evaluationRequired: "No",
+    },
+    {
+      heading: "GRADE 1",
+      content: "Develop Tamil speaking, writing, and reading skills through interactive methods like storytelling, games, and digital tools, focusing on pronunciation and sentence construction. Learn grammar concepts.",
+      ageRequirement: "6 years",
+      evaluationRequired: "Yes",
+    },
+  ];
+
+  
+export  const INTERMEDIATE_LEVEL = [
+    {
+      heading: "GRADE 3",
+      content: "Practice Tamil pronunciation, sentence formation, and comprehension through engaging plays and dramatization activities. Focus on writing and reading basic Tamil letters and words with correct pronunciation while understanding grammar concepts such as vowels, tenses, and consonant categories for effective language use.",
+      ageRequirement: "8 years",
+      evaluationRequired: "Yes",
+    },
+    {
+      heading: "GRADE 4",
+      content: "Use games and interactive activities to improve Tamil speaking skills, exploring different expressions and contexts. Practice writing 4-5 word sentences with correct letters and structure, focusing on proper formation and vocabulary. Recite Tamil literature like Thirukkural with correct pronunciation and understanding. Practice sentence construction, understand grammatical rules, and recognize the difference between words and their meanings.",
+      ageRequirement: "9 years",
+      evaluationRequired: "Yes",
+    },
+    {
+      heading: "GRADE 5",
+      content: "Start speaking Tamil through dramatization, focusing on correct intonation, voice modulation, and context-based expressions. Focus on writing clear, structured sentences. Grammar encompasses various aspects, such as suffix forms, tenses, verb conjugation, active and passive voice, tone changes, negative verb forms, and grammatical structures like compound sentences and subordinate clauses.",
+      ageRequirement: "10 years",
+      evaluationRequired: "Yes",
+    },
+  ];
+
+export  const ADVANCE_LEVEL = [
+    {
+      heading: "GRADE 6",
+      content: "Speak Tamil in different scenarios with appropriate expressions and explore it through games and other activities. Act and express ideas with clear pronunciation in various contexts. Practice writing with clarity and correct structure, using learned vocabulary and concepts. Forms of suffixes, masculine/feminine, singular/plural, short/long vowels, word structures, tense markers, affirmative and negative forms, sound variations, compound words, and sentence construction.",
+      ageRequirement: "11 years",
+      evaluationRequired: "Yes",
+    },
+    {
+      heading: "GRADE 7",
+      content: "Speak with appropriate vocabulary, intonation, and correct pronunciation in various contexts. Write sentences using proper structure, punctuation, and vocabulary, and practice short to medium-sized sentences. Recite sentences, including Thirukkural, with correct intonation and understanding. Learn grammar, focusing on suffixes, masculine/feminine forms, sounds, tenses, and word structures.",
+      ageRequirement: "12 years",
+      evaluationRequired: "Yes",
+    },
+    {
+      heading: "GRADE 8",
+      content: "Practice speaking with proper intonation, pronunciation, and clarity in various contexts, including dramatization and literature like Thirukkural. Write clear and accurate sentences using correct structure, vocabulary, and punctuation. Read aloud with proper tone, focusing on understanding and context, while learning different language forms and sentence construction for clarity.",
+      ageRequirement: "13 years",
+      evaluationRequired: "Yes",
+    },
+  ];
+  
+
+  export let AssestmentSystemPoints = [
+    "RTS assessment is based on ITA guidelines.",
+    "Current ITA students must score 95% in monthly tests and projects during the year in their current grade.",
+    "They must meet the appropriate age criteria for the requested grade.",
+    "New students fluent in reading, writing, and comprehension (6 years and older):",
+    "  - Age determines the grade they can be tested for.",
+    "  - Scoring an A or above assigns them to the grade they tested for.",
+    "  - Scoring a B assigns them one grade lower.",
+    "  - Scoring a C assigns them two grades lower.",
+    "  - They will not be assigned lower than Advanced KG.",
+    "New students under 6 years or not fluent in Tamil are assigned based on age and basic Tamil understanding:",
+    "  - Less than 4 years: Asked to come the next year.",
+    "  - 4 years: Preschool 2.",
+    "  - 5 years: First grade.",
+    "  - 6 years and older: Advanced KG."
+];
 export default cardsInfo;

@@ -10,8 +10,8 @@ function StudentSection() {
             <HomeHeader />
             <Header headVal={'Student Section'} />
             {/* <h4 className="text-dark text-center mt-3"><b>Student <span className="web-color"> achievements</span></b></h4> */}
-            <div className="container mt-5">
-                <div className="row text-dark">
+            <div className="container student-row mt-5">
+                <div className="row text-dark ">
                     {studentImageAndContent.map((item, index) => (
                         <StudentAchivement key={index} imageVal={item.imagePath} head={item.name} textContent={item.details} />
                     ))}
@@ -40,7 +40,7 @@ function StudentSection() {
 function StudentAchivement({ imageVal, head, textContent }) {
     return (
         <div className="col-sm-6 col-md-4 col-xl-4 d-flex flex-column align-items-center">
-            <img src={imageVal} alt="" style={{ width: '350px', height: 'auto' }} />
+            <img src={imageVal} className="student-achive-image" alt="" style={{ width: '350px', height: 'auto' }} />
             <h5 className="mt-3 student-achivement-head"><b>{head}</b></h5>
             <p>{textContent}</p>
         </div>
