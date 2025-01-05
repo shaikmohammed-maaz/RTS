@@ -19,7 +19,7 @@ function App() {
     <Router>
       <Routes>
       <Route path="/Read-more" element={<ReadMorePage />} /> 
-        <Route path="/Home" element={<SecondHome />} />
+        <Route path="/RTS" element={<SecondHome />} />
         <Route path="/About-us" element={<AboutUs />} />
         <Route path="/Student-section" element={<StudentSection />} />
         <Route path="/Parent-section" element={<ParentsSection />} />

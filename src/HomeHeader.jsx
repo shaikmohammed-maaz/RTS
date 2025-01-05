@@ -49,7 +49,7 @@ export default function HomeHeader() {
 
                     <div className="collapse navbar-collapse nav-style" id="collapsibleNavbar">
                         <ul className="navbar-nav ms-auto">
-                            {['/Home', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Acedemics', '/Blog', '/ContactUs'].map((path, index) => (
+                            {['/RTS', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Acedemics', '/Blog', '/ContactUs'].map((path, index) => (
                                 <li className="nav-item" key={index}>
                                     <Link
                                         className={`nav-link fs-5 text-dark ${location.pathname === path ? 'active' : ''}`}
