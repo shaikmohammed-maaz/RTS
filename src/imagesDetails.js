@@ -42,5 +42,22 @@ export let numWithText = [
     }
 ];
 
+export let numWithText2 = [
+    {
+        dateValue: "author name",
+        headValue: "Pongal Celebration – A Vibrant Cultural Festivity",
+        contentValue: "Redmond Tamil School proudly hosts its annual Pongal Celebration, a joyous event that unites the community in honoring Tamil heritage.",
+    },
+    {
+        dateValue: "author name",
+        headValue: "Tamil Talent Extravaganza",
+        contentValue: "*A Celebration of Creativity, Language, and Culture* We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades.",
+    },
+    {
+        dateValue: "author name",
+        headValue: "Teacher's Day Celebration",
+        contentValue: "We celebrated Teacher's Day to honor and appreciate the hard work of our educators.",
+    }
+];
 
 export default detailsObj;

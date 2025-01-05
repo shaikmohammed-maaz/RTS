@@ -511,11 +511,15 @@ header img {
   .card-styles {
     width: 76% !important;
     margin-left: 13%;
-    height: 100% !important;
+    height: 90% !important;
   }
+
+  /* .card-styles:hover {
+    height: 10% !important;
+  } */
   .cards-images{
     width: 100% !important;    /* Ensures full width for mobile */
-    height: 500% !important;   /* Adjusts height based on aspect ratio */
+    height: 100% !important;   /* Adjusts height based on aspect ratio */
     object-fit: cover !important; /* Ensures the image still covers the area */
     position: relative !important; 
   } 
@@ -1025,6 +1029,9 @@ header img {
   .blog-container{
     max-width: 80% !important;
   }
+  .right-section{
+    margin-top: 20% !important;
+  }
   /* .img-fluid{
     height: 10% !important;
   } */
@@ -1327,6 +1334,9 @@ header img {
 @media (max-width:991px) {
   .form-container{
     max-width: 100% !important;
+  }
+  .curriculam-container{
+    max-width: 600% !important;
   }
 }
 

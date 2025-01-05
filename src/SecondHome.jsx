@@ -1,10 +1,12 @@
 import HomeFirstImg from "./assets/homeFirstImg.jpg";
 import HomeHeader from "./HomeHeader.jsx";
 import { numWithText } from './imagesDetails.js';
-import EventPage from './assets/Events Section.png';
-import achiveMentImage from './assets/Achievements Column.png';
+import EventPage from './assets/Events Section.jpeg';
+import achiveMentImage from './assets/Achievements Column.jpeg';
 import aboutUsBG from './assets/about us bg.png';
 import { FooterSection } from "./App";
+import {numWithText2} from './imagesDetails.js';
+
 function SecondHome() {
     return (
         <div id="home">
@@ -66,6 +68,7 @@ function SecondHome() {
                 <div className="row">
                     <div className="col-xl-6 col-md-12 col-sm-12">
                         <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false}
+                        Details={numWithText}
                          />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none">
@@ -86,13 +89,15 @@ function SecondHome() {
                         <ShowImages imagePathLink={achiveMentImage} isTabView={true} />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 mt-3">
-                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true}
+                        <CardWithContentDetails link={'Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true}
+                        Details={numWithText2}
                          />
                     </div>
                 </div>
                 <div className="row mb-5 show-change-column-mobile">
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Upcoming Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true}
+                        <CardWithContentDetails link={'Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true}
+                        Details={numWithText2}
                          />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none">
@@ -106,7 +111,7 @@ function SecondHome() {
     )
 }
 
-function CardWithContentDetails({ link, spanVal, heading, checkTrue }) {
+function CardWithContentDetails({ link, spanVal, heading, checkTrue,Details }) {
     return (
         <>
             <div className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3`}>
@@ -119,7 +124,7 @@ function CardWithContentDetails({ link, spanVal, heading, checkTrue }) {
             </b>
             </h2>
             <div className="row">
-                {numWithText.map((item, index) => (
+                {Details.map((item, index) => (
                     <CreatenumberWithTexts key={index} date={item.dateValue}
                         head={item.headValue}
                         text={item.contentValue}

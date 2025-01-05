@@ -8,7 +8,7 @@ import { photoGallary } from "./cardDetails.js";
 import { Header } from './HomeHeader.jsx';
 import HomeHeader from './HomeHeader';
 import { FooterSection } from "./App.jsx";
-import imag1 from './assets/classroom.jpg';
+import imag1 from './assets/hoverImage.jpeg';
 
 function AboutUs() {
     return (
@@ -35,7 +35,7 @@ function AboutUs() {
                 <RowColCard />
             </div>
 
-            <div className="container-fluid mt-5 p-3 text-dark fluid-section ">
+            <div className="container-fluid mt-5 p-3 text-dark fluid-section mb-5">
                 <h2 className="text-center mb-5 mt-4"><b>Accreditation and <span className="web-color"> Affiliation</span></b></h2>
                 <div className="container">
                     <div className="row">
@@ -46,7 +46,8 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="container text-dark mt-5">
+{/* ADMINISTRATIO TEAM  */}
+            {/* <div className="container text-dark mt-5">
                 <h2 className="text-center m-3">
                     <b><span className="web-color">Administration</span> Team</b>
                 </h2>
@@ -63,7 +64,7 @@ function AboutUs() {
                     <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel"} />
                 </div>
 
-            </div>
+            </div> */}
             <FooterSection />
         </div>
     );

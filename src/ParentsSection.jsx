@@ -1,7 +1,7 @@
 import { PortalSection } from './StudentSection.jsx';
 import { schoolTimings } from "./cardDetails.js";
 import { commuincationProtocalsValues } from "./cardDetails.js";
-import bigImage from './assets/classroom.jpg';
+import bigImage from './assets/calender.png';
 import {Header} from './HomeHeader.jsx';
 import { FooterSection } from "./App";
 import HomeHeader from './HomeHeader.jsx';

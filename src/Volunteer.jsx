@@ -18,14 +18,15 @@ function Volunteer() {
                 <div className='text-center mb-5'>
                     <a href="" className="link-sty"><button className="login-style2 fs-6 pt-2 pb-2 mb-4"><b>Join Us</b></button></a>
                 </div>
-                <div className="text-center mt-5 mb-3">
+                {/* ADMINISTRATION TEAM  */}
+                {/* <div className="text-center mt-5 mb-3">
                     <h2><b>Volunteer <span className='web-color'> Teams</span></b></h2>
                 </div>
                 <div className="row">
                     {admissionImagesWithDetails.map((item, index) => (
                         <AdmissionColImages key={index} personImage={item.imagePath} personName={item.name} personDetails={item.details} />
                     ))}
-                </div>
+                </div> */}
             </div>
             <div className="container-fluid mt-5">
                 <h3 className='text-center text-dark mb-5'><b>Contact<span className='web-color'> Person</span></b></h3>

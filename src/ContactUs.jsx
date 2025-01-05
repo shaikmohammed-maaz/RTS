@@ -52,6 +52,9 @@ export default function ContactUs() {
                 setName('');
                 setEmail('');
                 setMessage('');
+                setTimeout(() => {
+                    setPopUpMessage('')
+                }, 5000);
             } else {
                 setPopUpMessage("There was an error submitting the form.");
             }
@@ -65,7 +68,7 @@ export default function ContactUs() {
             <HomeHeader />
             <Header headVal={'Contact Us'} />
             <div className="container form-container my-5 text-dark">
-                <div className="row g-3">
+                <div className="row g-5">
                     {/* Left Section: Contact Details */}
                     <div className="col-xl-6 col-md-6">
                         <p>
@@ -80,15 +83,23 @@ export default function ContactUs() {
                             </li>
                             <li className="mb-3">
                                 <img src={location} alt="location-logo" id="location-logo" />
-                                <span id="gmail">ganesh nagar,camproad,600073</span>
+                                <span id="gmail">Bellevue, WA 98005, USA</span>
                             </li>
                             <li className="">
                                 <img src={phone} alt="phone-logo" id="phone-logo" />
                                 <span id="gmail">3677273209</span>
                             </li>
                         </ul>
-                        <img src={map} alt="Map" className="map-img" />
-                        {/* <iframe src="https://www.google.com/maps/place/Reception+Desk,+Bellevue,+WA+98005,+USA/@47.5859163,-122.1500019,17z/data=!3m1!4b1!4m6!3m5!1s0x54906c1e512f32d1:0x70526e5f329b6b00!8m2!3d47.5859163!4d-122.1500019!16s%2Fg%2F1pzxg8_qv?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" className="map-img" title="Location"></iframe> */}
+                        {/* <img src={map} alt="Map" className="map-img" /> */}
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.1582087321247!2d-122.1500019!3d47.5859163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906c1e512f32d1%3A0x70526e5f329b6b00!2sReception%20Desk!5e0!3m2!1sen!2sus!4v1234567890123"
+                            className="map-iframe"
+                            title="Google Maps Embed"
+                            style={{ border: 0, width: "100%", height: "65%" }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </div>
 
                     {/* Right Section: Contact Form */}
@@ -135,6 +146,7 @@ export default function ContactUs() {
                                     ></textarea>
                                 </div>
                                 <button type="submit" className="btn btn-danger w-100 fs-5">Submit</button>
+                                <p className='text-success text-center'>{popUpMessage}</p>
                             </form>
                         </div>
                     </div>
@@ -142,7 +154,7 @@ export default function ContactUs() {
             </div>
 
             {/* Pop-up Message */}
-            {popUpMessage && (
+            {/* {popUpMessage && (
                 <div className="dialog-overlay">
                     <div className="dialog-box">
                         <div className="dialog-header">
@@ -156,7 +168,7 @@ export default function ContactUs() {
                         </div>
                     </div>
                 </div>
-            )}
+            )} */}
             <FooterSection />
         </>
     );

@@ -7,7 +7,10 @@ import { FooterSection } from "./App";
 import HomeHeader from "./HomeHeader";
 import BlogContents from './blogContents.js'
 import gradimg from "./assets/homeImgfour.jpg"; 
-// import ReadMorePage from './ReadMorePage.jsx';
+import ReadMorePage from './ReadMorePage.jsx';
+import {firstContentCard} from './blogContents.js';
+import {secondContentCard} from './blogContents.js';
+import { useNavigate } from 'react-router-dom';
 
 export default function Blog() {
     
@@ -46,14 +49,15 @@ export default function Blog() {
                         <BlogCard
                                 gradimg={gradimg}
                                 blogimgid={"x"}
-                                h1cont={"What is Grauvation? Unveilling the blend of design and functional"}
+                                h1cont={"Pongal Celebration – A Vibrant Cultural Festivity"}
                                 h1id={"grad1-cont1"}
                                 graddate={"26th December 2024"}
                                 dateid={"graddate1"}
-                                maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits."}
+                                maincont={"Redmond Tamil School proudly hosts its annual Pongal Celebration, a joyous event that unites the community in honoring Tamil heritage. "}
                                 excescont={"This includes earning the required number of credits."}
                                 maincontid={"main-cont-id"}
                                 btnid={"readmore-grad"}
+                                readContentFullDetails = {firstContentCard}
                             />
                         </div>
                     </div>
@@ -179,11 +183,13 @@ export default function Blog() {
                     <div className="col-md-4">
                         <div class="blog-card1">
                         <BlogCard gradimg={gradimg} blogimgid={"grad-img1"}
-                                    h1cont={"What is Grauvation? Unveilling the blend of design and functional"} h1id={"grad1-cont1"}
+                                    h1cont={"Tamil Talent Extravaganza"} h1id={"grad1-cont1"}
                                     graddate={"26th December 2024"} dateid={"graddate1"}
-                                    maincont={"Graduation is the process of completing the requirements to earn a degree or diploma from a school, college, or university. This includes earning the required number of credits "}
+                                    maincont={"*A Celebration of Creativity, Language, and Culture* We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. "}
                                     excescont={"This includes earning the required number of credits."}
-                                    maincontid={"main-cont-id"} btnid={"readmore-grad"} />
+                                    maincontid={"main-cont-id"} btnid={"readmore-grad"} 
+                                    readContentFullDetails={secondContentCard}
+                                    />
                         </div>
                     </div>
 
@@ -279,11 +285,16 @@ export default function Blog() {
 }
 
 
-export function BlogCard({ gradimg, blogimgid, h1cont, h1id, graddate, maincont, dateid, maincontid, btnid, excescont }) {
+export function BlogCard({ gradimg, blogimgid, h1cont, h1id, graddate, maincont, dateid, maincontid, btnid, excescont,readContentFullDetails }) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const navigate = useNavigate();
 
     const toggleContent = () => {
-        window.location.href = "/Read-more";
+        // setIsExpanded(!isExpanded);
+        // <ReadMorePage cardData={readContentFullDetails}/>
+        // window.location.href = "/Read-more";
+        console.log(readContentFullDetails);
+        navigate("/Read-more", { state: { cardData: readContentFullDetails } });
     };
 
     return (
