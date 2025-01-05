@@ -92,9 +92,9 @@ function ContentAllDetails({ head, authorName, content }) {
             <div className="text-center">
                 <img src={gradimg} alt="" width={500} />
             </div>
-            <p className="text-justify">
+            <pre className="text-justify preStyle">
                 {content}
-            </p>
+            </pre>
         </>
     )
 }
