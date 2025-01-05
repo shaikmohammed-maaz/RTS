@@ -12,7 +12,6 @@ import { INTERMEDIATE_LEVEL } from './cardDetails.js';
 import { BASIC_LEVEL } from './cardDetails.js';
 import { AssestmentSystemPoints } from './cardDetails.js';
 import { classSchedulePoints } from './cardDetails.js';
-import { stringify } from "uuid";
 import { assesMentTable } from './cardDetails.js';
 
 function Acedemics() {
