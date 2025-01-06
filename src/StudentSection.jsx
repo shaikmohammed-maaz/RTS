@@ -10,20 +10,11 @@ function StudentSection() {
             <HomeHeader />
             <Header headVal={'Student Section'} />
             {/* <h4 className="text-dark text-center mt-3"><b>Student <span className="web-color"> achievements</span></b></h4> */}
-            {/* <div className="container student-row mt-5">
+            <div className="container student-row mt-5">
                 <div className="row text-dark ">
                     {studentImageAndContent.map((item, index) => (
                         <StudentAchivement key={index} imageVal={item.imagePath} head={item.name} textContent={item.details} />
                     ))}
-                </div>
-            </div> */}
- <h2 className="text-center text-dark mt-5 mb-3">
-                <b><span className="web-color">Photo</span> Gallary</b>
-            </h2>
-            
-            <div className="container">
-                <div className="row mb-5">
-                    <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel2"} />
                 </div>
             </div>
 
@@ -32,7 +23,14 @@ function StudentSection() {
                     "Lorem ipsum dolor sit amet consectetur. Nunc sit rhoncus purus et. Ornare leo vivamus id tempus scelerisque consectetur mauris iaculis quam.Tristique vitae ipsum cras vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam."
                 } btnName={"Login"} />
             </div>
-           
+            <h2 className="text-center mt-3 text-dark mt-5 mb-3">
+                <b><span className="web-color">Photo</span> Gallary</b>
+            </h2>
+            <div className="container">
+                <div className="row mb-5">
+                    <PhotoGallaryFun pictures={photoGallary} idVal={"photoGalleryCarousel2"} />
+                </div>
+            </div>
             <FooterSection />
 
         </div>

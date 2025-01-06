@@ -17,6 +17,47 @@ p {
   color: #D4302B;
 }
 
+
+/* ___________________________________vaishu changed________________________________________ */
+
+.acheive-img{
+  margin-top: 10% !important;
+}
+
+/* Styling for image navigation buttons */
+.image-navigation-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem; /* Increased size */
+  width: 40px; /* Increased width */
+  height: 60px; /* Increased height */
+  background: none;
+  border: none;
+  color: rgb(224, 22, 22);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the arrow */
+  border-radius: 50%; /* Make the button circular */
+  cursor: pointer; /* Add cursor pointer for better UX */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+
+/* Position for the left arrow */
+#prevImageButton {
+  left: 10px;
+}
+
+/* Position for the right arrow */
+#nextImageButton {
+  right: 10px;
+}
+/* .parentsection-h1{
+  margin-top: 30%;
+} */
+
+
 /* header {
   text-align: center;
 }
@@ -1345,8 +1386,32 @@ header img {
 }
 
 .preStyle{
+  font-family: 'Outfit';
   overflow-x: auto;
             white-space: pre-wrap;
             /* word-wrap: break-word; */
             font-size: 15px;
+}
+
+.curriculam-card:hover{
+  background-color: #D4302B;
+  color: white;
+}
+
+.curriculam-card:hover .card-header{
+  background-color: #D4302B;
+  color: white;
+}
+
+.curriculam-card:hover .card-footer{
+  background-color: #D4302B;
+  color: white 
+}
+
+.curriculam-card:hover .curriculam-head{
+  color: white 
+}
+
+.curriculam-card:hover .curriculam-sub-head{
+  color: white 
 }

@@ -150,17 +150,17 @@ const BlogContents = [
 export let firstContentCard = [
     {
         heading: "Pongal Celebration – A Vibrant Cultural Festivity",
-        authorName: "Author Name",
+        authorName: "dc",
         content: `
 Redmond Tamil School proudly hosts its annual Pongal Celebration, a joyous event that unites the community in honoring Tamil heritage. This cherished festival is an opportunity to celebrate the spirit of Pongal—a time of gratitude, prosperity, and cultural unity.
 
 About Pongal
-          Pongal, one of Tamil culture’s most beloved festivals, symbolizes the harvest season and the spirit of abundance. It is a time to celebrate togetherness, preserve traditions, and inspire cultural pride in future generations. Our celebration reflects these values through engaging performances and community interactions.
+    Pongal, one of Tamil culture’s most beloved festivals, symbolizes the harvest season and the spirit of abundance. It is a time to celebrate togetherness, preserve traditions, and inspire cultural pride in future generations. Our celebration reflects these values through engaging performances and community interactions.
 
 What to Expect
-          • Cultural Performances: Be captivated by traditional dances, engaging skits, and artistic showcases by our talented students.
-          • Community Bonding: A heartwarming gathering that fosters connections among families and friends while celebrating shared heritage.
-          • Festive Atmosphere: A vibrant and family-friendly setting filled with the sights and sounds of Tamil culture.
+    • Cultural Performances: Be captivated by traditional dances, engaging skits, and artistic showcases by our talented students.
+    • Community Bonding: A heartwarming gathering that fosters connections among families and friends while celebrating shared heritage.
+    • Festive Atmosphere: A vibrant and family-friendly setting filled with the sights and sounds of Tamil culture.
 
 Join Us for a Memorable Celebration
 Our Pongal Celebration is more than an event—it’s a tribute to our cultural roots, a celebration of creativity, and a reminder of the values that connect us.
@@ -172,44 +172,53 @@ We look forward to celebrating this joyous festival with you every year!
 
 export let secondContentCard = [{
     heading: "Tamil Talent Extravaganza",
-    authorName: "Author Name",
-    content: `
+    authorName: "Event Coordinator",
+   content: `
 We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. These competitions offer a platform to showcase talents, foster creativity, enhance language skills, and instill cultural pride.
 
 Competition Categories:
-  1. Essay Writing / Letter Writing
-    - Description: Students will demonstrate their writing skills in essay and letter formats.
-    - Structure: Preliminary, Intermediate, and Final Rounds.
-    - Details: Specific topics and level details will be shared soon.
-  2. Thirukkural Recital
-    - Description: Participants will recite verses from the Thirukkural, highlighting its literary and moral significance.
-    - Structure: Preliminary, Intermediate, and Final Rounds.
-    - Details: Specific verses and guidelines will be provided soon.
-  3. Tamil Wordcraft Challenge
-    - Description: A creative competition enhancing Tamil writing skills through structured tasks and imaginative wordplay.
-    - How it Works: A grade-level specific word list will be provided in advance. Students will write them accurately based on pronunciation.
-    - Structure: Preliminary and Final Rounds.
-  4. Tamil Vocabulary Challenge
-    - Description: This challenge tests students’ knowledge of Tamil words by requiring them to translate English words into Tamil.
-    - Structure: Preliminary and Final Rounds.
-    - Details: Word lists and guidelines will be released soon.
-  5. Tamil Art
-    - Description: A platform for students to express their artistic talents through various forms of visual art.
-    - Structure: Final Round Only.
-  6. RTS School Logo Design Challenge
-    - Description: Students will design creative logos reflecting their school spirit.
-    - Structure: Final Round Only.
-  7. Tamil Debate
-    - Description: Students will engage in debates, enhancing their critical thinking and public speaking skills in Tamil.
-    - Structure: Preliminary and Final Rounds.
-  8. Tamil Elocution
-    - Description: Students will express their thoughts on various topics, enhancing their public speaking and communication skills in Tamil.
-    - Structure: Preliminary, Intermediate, and Final Rounds.
+    1. Essay Writing / Letter Writing
+              => Description: Students will demonstrate their writing skills in essay and letter formats.
+              => Structure: Preliminary, Intermediate, and Final Rounds.
+              => Details: Specific topics and level details will be shared soon.
+
+    2. Thirukkural Recital
+              => Description: Participants will recite verses from the Thirukkural, highlighting its literary and moral significance.
+              => Structure: Preliminary, Intermediate, and Final Rounds.
+              => Details: Specific verses and guidelines will be provided soon.
+
+    3. Tamil Wordcraft Challenge
+              => Description: A creative competition enhancing Tamil writing skills through structured tasks and imaginative wordplay.
+              => How it Works: A grade-level specific word list will be provided in advance. Students will write them accurately based on pronunciation.
+              => Structure: Preliminary and Final Rounds.
+
+    4. Tamil Vocabulary Challenge
+              => Description: This challenge tests students’ knowledge of Tamil words by requiring them to translate English words into Tamil.
+              => Structure: Preliminary and Final Rounds.
+              => Details: Word lists and guidelines will be released soon.
+
+    5. Tamil Art
+              => Description: A platform for students to express their artistic talents through various forms of visual art.
+              => Structure: Final Round Only.
+
+    6. RTS School Logo Design Challenge
+              => Description: Students will design creative logos reflecting their school spirit.
+              => Structure: Final Round Only.
+
+    7. Tamil Debate
+              => Description: Students will engage in debates, enhancing their critical thinking and public speaking skills in Tamil.
+              => Structure: Preliminary and Final Rounds.
+
+    8. Tamil Elocution
+              => Description: Students will express their thoughts on various topics, enhancing their public speaking and communication skills in Tamil.
+              => Structure: Preliminary, Intermediate, and Final Rounds.
 
 General Competition Information:
-  - Class Level Competitions: Initial rounds within each class will identify winners for subsequent rounds.
-  - Participation Certificates: All participants will receive certificates.
-  - Awards Ceremony: Winners will be honored during the Annual Day event.`
+              => Class Level Competitions: Initial rounds within each class will identify winners for subsequent rounds.
+              => Participation Certificates: All participants will receive certificates.
+              => Awards Ceremony: Winners will be honored during the Annual Day event.
+`
+
 }];
 
 

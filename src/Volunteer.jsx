@@ -11,7 +11,7 @@ function Volunteer() {
         <HomeHeader/>
             <Header headVal={'Volunteer'} />
             <div className="container text-dark">
-                <h2 className='text-center mt-5 mb-4'><b>Volunteering <span className='web-color'> opportunities</span></b></h2>
+                <h2 className='text-center mt-5 mb-4'><b>Volunteering <span className='web-color'> Opportunities</span></b></h2>
                 <p className='text-center'>vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam. Pharetra laoreet lobortis ut vivamus placerat vitae non feugiat. Pharetra mauris in quam non vitae. Amet habitant pretium nascetur nunc pretium. Tincidunt et nec quis amet et id volutpat. Sed vestibulum non risus nulla.
                     Risus sit senectus a velit. Vestibulum evismod eget vestibulum eget elementum duis nibh odio quisque. Cras faucibus viverra aenean commodo egestas posuere tincidunt tortor. Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis ipsum ipsum condimentum in aliquam commodo molestie.
                     Elementum nullam massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices curabitur felis malesuada ante arcu egestas. Donec.</p>

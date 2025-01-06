@@ -1,8 +1,8 @@
-import { Header } from "./HomeHeader";
+import { Header } from "./HomeHeader.jsx";
 import image1 from './assets/classroom.jpg';
 import { AdmissionColImages } from './AboutUs.jsx';
 import { admissionImagesWithDetails } from "./cardDetails.js";
-import HomeHeader from "./HomeHeader";
+import HomeHeader from "./HomeHeader.jsx";
 import { FooterSection } from "./App.jsx";
 import { AcedemicCalunder } from './ParentsSection.jsx'
 import { libraryInformation } from './cardDetails.js';
@@ -12,15 +12,18 @@ import { INTERMEDIATE_LEVEL } from './cardDetails.js';
 import { BASIC_LEVEL } from './cardDetails.js';
 import { AssestmentSystemPoints } from './cardDetails.js';
 import { classSchedulePoints } from './cardDetails.js';
+// import { stringify } from "uuid";
 import { assesMentTable } from './cardDetails.js';
+import { v4 as uuidv4 } from 'uuid';
 
-function Acedemics() {
+
+function Academics() {
   return (
     <>
       <HomeHeader></HomeHeader>
       <Header headVal={'Academics'} />
       <div className="container text-dark mt-5 curriculam-container">
-        <h2 className='text-center mb-3'><b>Curriculum<span className='web-color'> overview</span></b></h2>
+        <h2 className='text-center mb-3'><b>Curriculum<span className='web-color'> Overview</span></b></h2>
         {/* <p className='text-center'>At Redmond Tamil School, we are dedicated to preserving and promoting Tamil language and culture through comprehensive and engaging academic programs. Our curriculum is designed to nurture proficiency in reading, writing, and speaking Tamil, while also fostering an appreciation for Tamil culture, literature, history, and traditions. </p>
         <p className='text-center'>we create a dynamic learning environment where students of all ages can connect, grow, and develop a lasting appreciation for Tamil heritage.</p>
         <p className='text-center mb-5'>As an affiliated institution of the International Tamil Academy (ITA), formerly known as the California Tamil Academy (CTA), RTS provides a curriculum that caters to students from diverse backgrounds in a welcoming and inclusive atmosphere.</p> */}
@@ -47,7 +50,7 @@ function Acedemics() {
             return <p key={index}>{item}</p>;
           }
         })}
-        <h2 className='text-center mt-5 mb-4'><b>Library<span className='web-color'> information</span></b></h2>
+        <h2 className='text-center mt-5 mb-4'><b>Library<span className='web-color'> Information</span></b></h2>
         {libraryInformation.map((item, index) => (
           <LibraryInformationFunction
             head={item.heading}
@@ -55,7 +58,7 @@ function Acedemics() {
             point={item.points}
           />
         ))}
-        <h2 className='text-center mt-5 mb-5'><b>Assessment<span className='web-color'> system</span></b></h2>
+        <h2 className='text-center mt-5 mb-5'><b>Assessment<span className='web-color'> System</span></b></h2>
         <h5><b>Assessment for RTS is based on ITA guidelines. The ITS guidelines for current ITA students are as follows</b></h5>
         <div className="row d-flex flex-direction-column align-items-center">
           <div className="col-lg-6 col-md-12">
@@ -88,7 +91,7 @@ function Acedemics() {
         ))}
 
         <div className="text-center mt-2 mb-3">
-          <h2><b>Faculty<span className='web-color'> profiles</span></b></h2>
+          <h2><b>Teacher<span className='web-color'> Volunteers</span></b></h2>
         </div>
         <div className="row">
           {admissionImagesWithDetails.map((item, index) => (
@@ -217,4 +220,4 @@ function LibraryInformationFunction({ head, subHead, point }) {
     </div>
   )
 }
-export default Acedemics;
+export default Academics;

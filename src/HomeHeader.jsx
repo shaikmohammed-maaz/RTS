@@ -49,7 +49,7 @@ export default function HomeHeader() {
 
                     <div className="collapse navbar-collapse nav-style" id="collapsibleNavbar">
                         <ul className="navbar-nav ms-auto">
-                            {['/RTS', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Acedemics', '/Blog', '/ContactUs'].map((path, index) => (
+                            {['/RTS', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
                                 <li className="nav-item" key={index}>
                                     <Link
                                         className={`nav-link fs-5 text-dark ${location.pathname === path ? 'active' : ''}`}
@@ -79,7 +79,7 @@ export default function HomeHeader() {
                     &times;
                 </button>
                 <ul>
-                    {['/RTS', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Acedemics', '/Blog', '/ContactUs'].map((path, index) => (
+                    {['/Home', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
                         <li key={index}>
                             <Link
                                 className={`sidebar-link ${location.pathname === path ? 'active' : ''}`}
@@ -95,8 +95,6 @@ export default function HomeHeader() {
         </>
     );
 }
-
-
 
 export function Header({ headVal }) {
     return (

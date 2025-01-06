@@ -8,7 +8,7 @@ import AboutUs from "./AboutUs.jsx";
 import StudentSection from "./StudentSection.jsx";
 import ParentsSection from "./ParentsSection.jsx";
 import Volunteer from './Volunteer.jsx';
-import Acedemics from "./Acedemics.jsx";
+import Academics from "./Academics.jsx";
 import Blog from "./Blog.jsx";
 import ContactUs from "./ContactUs.jsx";
 import ReadMorePage from './ReadMorePage.jsx';
@@ -24,7 +24,7 @@ function App() {
         <Route path="/Student-section" element={<StudentSection />} />
         <Route path="/Parent-section" element={<ParentsSection />} />
         <Route path="/Volunteer" element={<Volunteer />} />
-        <Route path="/Acedemics" element={<Acedemics />} />
+        <Route path="/Academics" element={<Academics />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
@@ -86,14 +86,8 @@ function CreateIcon() {
       <a href="#" className="web-color" aria-label="Facebook">
         <i className="fab fa-facebook fa-2x"></i>
       </a>
-      <a href="#" className="web-color" aria-label="Twitter">
-        <i className="fab fa-twitter fa-2x"></i>
-      </a>
       <a href="#" className="web-color" aria-label="Instagram">
         <i className="fab fa-instagram fa-2x"></i>
-      </a>
-      <a href="#" className="web-color" aria-label="LinkedIn">
-        <i className="fab fa-linkedin fa-2x"></i>
       </a>
     </div>
   );

@@ -10,10 +10,10 @@ function ParentsSection() {
     return (
         <div id='parent-section'>
             <HomeHeader/>
-            <Header headVal={'Parent Section'}/>
-            <AcedemicCalunder/>
-            <div className="container-fluid portal-section d-flex flex-column align-items-center p-3">
-                <PortalSection heading={"Parent portal"} content={"Lorem ipsum dolor sit amet consectetur. Nunc sit rhoncus purus et. Ornare leo vivamus id tempus scelerisque consectetur mauris iaculis quam.Tristique vitae ipsum cras vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam."}
+            <Header headVal={'Parent Section'} />
+            {/* <AcedemicCalunder/> */}
+            <div className="container-fluid portal-section d-flex flex-column align-items-center p-3 mt-5">
+                <PortalSection heading={"Parent Portal"} content={"Lorem ipsum dolor sit amet consectetur. Nunc sit rhoncus purus et. Ornare leo vivamus id tempus scelerisque consectetur mauris iaculis quam.Tristique vitae ipsum cras vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam."}
                     btnName={"Login"} />
             </div>
 
@@ -48,13 +48,13 @@ function SchoolTimings({ val }) {
 export function AcedemicCalunder(){
     return(
         <>
-        <h2 className="text-center text-dark mt-5 mb-5"><b>Academic <span className="web-color"> calendar</span></b></h2>
+        <h2 className="text-center text-dark mt-5 mb-5"><b>Academic <span className="web-color"> Calendar</span></b></h2>
         <div className="container d-flex flex-column align-items-center mb-5">
             {/* <iframe src="https://www.catamilacademy.org/RedmondTamilSchoolSchedule.html" className='iframe-style' height="400" width="900" title="Iframe Example" style={{ backgroundColor: 'gray', borderRadius: '10px' }}></iframe> */}
             <img src={bigImage} alt="" style={{maxWidth:'100%',maxHeight:'100%'}}/>
         
-        <h3 className='mt-5 mb-4'><b>Special programs – HSCP (TBD)</b></h3>
-                <p>RTS has a home grown HSCP program which has been very successful (more than 15 students have achieved 3 or 4 credits in ALTA/AVENT) in getting foreign language credits in the public schools. HSCP classes are conducted every Sunday from 9:30 to 10:15 for students registered for HSCP.</p>
+        {/* <h3 className='mt-5 mb-4'><b>Special programs – HSCP (TBD)</b></h3>
+                <p>RTS has a home grown HSCP program which has been very successful (more than 15 students have achieved 3 or 4 credits in ALTA/AVENT) in getting foreign language credits in the public schools. HSCP classes are conducted every Sunday from 9:30 to 10:15 for students registered for HSCP.</p> */}
                 </div>
         </>
     )

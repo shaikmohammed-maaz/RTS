@@ -21,8 +21,8 @@ function CurriculamOverview({ head, curriculamDetail }) {
 function CreateCard({ heading, content, year, yesOrNo, age, evalution }) {
     return (
         <div className="col-xl-6 col-md-6 col-sm-12">
-            <div className="card p-3">
-            <h5 className="text-center web-color"><b>{heading}</b></h5>
+            <div className="card p-3 curriculam-card">
+            <h5 className="text-center web-color curriculam-head"><b>{heading}</b></h5>
                 <div className="card-header mt-3">
                     <p className="text-justify">{content}</p>
                     {/* <div> */}
@@ -47,7 +47,7 @@ function CreateYearAndEvalution({ value, value2 }) {
     return (
         <>
             <div className="col-sm-6">
-                <h6 className='web-color'><b>{value}</b></h6>
+                <h6 className='web-color curriculam-sub-head'><b>{value}</b></h6>
                 <p>{value2}</p>
             </div>
         </>
