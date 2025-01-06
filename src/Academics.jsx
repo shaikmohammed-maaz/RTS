@@ -14,7 +14,6 @@ import { AssestmentSystemPoints } from './cardDetails.js';
 import { classSchedulePoints } from './cardDetails.js';
 // import { stringify } from "uuid";
 import { assesMentTable } from './cardDetails.js';
-import { v4 as uuidv4 } from 'uuid';
 
 
 function Academics() {
