@@ -9,7 +9,7 @@ import GraduationCard from "./GraduationCard";
 
 export default function HomeBody() {
     return (
-        <>
+        <div className="about-us">
             {/* <div className="container-fluid">
                 <div id="homeContainer" className="text-center">
                     <img src={HomeFirstImg} id="HomeFirstImg" alt="Home" className="img-fluid" />
@@ -170,6 +170,6 @@ export default function HomeBody() {
                 </div>
             </div>
 
-        </>
+        </div>
     );
 }

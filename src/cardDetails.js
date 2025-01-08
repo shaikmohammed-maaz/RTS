@@ -152,20 +152,25 @@ export let studentImageAndContent = [
         imagePath: photo,
         name: "Innovative Tech Creator",
         details: "December 2023"
-    }
+    },
+    {
+        imagePath: photo,
+        name: "Innovative Tech Creator",
+        details: "December 2023"
+    },
 ];
 
 
 export let schoolTimings = [
-    "Lorem ipsum dolor sit amet consectetur.",
-    "Lorem ipsum dolor sit amet consectetur.",
-    "Lorem ipsum dolor sit amet consectetur.",
-    "Lorem ipsum dolor sit amet consectetur.",
-    "Lorem ipsum dolor sit amet consectetur.",
-    "Lorem ipsum dolor sit amet consectetur.",
-    "Lorem ipsum dolor sit amet consectetur.",
-    "Lorem ipsum dolor sit amet consectetur.",
-    "Lorem ipsum dolor sit amet consectetur."
+    "Morning assembly begins promptly at 8:30 AM, setting a positive tone for the day.",
+    "Classes commence at 8:45 AM, with engaging lessons and interactive sessions.",
+    "Students enjoy a refreshing break mid-morning to relax and recharge.",
+    "Lunch is served from 12:30 PM to 1:15 PM in a calm and friendly environment.",
+    "Afternoon classes resume with focus and enthusiasm, continuing until 3:30 PM.",
+    "After-school activities, including sports and arts, are held from 3:45 PM.",
+    "Saturdays are reserved for special workshops and parent-teacher meetings.",
+    "The school office is open Monday through Friday from 8:00 AM to 4:00 PM.",
+    "Lunch is served from 12:30 PM to 1:15 PM in a calm and friendly environment."
 ];
 
 

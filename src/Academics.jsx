@@ -14,15 +14,16 @@ import { AssestmentSystemPoints } from './cardDetails.js';
 import { classSchedulePoints } from './cardDetails.js';
 // import { stringify } from "uuid";
 import { assesMentTable } from './cardDetails.js';
+import { v4 as uuidv4 } from 'uuid';
+import dott from './assets/dott.png';
 
-
-function Academics() {
+function Academics(){
   return (
-    <>
+    <div className="about-us">
       <HomeHeader></HomeHeader>
       <Header headVal={'Academics'} />
       <div className="container text-dark mt-5 curriculam-container">
-        <h2 className='text-center mb-3'><b>Curriculum<span className='web-color'> Overview</span></b></h2>
+        <h2 className='text-center mb-3'><b>Curriculum<span className='web-color'> overview</span></b></h2>
         {/* <p className='text-center'>At Redmond Tamil School, we are dedicated to preserving and promoting Tamil language and culture through comprehensive and engaging academic programs. Our curriculum is designed to nurture proficiency in reading, writing, and speaking Tamil, while also fostering an appreciation for Tamil culture, literature, history, and traditions. </p>
         <p className='text-center'>we create a dynamic learning environment where students of all ages can connect, grow, and develop a lasting appreciation for Tamil heritage.</p>
         <p className='text-center mb-5'>As an affiliated institution of the International Tamil Academy (ITA), formerly known as the California Tamil Academy (CTA), RTS provides a curriculum that caters to students from diverse backgrounds in a welcoming and inclusive atmosphere.</p> */}
@@ -40,7 +41,7 @@ function Academics() {
             return (
               <ul key={index}>
                 {item.Details.map((detail, i) => (
-                  <li key={i}>{detail}</li>
+                  <li key={i} id="cls-shedule">{detail}</li>
                 ))}
               </ul>
             );
@@ -49,7 +50,7 @@ function Academics() {
             return <p key={index}>{item}</p>;
           }
         })}
-        <h2 className='text-center mt-5 mb-4'><b>Library<span className='web-color'> Information</span></b></h2>
+        <h2 className='text-center mt-5 mb-4'><b>Library<span className='web-color'> information</span></b></h2>
         {libraryInformation.map((item, index) => (
           <LibraryInformationFunction
             head={item.heading}
@@ -57,7 +58,7 @@ function Academics() {
             point={item.points}
           />
         ))}
-        <h2 className='text-center mt-5 mb-5'><b>Assessment<span className='web-color'> System</span></b></h2>
+        <h2 className='text-center mt-5 mb-5'><b>Assessment<span className='web-color'> system</span></b></h2>
         <h5><b>Assessment for RTS is based on ITA guidelines. The ITS guidelines for current ITA students are as follows</b></h5>
         <div className="row d-flex flex-direction-column align-items-center">
           <div className="col-lg-6 col-md-12">
@@ -74,7 +75,7 @@ function Academics() {
               src={image1}
               alt="Accredited"
               className="img-fluid"
-              style={{ maxWidth: '50%', maxHeight: '50%' }}
+              style={{ maxWidth: '50%', maxHeight: '50%',marginLeft:'20%' }}
             />
           </div>
         </div>
@@ -107,7 +108,7 @@ function Academics() {
 
       </div>
       <FooterSection />
-    </>
+    </div>
   )
 }
 
@@ -115,7 +116,7 @@ function ClassSchedule({ points, text }) {
   return (
     <>
       {points.map((point, index) => (
-        <p key={index}>* {point}</p>
+        <p key={index}><img src={dott} id="dott"/> {point}</p>
       ))}
       <p>{text}</p>
     </>
@@ -125,7 +126,7 @@ function ClassSchedule({ points, text }) {
 function AssestMentSystemFunction({ point }) {
   return (
     <>
-      <p className="text-justify">*{point}</p>
+      <p className="text-justify"><img src={dott} id="dott"/>{point}</p>
     </>
   )
 }
@@ -134,37 +135,65 @@ function AssestMentSystemFunction({ point }) {
 function AssesmentTableFunction({ headVal = [], firstCol = [], secondCol = [] }) {
   return (
     <div className="table-responsive m-5">
-      <table className="schedule-table" style={{ width: "100%", borderCollapse: "collapse" }}>
+      <table
+        className="schedule-table"
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+          tableLayout: "fixed", // Ensures equal column width
+        }}
+      >
         <thead>
           <tr>
             {headVal.map((item, index) => (
               <th
                 key={index}
                 className="table-head-style"
-                style={{ border: "1px solid #F9E1E0", padding: "10px", backgroundColor: "#f4f4f4", textAlign: "left" }}>
+                style={{
+                  border: "1px solid #F9E1E0",
+                  padding: "10px",
+                  backgroundColor: "#f4f4f4",
+                  textAlign: "center", // Center-align the headings
+                  width: `${100 / headVal.length}%`, // Equal width for each column
+                }}
+              >
                 {item}
               </th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {firstCol.length > 0 && secondCol.length > 0 && firstCol.map((data, index) => (
-            <tr key={index}>
-              <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "left" }}>
-                {data}
-              </td>
-              <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "left" }}>
-                {secondCol[index] || ''} {/* Handle missing second column data */}
-              </td>
-            </tr>
-          ))}
+          {firstCol.length > 0 &&
+            secondCol.length > 0 &&
+            firstCol.map((data, index) => (
+              <tr key={index}>
+                <td
+                  style={{
+                    border: "1px solid #ddd",
+                    padding: "10px",
+                    textAlign: "left",
+                    width: "50%", // Equal division for each column
+                  }}
+                >
+                  {data}
+                </td>
+                <td
+                  style={{
+                    border: "1px solid #ddd",
+                    padding: "10px",
+                    textAlign: "left",
+                    width: "50%", // Equal division for each column
+                  }}
+                >
+                  {secondCol[index] || ""} {/* Handle missing second column data */}
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
   );
 }
-
-
 
 
 const ScheduleTable = () => {
@@ -211,10 +240,12 @@ const ScheduleTable = () => {
 function LibraryInformationFunction({ head, subHead, point }) {
   return (
     <div className="m-3">
-      <h5 className="text-center"><b>{head}</b></h5>
-      <h6>{subHead}</h6>
+      <h4 className="text-center mb-4" style={{ fontFamily:'Outfit'}}>
+    <b id="head-acad">{head}</b>
+</h4>
+      <p id="sub-heading">{subHead}</p>
       {point.map((content, idx) => (
-        <p key={idx} className="m-auto">* {content}</p>
+        <p key={idx} className="m-auto"><img src={dott} id="dott"/> {content}</p>
       ))}
     </div>
   )

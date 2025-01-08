@@ -64,7 +64,7 @@ export default function ContactUs() {
     };
 
     return (
-        <>
+        <div className='about-us'>
             <HomeHeader />
             <Header headVal={'Contact Us'} />
             <div className="container form-container my-5 text-dark">
@@ -79,7 +79,7 @@ export default function ContactUs() {
                         <ul className="list-unstyled">
                             <li className="mb-3">
                                 <img src={atLogo} alt="at-logo" id="at-logo" />
-                                <span id="gmail">abc@gmail.com</span>
+                                <span id="gmail">info@RedmondTamilSchool.edu</span>
                             </li>
                             <li className="mb-3">
                                 <img src={location} alt="location-logo" id="location-logo" />
@@ -170,6 +170,6 @@ export default function ContactUs() {
                 </div>
             )} */}
             <FooterSection />
-        </>
+        </div>
     );
 }

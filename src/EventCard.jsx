@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function EventCard({ eventImg }) {
     return (
-        <div className="container my-4">
+        <div className="container my-4 about-us">
             <div className="row">
                 <div className="col-4 text-center">
                     <img src={eventImg} alt="Event" className="img-fluid" id="eventimg" />

@@ -9,10 +9,12 @@ import { Header } from './HomeHeader.jsx';
 import HomeHeader from './HomeHeader';
 import { FooterSection } from "./App.jsx";
 import imag1 from './assets/hoverImage.jpeg';
+import dott from './assets/dott.png';
+import './styles/card.css';
 
 function AboutUs() {
     return (
-        <div id="about-us">
+        <div className="about-us" >
             <HomeHeader></HomeHeader>
             <Header headVal={'About Us'} />
             {/* <header className="about p-3 mb-3">
@@ -20,7 +22,7 @@ function AboutUs() {
             </header> */}
             <div className="container mt-3 card-container mt-5 mb-5">
                 <div className="align-items-center">
-                    <div className="row g-3 card-row">
+                    <div className="row g-3 card-row about-us2">
                         {cardDetails.map((item, index) => (
                             <Card
                                 heading={item.heading}
@@ -70,60 +72,89 @@ function AboutUs() {
     );
 };
 
-function Card({ heading, subHeading, content, index, styleContent }) {
+const Card = ({ heading, subHeading, content, index, styleContent }) => {
     const [hovered, setHovered] = useState(false);
+  
     return (
-        <>
-            <div className="col-xl-3 col-md-3">
-                <div className="card card-styles p-2" style={styleContent ? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}
-                    onMouseEnter={() => setHovered(true)}
-                    onMouseLeave={() => setHovered(false)}>
-                    {
-                        hovered ? (
-                            <img
-                                src={imag1}
-                                alt=""
-                                className="cards-images"
-                            />
-                        ) :
-                            (
-                                <div className={index == 0 ? 'm-auto' : ''}>
-                                    <h2 style={styleContent ? { color: "#D4302B" } : { color: "white" }} className="text-center"><b>{heading}</b></h2>
-                                    <h5 style={styleContent ? { color: "black" } : { color: "white" }}><b>{subHeading}</b></h5>
-                                    <p style={styleContent ? { color: "black" } : { color: "white" }}>{content}</p>
-                                </div>)
-                    }
-
-                </div>
-            </div>
-
-            {(index === 2 || index === 5) ? (
-                index === 2 ? (
-                    <div className="row">
-                        <div className="col-sm-6"></div>
-                        <div className="col-sm-6">
-                            <p className="left-arrow"></p>
-                        </div>
-                    </div>
-                ) : ""
+      <>
+        <div className="col-xl-3 col-md-3">
+          <div
+            className="card card-styles p-2"
+            style={
+              styleContent
+                ? { backgroundColor: "white" }
+                : { backgroundColor: "#D4302B" }
+            }
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {hovered ? (
+              <img src={imag1} alt="" className="cards-images" />
             ) : (
-                <div className="col-xl-1 col-md-1 col-sm-6">
-                    {index === 3 || index === 4 ? (
-                        <p className="left-dashed-arrow"></p>
-                    ) : (
-                        <p className="dashed-arrow"></p>
-                    )}
-                </div>
+              <div className={index === 0 ? "m-auto" : ""}>
+                <h2
+                  style={
+                    styleContent
+                      ? { color: "#D4302B" }
+                      : { color: "white" }
+                  }
+                  className="text-center"
+                >
+                  <b>{heading}</b>
+                </h2>
+                <h5
+                  style={
+                    styleContent
+                      ? { color: "black" }
+                      : { color: "white" }
+                  }
+                >
+                  <b>{subHeading}</b>
+                </h5>
+                <p
+                  style={
+                    styleContent
+                      ? { color: "black" }
+                      : { color: "white" }
+                  }
+                >
+                  {content}
+                </p>
+              </div>
             )}
-        </>
+          </div>
+        </div>
+  
+        {(index === 2 || index === 5) ? (
+          index === 2 ? (
+            <div className="row mt-4">
+              <div className="col-sm-6"></div>
+              <div className="col-sm-6">
+                <p className="left-arrow"></p>
+              </div>
+            </div>
+          ) : (
+            ""
+          )
+        ) : (
+          <div className="col-xl-1 col-md-1 col-sm-6">
+            {index === 3 || index === 4 ? (
+              <p className="left-dashed-arrow"></p>
+            ) : (
+              <p className="dashed-arrow"></p>
+            )}
+          </div>
+        )}
+      </>
     );
-};
+  };
+  
 
 function RowColCard() {
     return (
         <div className="text-dark container image-with-text-container">
             <h1 className="text-center mt-5 mb-3">
-                <b>Our <span className="web-color"> Core Area Of Focus, Our objectives</span></b>
+                <b>Our <span className="web-color">Mission,</span> Core Area Of <span className="web-color">Focus</span> , Our<span className="web-color"> objectives</span></b>
             </h1>
             <div className="row">
                 {imageWithContent.map((item, index) => (
@@ -155,7 +186,7 @@ function CardCol({ imgVal, cardHead, subHead, cardText, isVal }) {
                         <div>
                             {subHead && <h6><b>{subHead}</b></h6>} {/* Use subHead instead of item.subHead */}
                             {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
-                                <p key={idx} className="m-auto">* {content}</p>
+                                <p key={idx} className="m-auto"><img src={dott} id="dott"/> {content}</p>
                             ))}
                         </div>
                     </div>
@@ -166,7 +197,7 @@ function CardCol({ imgVal, cardHead, subHead, cardText, isVal }) {
                         <h5 className="web-color text-center"><b>{cardHead}</b></h5>
                         {subHead && <h3>{subHead}</h3>} {/* Use subHead instead of item.subHead */}
                         {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
-                            <p key={idx} className="m-auto">* {content}</p>
+                            <p key={idx} className="m-auto"><img src={dott} id="dott"/> {content}</p>
                         ))}
                     </div>
 
@@ -302,8 +333,5 @@ export function PhotoGallaryFun({ pictures = [], idVal }) {
 
     );
 }
-
-
-
 
 export default AboutUs;

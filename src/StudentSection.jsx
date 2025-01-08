@@ -4,6 +4,7 @@ import { photoGallary } from "./cardDetails.js";
 import { Header } from './HomeHeader.jsx';
 import HomeHeader from "./HomeHeader.jsx";
 import { FooterSection } from "./App";
+import { useState } from "react";
 function StudentSection() {
     return (
         <div id="student-section">
@@ -13,7 +14,7 @@ function StudentSection() {
             <div className="container student-row mt-5">
                 <div className="row text-dark ">
                     {studentImageAndContent.map((item, index) => (
-                        <StudentAchivement key={index} imageVal={item.imagePath} head={item.name} textContent={item.details} />
+                        <StudentAchivement key={index} imageVal={item.imagePath} head={item.name} textContent={item.details} isShow={index==6} />
                     ))}
                 </div>
             </div>
@@ -32,18 +33,41 @@ function StudentSection() {
                 </div>
             </div>
             <FooterSection />
-
         </div>
     )
 }
 
-function StudentAchivement({ imageVal, head, textContent }) {
+function StudentAchivement({ imageVal, head, textContent,isShow }) {
+    let [showReadLess,setReadLess] =  useState(false);
+    let [showReadMore,setReadMore] = useState(isShow);
+    function toggleContent(){
+        setReadMore(false);
+        setReadLess(true);
+    }
+    function toggleContent2(){
+        setReadMore(true);
+        setReadLess(false);
+    }
     return (
-        <div className="col-sm-6 col-md-4 col-xl-4 d-flex flex-column align-items-center">
+        <>
+        {showReadMore ?(
+            <div className="text-center">
+            <button className="login-style2 fs-6 pt-2 pb-2" onClick={toggleContent}><b>Read More</b></button>
+            </div>
+        ):(
+            <div className="col-sm-6 col-md-4 col-xl-4 d-flex flex-column align-items-center">
             <img src={imageVal} className="student-achive-image" alt="" style={{ width: '350px', height: 'auto' }} />
             <h5 className="mt-3 student-achivement-head"><b>{head}</b></h5>
             <p>{textContent}</p>
         </div>
+        )}
+        {showReadLess ? (
+             <div className="text-center">
+                <button className="login-style2 fs-6 pt-2 pb-2" onClick={toggleContent2}><b>Read Less</b></button>
+             </div>
+        )
+         : ''}
+        </>
     )
 }
 

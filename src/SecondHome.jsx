@@ -6,7 +6,7 @@ import achiveMentImage from './assets/Achievements Column.jpeg';
 import aboutUsBG from './assets/about us bg.png';
 import { FooterSection } from "./App";
 import {numWithText2} from './imagesDetails.js';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import { Link } from "react-router-dom";
 
 function SecondHome() {
@@ -38,7 +38,7 @@ function SecondHome() {
     
 
     return (
-        <div id="home">
+        <div className="about-us">
             <HomeHeader />
             <div className="container-fluid text-dark position-relative p-0">
             <img
@@ -78,9 +78,12 @@ function SecondHome() {
                     </div>
                 </div>
                 <div className="image-navigation-buttons">
-        <button id="prevImageButton" onClick={prevImage} className="image-navigation-button">←</button>
-
-   <button id="nextImageButton" onClick={nextImage} className="image-navigation-button" >→</button>
+                <div className="carousel-control-prev" onClick={prevImage}>
+            <span className="carousel-control-prev-icon"></span>
+            </div>
+            <div className="carousel-control-next" onClick={nextImage}>
+            <span className="carousel-control-next-icon"></span>
+            </div>
 
                 </div>
             </div>
@@ -222,7 +225,7 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
 function ShowImages({ imagePathLink,isTabView }) {
     return (
         <div className="image-container">
-            <img src={imagePathLink} alt="" className="home-colum-image" style={isTabView ? { width: '69%', height: 'auto'} : { width: '69%', height: 'auto',marginLeft:'19%'}}
+            <img src={imagePathLink} alt="" className="home-colum-image" style={isTabView ? { width: '80%', height: 'auto',marginTop:'0%'} : { width: '69%', height: 'auto',marginLeft:'25%'}}
  />
         </div>
 

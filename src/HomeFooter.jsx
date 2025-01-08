@@ -1,6 +1,6 @@
 export default function HomeFooter({ instagram, facebook }) {
     return (
-        <>
+        <div className="about-us">
             <div className="container-fluid my-4 footer-container">
                 <div className="row justify-content-center ">
                     <div className="col-12">
@@ -16,6 +16,6 @@ export default function HomeFooter({ instagram, facebook }) {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

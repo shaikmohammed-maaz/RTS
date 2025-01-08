@@ -7,13 +7,13 @@ import instagram from "./assets/insta.jpg";
 
 export default function App() {
     return (
-        <>
+        <div className="about-us">
             <HomeHeader />
             <HomeBody />
             <div id="footer">
                 <HomeFooter facebook={facebook} instagram={instagram} />
             </div>
-        </>
+        </div>
     )
 }
 

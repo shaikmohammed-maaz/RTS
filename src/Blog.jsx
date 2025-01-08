@@ -185,7 +185,7 @@ export default function Blog() {
                         <BlogCard gradimg={Logo} blogimgid={"grad-img1"}
                                     h1cont={"Tamil Talent Extravaganza"} h1id={"grad1-cont1"}
                                     graddate={"26th December 2024"} dateid={"graddate1"}
-                                    maincont={"*A Celebration of Creativity, Language, and Culture* We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. "}
+                                    maincont={"A Celebration of Creativity, Language, and Culture* We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. "}
                                     excescont={"This includes earning the required number of credits."}
                                     maincontid={"main-cont-id"} btnid={"readmore-grad"} 
                                     readContentFullDetails={secondContentCard}
@@ -310,8 +310,8 @@ export function BlogCard({ gradimg, blogimgid, h1cont, h1id, graddate, maincont,
     };
 
     return (
-        <div className="card h-100">
-            <img src={Logo} alt="grad-img" id={blogimgid} className="card-img-top img-fluid"  style={{width:'90%',height:'70%'}}/>
+        <div className="card blog-card-style">
+            <img src={Logo} alt="grad-img"  className="card-img-top img-fluid"  style={{width:'90%',height:'60%'}}/>
             <div className="card-body">
                 <h4 id="grad1-cont1" className="blog-card-header text-center"><b>{h1cont}</b></h4>
                 <p className="text-muted text-center">{graddate}</p>

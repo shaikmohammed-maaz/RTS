@@ -32,7 +32,7 @@ export default function HomeHeader() {
     }, [isSidebarOpen]);
 
     return (
-        <>
+        <div className='about-us'>
             <nav className="navbar navbar-expand-xl navbar-dark nav-style-row">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
@@ -92,18 +92,18 @@ export default function HomeHeader() {
                     ))}
                 </ul>
             </div>
-        </>
+        </div>
     );
 }
 
 export function Header({ headVal }) {
     return (
-        <>
+        <div className='about-us'>
             <div className="container-fluid p-0">
                 <div className="bg-img-header d-flex align-items-center justify-content-center text-center p-4">
                     <h2 className="header-title">{headVal}</h2>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
