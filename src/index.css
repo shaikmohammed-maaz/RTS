@@ -24,6 +24,14 @@ p {
   max-width: 1327px; /* Set the maximum width you desire */
   margin: 0 auto; /* Center align the container */
 }
+@media (max-width:767px) {
+  .card-styles {
+    width: 40% !important;
+    height: 100% !important;
+    margin-left: 30%;
+  }
+}
+
 .no-content{
   text-align: center;
 }

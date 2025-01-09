@@ -87,7 +87,15 @@ export default function HomeHeader() {
                                 to={path}
                                 onClick={toggleSidebar} // Close sidebar on link click
                             >
-                                {path.replace('/', '').replace('-', ' ')}
+                                {path === '/RTS'
+                    ? 'Home'
+                    : path === '/Blog'
+                    ? 'Blog & Events'
+                    : path
+                        .replace('/', '')
+                        .replace(/-/g, ' ')
+                        .replace(/([a-z])([A-Z])/g, '$1 $2')
+                        .trim()}
                             </Link>
                         </li>
                     ))}
