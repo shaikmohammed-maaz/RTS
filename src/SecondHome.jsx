@@ -1,24 +1,24 @@
 import HomeFirstImg from "./assets/homeFirstImg.jpg";
 import HomeHeader from "./HomeHeader.jsx";
 import { numWithText } from './imagesDetails.js';
-import EventPage from './assets/Events Section.jpeg';
-import achiveMentImage from './assets/Achievements Column.jpeg';
+import heroImgTwo from './assets/Events Section.jpeg';
+import heroImgThree from './assets/Achievements Column.jpeg';
 import aboutUsBG from './assets/about us bg.png';
 import { FooterSection } from "./App";
 import {numWithText2} from './imagesDetails.js';
-import React, { useState, useEffect } from 'react'; 
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+
+import  EventPage from "./assets/News Section image one.png";
+import achiveMentImage from "./assets/Events Section image two.png";
 
 function SecondHome() {
     const images = [
         HomeFirstImg,  
-        achiveMentImage,     
-        EventPage
-    ];
-  
+        heroImgTwo,     
+        heroImgThree
+];
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Automatically change images every 3 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -65,7 +65,7 @@ function SecondHome() {
                         style={{
                             marginTop: '15%', // Adjust margin for better center positioning
                             width: '100%',
-                            maxWidth: '800px', // Max width to prevent content from being too wide
+                            maxWidth: '1000px', // Max width to prevent content from being too wide
                             boxSizing: 'border-box',
                             padding: '10px',
                         }}
@@ -95,16 +95,16 @@ function SecondHome() {
             <img src={aboutUsBG} alt="" className="about-bg-img" />
             <div className="container d-flex flex-column align-items-center justify-content-center text-dark mb-2">
                 <div className="about-content m-5 d-flex flex-column align-items-center justify-content-center text-dark">
-                    <h3 style={{ fontWeight: 'bold', marginBottom: '3%' ,marginTop: '-4%'}}>About Us</h3>
+                    <h2 style={{ fontWeight: "bolder", marginBottom: '3%' ,marginTop: '-4%'}}>About <span className='web-color'>Us</span></h2>
                     <p>vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam. Pharetra laoreet lobortis ut vivamus placerat vitae non feugiat. Pharetra mauris in
                         quam non vitae. Amet habitant pretium nascetur nunc pretium. I incidunt et nec quis amet et id volutpat. sed vestibulum non risus nulla
                         Risus sit senectus a velit. Vestibulum euismod eget vestibulum eget elementum duis nibh odio quisque. Cras taucibus viverra aenean commodo egestas posuere tincidun tortor. Molestie viverra vitae lacinia in venenatis in pellentesque. Lobortis ipsum ipsum condimentum in aliquam commodo molestie.
                         Elementum nullam massa tortor ut amet felis fringilla lacus aliquam. Eget nibh tempus volutpat sociis risus. Lacus faucibus massa in amet. Eget ultrices curabitur felis malesuada ante arcu egestas. Donec.</p>
-                    <Link to={"/About-us"} className="web-color mt-4"  >Know More</Link>
+                    <a href="/About-us" className="web-color mt-4"  >Know More</a>
                 </div>
                 <div className="row">
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Latest News'} spanVal={'Lorem ipsum'} heading={'dolor sit amet, consectetur'} checkTrue={false}
+                        <CardWithContentDetails  spanVal={'Latest '} heading={' News '} checkTrue={false}
                         Details={numWithText}
                          />
                     </div>
@@ -117,7 +117,7 @@ function SecondHome() {
                         <ShowImages imagePathLink={EventPage} />
                     </div>
                     <div className="col-md-6 tabView-colum2 ">
-                        <ShowImages imagePathLink={achiveMentImage} />
+                        <ShowImages imagePathLink={achiveMentImage} isTabView={true} />
                     </div>
                 </div>
 
@@ -126,7 +126,7 @@ function SecondHome() {
                         <ShowImages imagePathLink={achiveMentImage} isTabView={true} />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 mt-3">
-                        <CardWithContentDetails link={'Events'} spanVal={'Events'} heading={'dolor sit amet, consectetur'} checkTrue={true}
+                        <CardWithContentDetails  heading={'Events'} checkTrue={true}
                         Details={numWithText2}
                          />
                     </div>
@@ -152,12 +152,11 @@ function CardWithContentDetails({ link, spanVal, heading, checkTrue,Details }) {
     return (
         <>
             <div className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3`}>
-                <Link to={'/Blog'} className="web-color " 
-                ><b>{link}</b></Link>
             </div>
             <h2 className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3 span-val`}>
             <b>
-                <span className="web-color">{spanVal}</span> {heading}
+                <a href='/Blog' className="web-color " style={{ textDecoration: 'none' }}
+                ><b id="spanVal-colo">{spanVal} <span className='web-color'>{heading}</span></b></a>
             </b>
             </h2>
             <div className="row">
@@ -181,13 +180,13 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
                         <p
                             className="num-circle rounded-circle mt-5 text-white d-flex justify-content-center align-items-center"
                             style={{
-                                width: '60px',
-                                height: '60px',
+                                width: '75px',
+                                height: '75px',
                                 margin: '0',
                                 fontSize: '0.7rem'
                             }}
                         >
-                            21st Dec
+                            21st <br></br>Dec
                         </p>
                     </div>
                     <div className="col-sm-10">
@@ -203,7 +202,7 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
                         <h5><b>{head}</b></h5>
                         <p className="apply-gray">{text}</p>
                     </div>
-                    <div className="col-sm-1">
+                    <div className="col-sm-1 circle-space">
                         <p
                             className="num-circle  rounded-circle mt-5 text-white d-flex justify-content-center align-items-center"
                             style={{
@@ -222,15 +221,18 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide }) {
     )
 }
 
-function ShowImages({ imagePathLink,isTabView }) {
+function ShowImages({ imagePathLink, isTabView }) {
     return (
         <div className="image-container">
-            <img src={imagePathLink} alt="" className="home-colum-image" style={isTabView ? { width: '80%', height: 'auto',marginTop:'0%'} : { width: '69%', height: 'auto',marginLeft:'25%'}}
- />
+            <img
+                src={imagePathLink}
+                alt=""
+                className={isTabView ? "tab-view-image" : "default-view-image"}
+            />
         </div>
-
     );
 }
+
 
 
 

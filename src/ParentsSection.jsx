@@ -2,24 +2,24 @@ import { PortalSection } from './StudentSection.jsx';
 import { schoolTimings } from "./cardDetails.js";
 import { commuincationProtocalsValues } from "./cardDetails.js";
 import bigImage from './assets/calender.png';
-import { Header } from './HomeHeader.jsx';
+import {Header} from './HomeHeader.jsx';
 import { FooterSection } from "./App";
 import HomeHeader from './HomeHeader.jsx';
 
 function ParentsSection() {
     return (
         <div className='about-us'>
-            <HomeHeader />
+            <HomeHeader/>
             <Header headVal={'Parent Section'} />
             {/* <AcedemicCalunder/> */}
-            <div className="container dummy-parent-section mt-4">
-                <p className='text-center'>
-                    Our curriculum is designed to inspire creativity, 
-                    critical thinking, and cultural values. It provides 
-                    a balanced approach to learning, helping students
-                     grow academically and personally across all subjects.
-                </p>
-            </div>
+            <iframe
+    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&showPrint=0&src=dmFpc2huYXZpLnNhcmEyNUBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4taW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4tZ2IuaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043&color=%230B8043&color=%230B8043"
+    className="responsive-iframe"
+    frameBorder="0"
+    scrolling="no"
+/>
+
+
             <div className="container-fluid portal-section d-flex flex-column align-items-center p-3 mt-5">
                 <PortalSection heading={"Parent portal"} content={"Lorem ipsum dolor sit amet consectetur. Nunc sit rhoncus purus et. Ornare leo vivamus id tempus scelerisque consectetur mauris iaculis quam.Tristique vitae ipsum cras vestibulum non volutpat porttitor sit. Dolor amet at in facilisis in pulvinar lectus ut diam."}
                     btnName={"Login"} />
@@ -39,7 +39,7 @@ function ParentsSection() {
                     ))}
                 </div>
             </div>
-
+            
             <FooterSection />
         </div>
     )
@@ -53,17 +53,17 @@ function SchoolTimings({ val }) {
     )
 }
 
-export function AcedemicCalunder() {
-    return (
+export function AcedemicCalunder(){
+    return(
         <div className='about-us'>
-            <h2 className="text-center text-dark mt-5 mb-5"><b>Academic <span className="web-color"> calendar</span></b></h2>
-            <div className="container d-flex flex-column align-items-center mb-5">
-                {/* <iframe src="https://www.catamilacademy.org/RedmondTamilSchoolSchedule.html" className='iframe-style' height="400" width="900" title="Iframe Example" style={{ backgroundColor: 'gray', borderRadius: '10px' }}></iframe> */}
-                <img src={bigImage} alt="" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-
-                {/* <h3 className='mt-5 mb-4'><b>Special programs – HSCP (TBD)</b></h3>
+        <h2 className="text-center text-dark mt-5 mb-5"><b>Academic <span className="web-color"> calendar</span></b></h2>
+        <div className="container d-flex flex-column align-items-center mb-5">
+            {/* <iframe src="https://www.catamilacademy.org/RedmondTamilSchoolSchedule.html" className='iframe-style' height="400" width="900" title="Iframe Example" style={{ backgroundColor: 'gray', borderRadius: '10px' }}></iframe> */}
+            <img src={bigImage} alt="" style={{maxWidth:'100%',maxHeight:'100%'}}/>
+        
+        {/* <h3 className='mt-5 mb-4'><b>Special programs – HSCP (TBD)</b></h3>
                 <p>RTS has a home grown HSCP program which has been very successful (more than 15 students have achieved 3 or 4 credits in ALTA/AVENT) in getting foreign language credits in the public schools. HSCP classes are conducted every Sunday from 9:30 to 10:15 for students registered for HSCP.</p> */}
-            </div>
+                </div>
         </div>
     )
 }

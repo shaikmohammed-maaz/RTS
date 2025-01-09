@@ -19,7 +19,125 @@ p {
 
 
 /* ___________________________________vaishu changed________________________________________ */
+.custom-container {
+  width: 90%; /* Or any percentage or pixel value you prefer */
+  max-width: 1327px; /* Set the maximum width you desire */
+  margin: 0 auto; /* Center align the container */
+}
+.no-content{
+  text-align: center;
+}
 
+/* For screens smaller than 1327px */
+@media (max-width: 1323px) {
+  .sidebar {
+      display: block; /* Sidebar is hidden */
+  }
+}
+
+
+
+.curiculam-whole-card{
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.font-for-path{
+  font-size: 18px;
+}
+
+.num-circle {
+  background-color: #D4302B;
+  font-size: 15px !important;
+}
+
+/* For the tab view */
+.tab-view-image {
+  width: 94%;
+  height: 96%;
+  margin-left: 11%;
+  margin-top: -10%;
+}
+
+/* For the default view */
+.default-view-image {
+  width: 80%;
+  height: auto;
+  margin-left: 11%;
+  margin-top: 4%;
+}
+@media (max-width:1115px){
+  .tab-view-image {
+    width: 70%;
+    height: 96%;
+    margin-left: 11%;
+    margin-top: 4.5%;
+  }
+}
+@media (max-width:767px){
+  .default-view-image {
+    width: 69%;
+  height: auto;
+  margin-left: 19%;
+  }
+}
+
+@media (max-width:575px){
+  .default-view-image {
+  width: 59%;
+  height: auto;
+  margin-left: 19%;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.973); /* Light, semi-transparent background */
+    border-radius: 50%; /* Circular shape */
+    padding: 12px; /* Adjust padding for smaller size */
+    background-size: 60%; /* Adjust icon size */
+    background-position: center; /* Center the icon */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* Required to adjust position */
+    margin-bottom: 100%;
+    margin-top: 45%;
+    
+}
+
+.tamil-content {
+  background-color: #FDF4F4;
+  font-weight: bold;
+}
+
+.home-bg-img-head {
+  font-weight: 800;
+  font-size: 50px;
+}
+
+
+.responsive-iframe {
+  border: solid 1px #777;
+  width: 90%; /* Default to 90% of the viewport width */
+  height: 600px;
+  margin: 0 auto; /* Center the iframe horizontally */
+  display: block; /* Ensure it behaves like a block element */
+  margin-top: 2%;
+}
+
+@media (min-width: 768px) {
+  .responsive-iframe {
+      width: 800px; /* Set a fixed width for larger screens */
+  }
+}
+
+#spanVal-colo{
+  color: #000;
+}
+
+
+
+/* 
+__________________________________________________________ */
 .about-us {
   font-size: 18px;
 }
@@ -1516,13 +1634,16 @@ header img {
   overflow-x: auto;
   white-space: pre-wrap;
   /* word-wrap: break-word; */
-  font-size: 15px;
+  font-size: 18px;
 }
 
 /* Curriculam Card hover styles  */
 .curriculam-card:hover {
   background-color: #D4302B;
   color: white;
+  /* margin-bottom: 85%; */
+
+
 }
 
 .curriculam-card:hover .card-header {

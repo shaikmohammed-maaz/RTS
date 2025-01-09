@@ -10,7 +10,7 @@ export default function HomeFooter({ instagram, facebook }) {
                         <h3 id="footer-msg">Stay updated with latest news and events.sign up now!</h3>
                         <input type="text" id="email" className="email-box" placeholder="email address"></input>
                         <button id="subscribe-btn">Subscribe</button>
-                        <p id="footer-add">123 greenfield AVE,springField, il<br/>
+                        <p id="footer-add">Bellevue,WA 98005 ,USA<br/>
                             info@RedmondTamilSchool.edu</p>
                       
                     </div>

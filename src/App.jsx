@@ -134,7 +134,7 @@ export function FooterSection() {
 
           {/* Contact Information */}
           <p className="bootom-footer text-center mt-3">
-            123 Greenfield Ave, Springfield, IL <br />
+          Bellevue,WA 98005 ,USA <br />
             <a href="mailto:info@RedmondTamilSchool.edu" className="text-dark text-decoration-none">
               info@RedmondTamilSchool.edu
             </a>

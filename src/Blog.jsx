@@ -40,10 +40,10 @@ export default function Blog() {
         <div>
             <HomeHeader />
             <Header headVal={'Blog & Events'} />
-
             <div className="container blog-container mt-4 text-dark fs-3">
                 <h2 className='text-center m-4'><b>School <span className='web-color'>News</span></b></h2>
                 <div className="row g-3">
+                    <h2 className='no-content'>No content to display</h2>
                     {/* <div className="col-md-4">
                         <div class="blog-card1">
                         <BlogCard
@@ -62,7 +62,7 @@ export default function Blog() {
                         </div>
                     </div> */}
 
-                    <div className="col-md-4">
+                    {/* <div className="col-md-4">
                         <div class="blog-card1">
                         <BlogCard
                                 gradimg={Logo}
@@ -77,7 +77,7 @@ export default function Blog() {
                                 btnid={"readmore-grad"}
                             />
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* <div className="col-md-4">
                         <div class="blog-card1">

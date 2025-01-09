@@ -150,7 +150,8 @@ const BlogContents = [
 export let firstContentCard = [
     {
         heading: "Pongal Celebration – A Vibrant Cultural Festivity",
-        authorName: "dc",
+        authorName: "Vaishnavi",
+        date: "15.01.2025",
         content: `
 Redmond Tamil School proudly hosts its annual Pongal Celebration, a joyous event that unites the community in honoring Tamil heritage. This cherished festival is an opportunity to celebrate the spirit of Pongal—a time of gratitude, prosperity, and cultural unity.
 

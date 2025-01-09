@@ -10,7 +10,6 @@ import HomeHeader from './HomeHeader';
 import { FooterSection } from "./App.jsx";
 import imag1 from './assets/hoverImage.jpeg';
 import dott from './assets/dott.png';
-import './styles/card.css';
 
 function AboutUs() {
     return (
@@ -72,89 +71,60 @@ function AboutUs() {
     );
 };
 
-const Card = ({ heading, subHeading, content, index, styleContent }) => {
+function Card({ heading, subHeading, content, index, styleContent }) {
     const [hovered, setHovered] = useState(false);
-  
     return (
-      <>
-        <div className="col-xl-3 col-md-3">
-          <div
-            className="card card-styles p-2"
-            style={
-              styleContent
-                ? { backgroundColor: "white" }
-                : { backgroundColor: "#D4302B" }
-            }
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-          >
-            {hovered ? (
-              <img src={imag1} alt="" className="cards-images" />
-            ) : (
-              <div className={index === 0 ? "m-auto" : ""}>
-                <h2
-                  style={
-                    styleContent
-                      ? { color: "#D4302B" }
-                      : { color: "white" }
-                  }
-                  className="text-center"
-                >
-                  <b>{heading}</b>
-                </h2>
-                <h5
-                  style={
-                    styleContent
-                      ? { color: "black" }
-                      : { color: "white" }
-                  }
-                >
-                  <b>{subHeading}</b>
-                </h5>
-                <p
-                  style={
-                    styleContent
-                      ? { color: "black" }
-                      : { color: "white" }
-                  }
-                >
-                  {content}
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
-  
-        {(index === 2 || index === 5) ? (
-          index === 2 ? (
-            <div className="row mt-4">
-              <div className="col-sm-6"></div>
-              <div className="col-sm-6">
-                <p className="left-arrow"></p>
-              </div>
+        <>
+            <div className="col-xl-3 col-md-3">
+                <div className="card card-styles p-2" style={styleContent ? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}>
+                    {
+                        hovered ? (
+                            <img
+                                src={imag1}
+                                alt=""
+                                className="cards-images"
+                            />
+                        ) :
+                            (
+                                <div className={index == 0 ? 'm-auto' : ''}>
+                                    <h2 style={styleContent ? { color: "#D4302B" } : { color: "white" }} className="text-center"><b>{heading}</b></h2>
+                                    <h5 style={styleContent ? { color: "black" } : { color: "white" }}><b>{subHeading}</b></h5>
+                                    <p style={styleContent ? { color: "black" } : { color: "white" }}>{content}</p>
+                                </div>)
+                    }
+
+                </div>
             </div>
-          ) : (
-            ""
-          )
-        ) : (
-          <div className="col-xl-1 col-md-1 col-sm-6">
-            {index === 3 || index === 4 ? (
-              <p className="left-dashed-arrow"></p>
+
+            {(index === 2 || index === 5) ? (
+                index === 2 ? (
+                    <div className="row">
+                        <div className="col-sm-6"></div>
+                        <div className="col-sm-6">
+                            <p className="left-arrow"></p>
+                        </div>
+                    </div>
+                ) : ""
             ) : (
-              <p className="dashed-arrow"></p>
+                <div className="col-xl-1 col-md-1 col-sm-6">
+                    {index === 3 || index === 4 ? (
+                        <p className="left-dashed-arrow"></p>
+                    ) : (
+                        <p className="dashed-arrow"></p>
+                    )}
+                </div>
             )}
-          </div>
-        )}
-      </>
+        </>
     );
-  };
-  
+};
 
 function RowColCard() {
     return (
         <div className="text-dark container image-with-text-container">
             <h1 className="text-center mt-5 mb-3">
-                <b>Our <span className="web-color">Mission,</span> Core Area Of <span className="web-color">Focus</span> , Our<span className="web-color"> objectives</span></b>
+                <b>Our <span className="web-color"> Core Area Of Focus, Our objectives</span></b>
             </h1>
             <div className="row">
                 {imageWithContent.map((item, index) => (
@@ -298,10 +268,11 @@ export function PhotoGallaryFun({ pictures = [], idVal }) {
                                         alt={`Slide ${index + 1} - Image ${picIndex + 1}`}
                                         className="photo-gallary-image w-100"
                                         style={{
-                                            maxWidth: "90%",
+                                            maxWidth: "98%",
                                             height: "auto",
                                             objectFit: "cover",
                                             borderRadius: "8px",
+                    
                                         }}
                                     />
                                 </div>

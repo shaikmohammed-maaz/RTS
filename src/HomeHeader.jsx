@@ -52,11 +52,12 @@ export default function HomeHeader() {
                             {['/RTS', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
                                 <li className="nav-item" key={index}>
                                     <Link
-                                        className={`nav-link fs-5 text-dark ${location.pathname === path ? 'active' : ''}`}
+                                        className={`nav-link font-for-path text-dark ${location.pathname === path ? 'active' : ''}`}
                                         to={path}
                                     >
                                         {path === '/RTS'
-                                            ? 'Home'
+                                            ? 'Home' : path === '/Blog'
+                                      ? 'Blog & Events'
                                             : path
                                                 .replace('/', '')
                                                 .replace(/-/g, ' ')
