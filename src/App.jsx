@@ -101,6 +101,7 @@ export function FooterSection() {
 
         {/* Subscription Form */}
         <div className="footer-contain text-dark d-flex flex-column align-items-center justify-content-center">
+          {/* <form action=""> */}
           <div className="row w-50 px-3 mb-2 footer-row">
             {/* Email Input */}
             <div className="col-xl-6 col-sm-12 col-md-8 mb-3 mb-md-0">
@@ -111,6 +112,7 @@ export function FooterSection() {
                 aria-label="Email address"
                 value={email}
                 onChange={handleEmailChange}
+                required
               />
             </div>
 
@@ -122,8 +124,10 @@ export function FooterSection() {
               >
                 Subscribe
               </button>
+    
             </div>
           </div>
+          {/* </form> */}
 
           {/* Display Success/Error Message */}
           {message && (

@@ -80,7 +80,7 @@ export default function HomeHeader() {
                     &times;
                 </button>
                 <ul>
-                    {['/Home', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
+                    {['/RTS', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
                         <li key={index}>
                             <Link
                                 className={`sidebar-link ${location.pathname === path ? 'active' : ''}`}

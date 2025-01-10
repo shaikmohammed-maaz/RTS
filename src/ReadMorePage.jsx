@@ -15,7 +15,7 @@ function ReadMorePage() {
     return (
         <>
             <HomeHeader />
-            <Header headVal={'Blog'} />
+            <Header headVal={'Blog & Events'} />
             {cardData != undefined ? (
                 <div className="custom-container fs-3"> {/* Custom container with controlled width */}
                     <div className="row mt-5">
@@ -24,8 +24,8 @@ function ReadMorePage() {
                                 <ContentAllDetails 
                                     key={index} 
                                     head={item.heading} 
+                                    date={item.date}
                                     authorName={item.authorName} 
-                                    date= {item.date}
                                     content={item.content} 
                                 />
                             ))}
@@ -94,13 +94,14 @@ function ReadMorePage() {
     );
 }
 
-function ContentAllDetails({ head, authorName, content }) {
+function ContentAllDetails({ head, authorName, content,date }) {
     return (
         <>
             <h3><b>{head}</b></h3>
-            <p>{authorName}</p>
+            <p className="fs-5 text-muted mb-0">{date}</p>
+            <p className="fs-5 text-muted">{authorName}</p>
             <div className="text-center">
-                <img src={Logo} alt="" width={500} />
+                <img src={Logo} alt="" width={500} className="read-more-image" />
             </div>
             <pre className="text-justify preStyle">
                 {content}

@@ -316,10 +316,12 @@ export function BlogCard({ gradimg, blogimgid, h1cont, h1id, graddate, maincont,
                 <h4 id="grad1-cont1" className="blog-card-header text-center"><b>{h1cont}</b></h4>
                 <p className="text-muted text-center">{graddate}</p>
                 <p id="main-cont-id">
-                    {isExpanded ? `${maincont} ${excescont}` : maincont}
+                    {isExpanded ?  `${maincont} ${excescont}` : maincont}
                 </p>
                 <div className="text-center m-3">
-                    <button className="login-style2 fs-6 pt-2 pb-2" onClick={toggleContent}>
+                    <button className="login-style2 fs-6 pt-2 pb-2"
+                    data-toggle="tooltip" data-placement="top" title={readContentFullDetails==undefined ? "No datas available" : ""}
+                     style={readContentFullDetails==undefined ? {backgroundColor : 'gray'}: {}}onClick={toggleContent} disabled={readContentFullDetails==undefined}>
                         <b>Read More</b>
                     </button>
                 </div>

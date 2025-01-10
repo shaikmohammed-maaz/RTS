@@ -159,9 +159,9 @@ About Pongal
     Pongal, one of Tamil culture’s most beloved festivals, symbolizes the harvest season and the spirit of abundance. It is a time to celebrate togetherness, preserve traditions, and inspire cultural pride in future generations. Our celebration reflects these values through engaging performances and community interactions.
 
 What to Expect
-    • Cultural Performances: Be captivated by traditional dances, engaging skits, and artistic showcases by our talented students.
-    • Community Bonding: A heartwarming gathering that fosters connections among families and friends while celebrating shared heritage.
-    • Festive Atmosphere: A vibrant and family-friendly setting filled with the sights and sounds of Tamil culture.
+    => Cultural Performances: Be captivated by traditional dances, engaging skits, and artistic showcases by our talented students.
+    => Community Bonding: A heartwarming gathering that fosters connections among families and friends while celebrating shared heritage.
+    => Festive Atmosphere: A vibrant and family-friendly setting filled with the sights and sounds of Tamil culture.
 
 Join Us for a Memorable Celebration
 Our Pongal Celebration is more than an event—it’s a tribute to our cultural roots, a celebration of creativity, and a reminder of the values that connect us.
@@ -174,6 +174,7 @@ We look forward to celebrating this joyous festival with you every year!
 export let secondContentCard = [{
     heading: "Tamil Talent Extravaganza",
     authorName: "Event Coordinator",
+    date: "18.01.2025",
    content: `
 We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. These competitions offer a platform to showcase talents, foster creativity, enhance language skills, and instill cultural pride.
 

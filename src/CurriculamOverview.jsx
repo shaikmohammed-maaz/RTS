@@ -27,10 +27,10 @@ function CreateCard({ heading, content, year, yesOrNo, age, evalution }) {
                     <p className="text-justify">{content}</p>
                     {/* <div> */}
                 </div>
-                <div className="card-body">
+                <div className="card-body body-card-style">
 
                 </div>
-                <div className="card-footer">
+                <div className="card-footer footer-card-style">
                     <div className="container">
                         <div className="row">
                             <CreateYearAndEvalution value={age} value2={'Age'} />
@@ -46,7 +46,7 @@ function CreateCard({ heading, content, year, yesOrNo, age, evalution }) {
 function CreateYearAndEvalution({ value, value2 }) {
     return (
         <>
-            <div className="col-sm-6">
+            <div className="col-xl-6 col-sm-6 col-md-6">
                 <h6 className='web-color curriculam-sub-head'><b>{value}</b></h6>
                 <p>{value2}</p>
             </div>

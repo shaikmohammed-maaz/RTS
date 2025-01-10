@@ -1679,3 +1679,26 @@ header img {
 .blog-card1{
   height: 100% !important;
 }
+
+@media (max-width:438px) {
+  .header-title{
+    font-size: 1.7rem;
+  }
+  .tamil-content{
+    font-size: 0.9rem !important;
+  }
+}
+@media (max-width:577px) {
+  .body-card-style{
+    display: none;
+  }
+  .curriculam-card{
+    height: 100% !important;
+  }
+}
+
+@media (max-width:526px) {
+  .read-more-image{
+    width: 50%;
+  }
+}
