@@ -5,11 +5,11 @@ import React, { useState } from 'react';
 import { Header } from "./HomeHeader";
 import { FooterSection } from "./App";
 import HomeHeader from "./HomeHeader";
-import BlogContents from './blogContents.js'
+import BlogContents from './blogContents.jsx'
 import Logo from "./assets/logo.png"; 
 import ReadMorePage from './ReadMorePage.jsx';
-import {firstContentCard} from './blogContents.js';
-import {secondContentCard} from './blogContents.js';
+import {firstContentCard} from './blogContents.jsx';
+import {secondContentCard} from './blogContents.jsx';
 import { useNavigate } from 'react-router-dom';
 
 export default function Blog() {
@@ -185,7 +185,7 @@ export default function Blog() {
                         <BlogCard gradimg={Logo} blogimgid={"grad-img1"}
                                     h1cont={"Tamil Talent Extravaganza"} h1id={"grad1-cont1"}
                                     graddate={"26th December 2024"} dateid={"graddate1"}
-                                    maincont={"A Celebration of Creativity, Language, and Culture* We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. "}
+                                    maincont={"A Celebration of Creativity, Language, and Culture We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. "}
                                     excescont={"This includes earning the required number of credits."}
                                     maincontid={"main-cont-id"} btnid={"readmore-grad"} 
                                     readContentFullDetails={secondContentCard}

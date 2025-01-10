@@ -1,9 +1,23 @@
-
 import classRoom from './assets/classroom.jpg';
 import mission from './assets/mission.jpg';
 import vision from './assets/vision.jpg';
 import photo from './assets/photo.jpg';
 import values from './assets/values.jpg';
+import imageGal1 from "./assets/imageGal1.jpeg";
+import imageGal2 from "./assets/imageGal2.jpeg";
+import imageGal3 from "./assets/imageGal3.jpeg";
+import imageGal4 from "./assets/imageGal4.jpeg";
+import imageGal5 from "./assets/imageGal5.jpeg";
+import imageGal6 from "./assets/imageGal6.jpeg";
+import imageGal7 from "./assets/imageGal7.jpeg";
+import imageGal8 from "./assets/imageGal8.jpeg";
+import imageGal9 from "./assets/imageGal9.jpeg";
+import imageGal10 from "./assets/imageGal10.jpeg";
+import imageGal11 from "./assets/imageGal11.jpeg";
+import imageGal12 from "./assets/imageGal12.jpeg";
+import imageGal13 from "./assets/imageGal13.jpeg";
+import imageGal14 from "./assets/imageGal14.jpeg";
+import HomeFirstImg from "./assets/homeFirstImg.jpg";
 
 
 let cardsInfo = [
@@ -108,18 +122,21 @@ export let admissionImagesWithDetails = [
 ];
 
 export let photoGallary = [
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
-    classRoom,
+    HomeFirstImg,
+    imageGal1,
+    imageGal2,
+    imageGal3,
+    imageGal4,
+    imageGal5,
+    imageGal6,
+    imageGal7,
+    imageGal8,
+    imageGal9,
+    imageGal10,
+    imageGal11,
+    imageGal12,
+    imageGal13,
+    imageGal14
 ];
 
 export let studentImageAndContent = [
@@ -339,7 +356,7 @@ export let classSchedulePoints = [
         ]
 
     },
-    "n addition to regular lessons, we celebrate major Tamil holidays, including Pongal, allowing students to immerse themselves in Tamil traditions and cultural celebrations.",
+    "In addition to regular lessons, we celebrate major Tamil holidays, including Pongal, allowing students to immerse themselves in Tamil traditions and cultural celebrations.",
     "Join us at RTS in fostering the next generation of Tamil speakers and cultural ambassadors, explore the Tamil language and culture in a vibrant, supportive environment!"
 ]
 

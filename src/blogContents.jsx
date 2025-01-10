@@ -1,4 +1,6 @@
 import gradimg from "./assets/homeImgfour.jpg"; 
+import ReactDOMServer from 'react-dom/server';
+
 
 const BlogContents = [
     {
@@ -152,22 +154,26 @@ export let firstContentCard = [
         heading: "Pongal Celebration – A Vibrant Cultural Festivity",
         authorName: "Vaishnavi",
         date: "15.01.2025",
-        content: `
-Redmond Tamil School proudly hosts its annual Pongal Celebration, a joyous event that unites the community in honoring Tamil heritage. This cherished festival is an opportunity to celebrate the spirit of Pongal—a time of gratitude, prosperity, and cultural unity.
-
-About Pongal
-    Pongal, one of Tamil culture’s most beloved festivals, symbolizes the harvest season and the spirit of abundance. It is a time to celebrate togetherness, preserve traditions, and inspire cultural pride in future generations. Our celebration reflects these values through engaging performances and community interactions.
-
-What to Expect
-    => Cultural Performances: Be captivated by traditional dances, engaging skits, and artistic showcases by our talented students.
-    => Community Bonding: A heartwarming gathering that fosters connections among families and friends while celebrating shared heritage.
-    => Festive Atmosphere: A vibrant and family-friendly setting filled with the sights and sounds of Tamil culture.
-
-Join Us for a Memorable Celebration
-Our Pongal Celebration is more than an event—it’s a tribute to our cultural roots, a celebration of creativity, and a reminder of the values that connect us.
-
-We look forward to celebrating this joyous festival with you every year!
-        `
+        content: ReactDOMServer.renderToStaticMarkup(
+          <div>
+            <h3>Pongal Celebration – A Vibrant Cultural Festivity</h3>
+            <p>Redmond Tamil School proudly hosts its annual Pongal Celebration, a joyous event that unites the community in honoring Tamil heritage. This cherished festival is an opportunity to celebrate the spirit of Pongal—a time of gratitude, prosperity, and cultural unity.</p>
+    
+            <h6><strong>About Pongal</strong></h6>
+            <p>Pongal, one of Tamil culture’s most beloved festivals, symbolizes the harvest season and the spirit of abundance...</p>
+    
+            <h6><strong>What to Expect</strong></h6>
+            <ul>
+              <li><strong>Cultural Performances:</strong> Be captivated by traditional dances...</li>
+              <li><strong>Community Bonding:</strong> A heartwarming gathering...</li>
+              <li><strong>Festive Atmosphere:</strong> A vibrant and family-friendly setting...</li>
+            </ul>
+    
+            <h6><strong>Join Us for a Memorable Celebration</strong></h6>
+            <p>Our Pongal Celebration is more than an event—it’s a tribute to our cultural roots, a celebration of creativity, and a reminder of the values that connect us</p>
+            <p>We look forward to celebrating this joyous festival with you every year!</p>
+          </div>
+        )
     }
 ];
 
@@ -175,54 +181,76 @@ export let secondContentCard = [{
     heading: "Tamil Talent Extravaganza",
     authorName: "Event Coordinator",
     date: "18.01.2025",
-   content: `
-We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. These competitions offer a platform to showcase talents, foster creativity, enhance language skills, and instill cultural pride.
+   content: ReactDOMServer.renderToStaticMarkup(
+    <div>
+      <h3>A Celebration of Creativity, Language, and Culture</h3>
+      <p>We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. These competitions offer a platform to showcase talents, foster creativity, enhance language skills, and instill cultural pride.</p>
 
-Competition Categories:
-    1. Essay Writing / Letter Writing
-              => Description: Students will demonstrate their writing skills in essay and letter formats.
-              => Structure: Preliminary, Intermediate, and Final Rounds.
-              => Details: Specific topics and level details will be shared soon.
+      <h6><strong>Competition Categories:</strong></h6>
+      <ul>
+        <li><strong>Essay Writing / Letter Writing:</strong>
+          <ul>
+            <li><strong>Description:</strong> Students will demonstrate their writing skills in essay and letter formats.</li>
+            <li><strong>Structure:</strong> Preliminary, Intermediate, and Final Rounds.</li>
+            <li><strong>Details:</strong> Specific topics and level details will be shared soon.</li>
+          </ul>
+        </li>
+        <li><strong>Thirukkural Recital:</strong>
+          <ul>
+            <li><strong>Description:</strong> Participants will recite verses from the Thirukkural, highlighting its literary and moral significance.</li>
+            <li><strong>Structure:</strong> Preliminary, Intermediate, and Final Rounds.</li>
+            <li><strong>Details:</strong> Specific verses and guidelines will be provided soon.</li>
+          </ul>
+        </li>
+        <li><strong>Tamil Wordcraft Challenge:</strong>
+          <ul>
+            <li><strong>Description:</strong> A creative competition enhancing Tamil writing skills through structured tasks and imaginative wordplay.</li>
+            <li><strong>How it Works:</strong> A grade-level specific word list will be provided in advance. Students will write them accurately based on pronunciation.</li>
+            <li><strong>Structure:</strong> Preliminary and Final Rounds.</li>
+          </ul>
+        </li>
+        <li><strong>Tamil Vocabulary Challenge:</strong>
+          <ul>
+            <li><strong>Description:</strong> This challenge tests students’ knowledge of Tamil words by requiring them to translate English words into Tamil.</li>
+            <li><strong>Structure:</strong> Preliminary and Final Rounds.</li>
+            <li><strong>Details:</strong> Word lists and guidelines will be released soon.</li>
+          </ul>
+        </li>
+        <li><strong>Tamil Art:</strong>
+          <ul>
+            <li><strong>Description:</strong> A platform for students to express their artistic talents through various forms of visual art.</li>
+            <li><strong>Structure:</strong> Final Round Only.</li>
+          </ul>
+        </li>
+        <li><strong>RTS School Logo Design Challenge:</strong>
+          <ul>
+            <li><strong>Description:</strong> Students will design creative logos reflecting their school spirit.</li>
+            <li><strong>Structure:</strong> Final Round Only.</li>
+          </ul>
+        </li>
+        <li><strong>Tamil Debate:</strong>
+          <ul>
+            <li><strong>Description:</strong> Students will engage in debates, enhancing their critical thinking and public speaking skills in Tamil.</li>
+            <li><strong>Structure:</strong> Preliminary and Final Rounds.</li>
+          </ul>
+        </li>
+        <li><strong>Tamil Elocution:</strong>
+          <ul>
+            <li><strong>Description:</strong> Students will express their thoughts on various topics, enhancing their public speaking and communication skills in Tamil.</li>
+            <li><strong>Structure:</strong> Preliminary, Intermediate, and Final Rounds.</li>
+          </ul>
+        </li>
+      </ul>
 
-    2. Thirukkural Recital
-              => Description: Participants will recite verses from the Thirukkural, highlighting its literary and moral significance.
-              => Structure: Preliminary, Intermediate, and Final Rounds.
-              => Details: Specific verses and guidelines will be provided soon.
-
-    3. Tamil Wordcraft Challenge
-              => Description: A creative competition enhancing Tamil writing skills through structured tasks and imaginative wordplay.
-              => How it Works: A grade-level specific word list will be provided in advance. Students will write them accurately based on pronunciation.
-              => Structure: Preliminary and Final Rounds.
-
-    4. Tamil Vocabulary Challenge
-              => Description: This challenge tests students’ knowledge of Tamil words by requiring them to translate English words into Tamil.
-              => Structure: Preliminary and Final Rounds.
-              => Details: Word lists and guidelines will be released soon.
-
-    5. Tamil Art
-              => Description: A platform for students to express their artistic talents through various forms of visual art.
-              => Structure: Final Round Only.
-
-    6. RTS School Logo Design Challenge
-              => Description: Students will design creative logos reflecting their school spirit.
-              => Structure: Final Round Only.
-
-    7. Tamil Debate
-              => Description: Students will engage in debates, enhancing their critical thinking and public speaking skills in Tamil.
-              => Structure: Preliminary and Final Rounds.
-
-    8. Tamil Elocution
-              => Description: Students will express their thoughts on various topics, enhancing their public speaking and communication skills in Tamil.
-              => Structure: Preliminary, Intermediate, and Final Rounds.
-
-General Competition Information:
-              => Class Level Competitions: Initial rounds within each class will identify winners for subsequent rounds.
-              => Participation Certificates: All participants will receive certificates.
-              => Awards Ceremony: Winners will be honored during the Annual Day event.
-`
+      <h6><strong>General Competition Information:</strong></h6>
+      <ul>
+        <li><strong>Class Level Competitions:</strong> Initial rounds within each class will identify winners for subsequent rounds.</li>
+        <li><strong>Participation Certificates:</strong> All participants will receive certificates.</li>
+        <li><strong>Awards Ceremony:</strong> Winners will be honored during the Annual Day event.</li>
+      </ul>
+    </div>
+  )
 
 }];
-
-
 
 export default BlogContents;

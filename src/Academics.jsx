@@ -34,21 +34,21 @@ function Academics(){
       {/* <ScheduleTable /> */}
 
       <div className="container text-dark">
-        <h2 className="text-center mb-3"><b>Class <span className="web-color"> Schedule</span></b></h2>
-        {classSchedulePoints.map((item, index) => {
-          if (typeof item === "object" && item.Details) {
-            return (
-              <ul key={index}>
-                {item.Details.map((detail, i) => (
-                  <li key={i} id="cls-shedule">{detail}</li>
-                ))}
-              </ul>
-            );
-          } else {
-            // Render plain text items
-            return <p key={index}>{item}</p>;
-          }
-        })}
+    <h2 className="text-center mb-3"><b>Class <span className="web-color">Schedule</span></b></h2>
+    {classSchedulePoints.map((item, index) => {
+      if (typeof item === "object" && item.Details) {
+        return (
+          <ul key={index}>
+            {item.Details.map((detail, i) => (
+              <li key={i} id="cls-shedule" className="list-item-spacing">{detail}</li>
+            ))}
+          </ul>
+        );
+      } else {
+        // Render plain text items
+        return <p key={index}>{item}</p>;
+      }
+    })}
         <h2 className='text-center mt-5 mb-4'><b>Library<span className='web-color'> information</span></b></h2>
         {libraryInformation.map((item, index) => (
           <LibraryInformationFunction
@@ -59,8 +59,8 @@ function Academics(){
         ))}
         <h2 className='text-center mt-5 mb-5'><b>Assessment<span className='web-color'> system</span></b></h2>
         <h5><b>Assessment for RTS is based on ITA guidelines. The ITS guidelines for current ITA students are as follows</b></h5>
-        <div className="row d-flex flex-direction-column align-items-center">
-          <div className="col-lg-6 col-md-12">
+        <div className="row d-flex flex-direction-column align-items-center  ">
+          <div className="col-lg-6 col-md-12  ">
             <p className="text-center ">
               {AssestmentSystemPoints.map((item, index) => (
                 <AssestMentSystemFunction key={index}
@@ -69,7 +69,7 @@ function Academics(){
               ))}
             </p>
           </div>
-          <div className="col-lg-6 col-md-12">
+          <div className="col-lg-6 col-md-12 ">
             <img
               src={image1}
               alt="Accredited"
@@ -125,7 +125,7 @@ function ClassSchedule({ points, text }) {
 function AssestMentSystemFunction({ point }) {
   return (
     <>
-      <p className="text-justify"><img src={dott} id="dott"/>{point}</p>
+      <p className="text-justify "><img src={dott} id="dott"/>{point}</p>
     </>
   )
 }
@@ -244,7 +244,7 @@ function LibraryInformationFunction({ head, subHead, point }) {
 </h4>
       <p id="sub-heading">{subHead}</p>
       {point.map((content, idx) => (
-        <p key={idx} className="m-auto"><img src={dott} id="dott"/> {content}</p>
+        <p key={idx} className="m-auto dott-margin"><img src={dott} id="dott"/> {content}</p>
       ))}
     </div>
   )

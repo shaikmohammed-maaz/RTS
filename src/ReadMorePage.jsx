@@ -103,9 +103,9 @@ function ContentAllDetails({ head, authorName, content,date }) {
             <div className="text-center">
                 <img src={Logo} alt="" width={500} className="read-more-image" />
             </div>
-            <pre className="text-justify preStyle">
-                {content}
-            </pre>
+            <div className="text-justify preStyle" dangerouslySetInnerHTML={{ __html: content }} >
+                {/* {content} */}
+            </div>
         </>
     );
 }

@@ -61,6 +61,9 @@ export function AcedemicCalunder(){
             {/* <iframe src="https://www.catamilacademy.org/RedmondTamilSchoolSchedule.html" className='iframe-style' height="400" width="900" title="Iframe Example" style={{ backgroundColor: 'gray', borderRadius: '10px' }}></iframe> */}
             <img src={bigImage} alt="" style={{maxWidth:'100%',maxHeight:'100%'}}/>
         
+            <h3 className='mt-5 mb-4'><b>Special programs – HSCP (TBD)</b></h3>
+                <p>RTS has a home grown HSCP program which has been very successful (more than 15 students have achieved 3 or 4 credits in ALTA/AVENT) in getting foreign language credits in the public schools. HSCP classes are conducted every Sunday from 9:30 to 10:15 for students registered for HSCP.</p>
+
         {/* <h3 className='mt-5 mb-4'><b>Special programs – HSCP (TBD)</b></h3>
                 <p>RTS has a home grown HSCP program which has been very successful (more than 15 students have achieved 3 or 4 credits in ALTA/AVENT) in getting foreign language credits in the public schools. HSCP classes are conducted every Sunday from 9:30 to 10:15 for students registered for HSCP.</p> */}
                 </div>

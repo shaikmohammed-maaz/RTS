@@ -51,7 +51,7 @@ export let numWithText2 = [
     {
         dateValue: "author name",
         headValue: "Tamil Talent Extravaganza",
-        contentValue: "*A Celebration of Creativity, Language, and Culture* We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades.",
+        contentValue: "A Celebration of Creativity, Language, and Culture We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades.",
     },
     {
         dateValue: "author name",

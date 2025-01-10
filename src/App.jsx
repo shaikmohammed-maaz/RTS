@@ -18,9 +18,9 @@ function App() {
       <Routes>
       <Route path="/Read-more" element={<ReadMorePage />} /> 
         <Route path="/RTS" element={<SecondHome />} />
-        <Route path="/About-us" element={<AboutUs />} />
-        <Route path="/Student-section" element={<StudentSection />} />
-        <Route path="/Parent-section" element={<ParentsSection />} />
+        <Route path="/About-Us" element={<AboutUs />} />
+        <Route path="/Student-Section" element={<StudentSection />} />
+        <Route path="/Parent-Section" element={<ParentsSection />} />
         <Route path="/Volunteer" element={<Volunteer />} />
         <Route path="/Academics" element={<Academics />} />
         <Route path="/Blog" element={<Blog />} />
@@ -100,6 +100,7 @@ export function FooterSection() {
         </h5>
 
         {/* Subscription Form */}
+        <form action="">
         <div className="footer-contain text-dark d-flex flex-column align-items-center justify-content-center">
           {/* <form action=""> */}
           <div className="row w-50 px-3 mb-2 footer-row">
@@ -126,6 +127,7 @@ export function FooterSection() {
               </button>
     
             </div>
+            {/* </form> */}
           </div>
           {/* </form> */}
 
@@ -144,6 +146,7 @@ export function FooterSection() {
             </a>
           </p>
         </div>
+        </form>
       </footer>
     </div>
   );

@@ -49,7 +49,7 @@ export default function HomeHeader() {
 
                     <div className="collapse navbar-collapse nav-style" id="collapsibleNavbar">
                         <ul className="navbar-nav ms-auto">
-                            {['/RTS', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
+                            {['/RTS', '/About-Us', '/Student-Section', '/Parent-Section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
                                 <li className="nav-item" key={index}>
                                     <Link
                                         className={`nav-link font-for-path text-dark ${location.pathname === path ? 'active' : ''}`}
@@ -80,7 +80,7 @@ export default function HomeHeader() {
                     &times;
                 </button>
                 <ul>
-                    {['/RTS', '/About-us', '/Student-section', '/Parent-section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
+                    {['/RTS', '/About-Us', '/Student-Section', '/Parent-Section', '/Volunteer', '/Academics', '/Blog', '/ContactUs'].map((path, index) => (
                         <li key={index}>
                             <Link
                                 className={`sidebar-link ${location.pathname === path ? 'active' : ''}`}
@@ -107,7 +107,7 @@ export default function HomeHeader() {
 
 export function Header({ headVal }) {
     return (
-        <div className='about-us'>
+        <div className='about-us mt-2'>
             <div className="container-fluid p-0">
                 <div className="bg-img-header d-flex align-items-center justify-content-center text-center p-4">
                     <h2 className="header-title">{headVal}</h2>

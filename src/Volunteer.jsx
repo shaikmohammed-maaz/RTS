@@ -29,7 +29,7 @@ function Volunteer() {
                 </div> */}
             </div>
             <div className="container-fluid mt-5">
-                <h3 className='text-center text-dark mb-5'><b>Contact<span className='web-color'> Person</span></b></h3>
+                <h3 className='text-center text-dark mb-5'><b>Administrative<span className='web-color'> Contact</span></b></h3>
                 <div className="row mb-5">
                     {commuincationProtocalsValues.map((item, index) => (
                         <CommunicationProtocols key={index} emailId={item.emailValue} nameValue={item.nameValue} />

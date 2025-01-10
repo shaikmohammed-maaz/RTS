@@ -47,7 +47,7 @@ function AboutUs() {
                 </div>
             </div>
 
-{/* ADMINISTRATIO TEAM  */}
+            {/* ADMINISTRATIO TEAM  */}
             {/* <div className="container text-dark mt-5">
                 <h2 className="text-center m-3">
                     <b><span className="web-color">Administration</span> Team</b>
@@ -76,7 +76,7 @@ function Card({ heading, subHeading, content, index, styleContent }) {
     return (
         <>
             <div className="col-xl-3 col-md-3">
-                <div className="card card-styles p-2" style={styleContent ||hovered? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}
+                <div className="card card-styles p-2" style={styleContent || hovered ? { backgroundColor: "white" } : { backgroundColor: "#D4302B" }}
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}>
                     {
@@ -156,7 +156,7 @@ function CardCol({ imgVal, cardHead, subHead, cardText, isVal }) {
                         <div>
                             {subHead && <h6><b>{subHead}</b></h6>} {/* Use subHead instead of item.subHead */}
                             {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
-                                <p key={idx} className="m-auto"><img src={dott} id="dott"/> {content}</p>
+                                <p key={idx} className="m-auto"><img src={dott} id="dott" /> {content}</p>
                             ))}
                         </div>
                     </div>
@@ -167,7 +167,7 @@ function CardCol({ imgVal, cardHead, subHead, cardText, isVal }) {
                         <h5 className="web-color text-center"><b>{cardHead}</b></h5>
                         {subHead && <h3>{subHead}</h3>} {/* Use subHead instead of item.subHead */}
                         {cardText.map((content, idx) => (  /* Use cardText instead of item.contentValue */
-                            <p key={idx} className="m-auto"><img src={dott} id="dott"/> {content}</p>
+                            <p key={idx} className="m-auto"><img src={dott} id="dott" /> {content}</p>
                         ))}
                     </div>
 
@@ -272,7 +272,7 @@ export function PhotoGallaryFun({ pictures = [], idVal }) {
                                             height: "auto",
                                             objectFit: "cover",
                                             borderRadius: "8px",
-                    
+
                                         }}
                                     />
                                 </div>
